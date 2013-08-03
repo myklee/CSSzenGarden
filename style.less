@@ -16,6 +16,12 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic');
 @import url('http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300');
 @import url('http://fonts.googleapis.com/css?family=Playball');
+@import url('http://fonts.googleapis.com/css?family=Rye');
+
+
+
+
+@import url('http://openfontlibrary.org/face/averia');
 
 .hide-text {
 	text-indent: 100%;
@@ -32,7 +38,9 @@
 	}
 }
 
-@globalFontColor: rgba(255,255,255,1);
+@globalFontColor: rgba(255,255,255,.8);
+@globalFontColor: #cfe0b3;
+
 
 @baseTS: 5px 5px 0 rgba(0,0,0,.15);
 
@@ -44,7 +52,7 @@ html {
 }
 body { 
 	font: 62.5% 'Roboto', 'Open Sans' sans-serif;
-	/*font-family: 'Playball', georgia, serif;*/
+	font-family: 'Playball', georgia, serif;
 	color: @globalFontColor; 
 	margin: 0; 
 	padding: 0;
@@ -53,6 +61,7 @@ body {
 }
 
 .page-wrapper {
+
 }
 h1,h2,h3,p { 
 	max-width: 66%;
@@ -86,10 +95,24 @@ abbr {
 /* INFIELD */
 .page-wrapper { 
 	position: absolute;
-	top: 100px;
-	left: 100px;
+	top: 150px;
+	left: 150px;
 	background: #587c19;
 	.square(1080px); 
+	.before-after;
+	&:before {
+		.square(100%);
+		.opacity(30);
+		background: #4a7c00; /* Old browsers */
+		background: -moz-linear-gradient(top,  #4a7c00 5%, #396d0f 5%, #396d0f 10%, #4a7c00 10%, #4a7c00 15%, #396d0f 15%, #396d0f 20%, #4a7c00 20%, #4a7c00 25%, #396d0f 25%, #396d0f 30%, #4a7c00 30%, #4a7c00 35%, #396d0f 35%, #396d0f 40%, #4a7c00 40%, #4a7c00 45%, #396d0f 45%, #396d0f 50%, #4a7c00 50%, #4a7c00 55%, #396d0f 55%, #396d0f 60%, #4a7c00 60%, #4a7c00 65%, #396d0f 65%, #396d0f 70%, #4a7c00 70%, #4a7c00 75%, #396d0f 75%, #396d0f 80%, #4a7c00 80%, #4a7c00 85%, #396d0f 85%, #396d0f 90%, #4a7c00 90%, #4a7c00 95%, #396d0f 95%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#4a7c00), color-stop(5%,#396d0f), color-stop(9%,#396d0f), color-stop(10%,#4a7c00), color-stop(15%,#4a7c00), color-stop(15%,#396d0f), color-stop(19%,#396d0f), color-stop(20%,#4a7c00), color-stop(25%,#4a7c00), color-stop(25%,#396d0f), color-stop(29%,#396d0f), color-stop(30%,#4a7c00), color-stop(35%,#4a7c00), color-stop(35%,#396d0f), color-stop(39%,#396d0f), color-stop(40%,#4a7c00), color-stop(45%,#4a7c00), color-stop(45%,#396d0f), color-stop(49%,#396d0f), color-stop(50%,#4a7c00), color-stop(55%,#4a7c00), color-stop(55%,#396d0f), color-stop(59%,#396d0f), color-stop(60%,#4a7c00), color-stop(65%,#4a7c00), color-stop(65%,#396d0f), color-stop(69%,#396d0f), color-stop(70%,#4a7c00), color-stop(75%,#4a7c00), color-stop(75%,#396d0f), color-stop(79%,#396d0f), color-stop(80%,#4a7c00), color-stop(85%,#4a7c00), color-stop(85%,#396d0f), color-stop(89%,#396d0f), color-stop(90%,#4a7c00), color-stop(95%,#4a7c00), color-stop(95%,#396d0f)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #4a7c00 5%,#396d0f 5%,#396d0f 10%,#4a7c00 10%,#4a7c00 15%,#396d0f 15%,#396d0f 20%,#4a7c00 20%,#4a7c00 25%,#396d0f 25%,#396d0f 30%,#4a7c00 30%,#4a7c00 35%,#396d0f 35%,#396d0f 40%,#4a7c00 40%,#4a7c00 45%,#396d0f 45%,#396d0f 50%,#4a7c00 50%,#4a7c00 55%,#396d0f 55%,#396d0f 60%,#4a7c00 60%,#4a7c00 65%,#396d0f 65%,#396d0f 70%,#4a7c00 70%,#4a7c00 75%,#396d0f 75%,#396d0f 80%,#4a7c00 80%,#4a7c00 85%,#396d0f 85%,#396d0f 90%,#4a7c00 90%,#4a7c00 95%,#396d0f 95%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #4a7c00 5%,#396d0f 5%,#396d0f 10%,#4a7c00 10%,#4a7c00 15%,#396d0f 15%,#396d0f 20%,#4a7c00 20%,#4a7c00 25%,#396d0f 25%,#396d0f 30%,#4a7c00 30%,#4a7c00 35%,#396d0f 35%,#396d0f 40%,#4a7c00 40%,#4a7c00 45%,#396d0f 45%,#396d0f 50%,#4a7c00 50%,#4a7c00 55%,#396d0f 55%,#396d0f 60%,#4a7c00 60%,#4a7c00 65%,#396d0f 65%,#396d0f 70%,#4a7c00 70%,#4a7c00 75%,#396d0f 75%,#396d0f 80%,#4a7c00 80%,#4a7c00 85%,#396d0f 85%,#396d0f 90%,#4a7c00 90%,#4a7c00 95%,#396d0f 95%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #4a7c00 5%,#396d0f 5%,#396d0f 10%,#4a7c00 10%,#4a7c00 15%,#396d0f 15%,#396d0f 20%,#4a7c00 20%,#4a7c00 25%,#396d0f 25%,#396d0f 30%,#4a7c00 30%,#4a7c00 35%,#396d0f 35%,#396d0f 40%,#4a7c00 40%,#4a7c00 45%,#396d0f 45%,#396d0f 50%,#4a7c00 50%,#4a7c00 55%,#396d0f 55%,#396d0f 60%,#4a7c00 60%,#4a7c00 65%,#396d0f 65%,#396d0f 70%,#4a7c00 70%,#4a7c00 75%,#396d0f 75%,#396d0f 80%,#4a7c00 80%,#4a7c00 85%,#396d0f 85%,#396d0f 90%,#4a7c00 90%,#4a7c00 95%,#396d0f 95%); /* IE10+ */
+		background: linear-gradient(to bottom,  #4a7c00 5%,#396d0f 5%,#396d0f 10%,#4a7c00 10%,#4a7c00 15%,#396d0f 15%,#396d0f 20%,#4a7c00 20%,#4a7c00 25%,#396d0f 25%,#396d0f 30%,#4a7c00 30%,#4a7c00 35%,#396d0f 35%,#396d0f 40%,#4a7c00 40%,#4a7c00 45%,#396d0f 45%,#396d0f 50%,#4a7c00 50%,#4a7c00 55%,#396d0f 55%,#396d0f 60%,#4a7c00 60%,#4a7c00 65%,#396d0f 65%,#396d0f 70%,#4a7c00 70%,#4a7c00 75%,#396d0f 75%,#396d0f 80%,#4a7c00 80%,#4a7c00 85%,#396d0f 85%,#396d0f 90%,#4a7c00 90%,#4a7c00 95%,#396d0f 95%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a7c00', endColorstr='#396d0f',GradientType=0 ); /* IE6-9 */
+
+	}
 }
 header {
 	h1 {
@@ -112,13 +135,20 @@ header {
 			font-family: 'Playball', serif;
 			font-size: 96px;
 			color: red;
-			text-shadow: 0 0 10px #000;
+			text-shadow: 0 0 8px rgba(0,0,0,0.6);
+			&:first-letter {
+				display:block;
+				clear:both;
+			}
+
+
 		}
 	}
 	h2 {
 		font-family: 'Playball', sans-serif;
 		font-weight: 300;
 		color:@globalFontColor;
+		margin: 30px 0 0 150px;
 	}
 }
 
@@ -126,6 +156,13 @@ header {
 	display: block;
 }
 .summary {
+	p {
+		font:300 32px/1.5em 'Playball';
+		color: @globalFontColor;
+		margin-top:30px;
+		margin-left:160px;
+
+	}
 	&:before, &:after {
 		content:'';
 		position: absolute;
@@ -152,9 +189,6 @@ header {
 
 	p {
 		display: block;
-
-
-
 		&:before, &:after {
 			content:'';
 			position: absolute;
@@ -183,6 +217,10 @@ header {
 	}
 	/* PITCHING RUBBER */
 	p:last-child {
+
+		/* download file */
+		font:300 21px 'Roboto';
+		margin:0 0 0 0;
 		
 		&:before {
 			top:513.359px;
@@ -191,6 +229,7 @@ header {
 			width: 6px;
 			.rotate(45deg);
 			z-index: 10;
+			.box-shadow(0 0 5px #603a02);
 
 		}
 	}
@@ -198,6 +237,7 @@ header {
 }
 
 .preamble {
+
 	p {
 		display: block;
 		&:before {

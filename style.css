@@ -5,6 +5,8 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300');
 
 @import url('http://fonts.googleapis.com/css?family=Playball');
+
+@import url('http://fonts.googleapis.com/css?family=Rye');
 /* css Zen Garden default style v1.02 */
 /* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
 /* This file based on 'Tranquille' by Dave Shea */
@@ -498,6 +500,48 @@ you can use the generic selector below, but it's slower:
   content: "\e06d";
 }
 /* decent fonts */
+@font-face {
+  font-family: 'Averia';
+  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/af38150b362561bdbfb36265336fa2b1/AveriaBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Averia';
+  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/227b245e968a844982fccb2201e87a37/AveriaBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Averia';
+  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/92d926a8b004c607f96784e453f0b7fa/AveriaGruesa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Averia';
+  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/a3a28d5cd3ff6719302066b28d5ffebf/AveriaItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Averia';
+  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/2e4799893da402448d36904376b46154/AveriaLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Averia';
+  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/eadbd6eeba74e6e2817ee281fdee1308/AveriaLightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Averia';
+  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/912c25a8d8247523a59280df83f09841/AveriaRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .hide-text {
   text-indent: 100%;
   white-space: nowrap;
@@ -518,9 +562,8 @@ html {
 }
 body {
   font: 62.5% 'Roboto', 'Open Sans' sans-serif;
-  /*font-family: 'Playball', georgia, serif;*/
-
-  color: #ffffff;
+  font-family: 'Playball', georgia, serif;
+  color: #cfe0b3;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -557,11 +600,49 @@ abbr {
 /* INFIELD */
 .page-wrapper {
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 150px;
+  left: 150px;
   background: #587c19;
   width: 1080px;
   height: 1080px;
+}
+.page-wrapper:before,
+.page-wrapper:after {
+  content: '';
+  position: absolute;
+  display: block;
+  /*z-index: 10;*/
+
+}
+.page-wrapper:before {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  background: #4a7c00;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #4a7c00 5%, #396d0f 5%, #396d0f 10%, #4a7c00 10%, #4a7c00 15%, #396d0f 15%, #396d0f 20%, #4a7c00 20%, #4a7c00 25%, #396d0f 25%, #396d0f 30%, #4a7c00 30%, #4a7c00 35%, #396d0f 35%, #396d0f 40%, #4a7c00 40%, #4a7c00 45%, #396d0f 45%, #396d0f 50%, #4a7c00 50%, #4a7c00 55%, #396d0f 55%, #396d0f 60%, #4a7c00 60%, #4a7c00 65%, #396d0f 65%, #396d0f 70%, #4a7c00 70%, #4a7c00 75%, #396d0f 75%, #396d0f 80%, #4a7c00 80%, #4a7c00 85%, #396d0f 85%, #396d0f 90%, #4a7c00 90%, #4a7c00 95%, #396d0f 95%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #4a7c00), color-stop(5%, #396d0f), color-stop(9%, #396d0f), color-stop(10%, #4a7c00), color-stop(15%, #4a7c00), color-stop(15%, #396d0f), color-stop(19%, #396d0f), color-stop(20%, #4a7c00), color-stop(25%, #4a7c00), color-stop(25%, #396d0f), color-stop(29%, #396d0f), color-stop(30%, #4a7c00), color-stop(35%, #4a7c00), color-stop(35%, #396d0f), color-stop(39%, #396d0f), color-stop(40%, #4a7c00), color-stop(45%, #4a7c00), color-stop(45%, #396d0f), color-stop(49%, #396d0f), color-stop(50%, #4a7c00), color-stop(55%, #4a7c00), color-stop(55%, #396d0f), color-stop(59%, #396d0f), color-stop(60%, #4a7c00), color-stop(65%, #4a7c00), color-stop(65%, #396d0f), color-stop(69%, #396d0f), color-stop(70%, #4a7c00), color-stop(75%, #4a7c00), color-stop(75%, #396d0f), color-stop(79%, #396d0f), color-stop(80%, #4a7c00), color-stop(85%, #4a7c00), color-stop(85%, #396d0f), color-stop(89%, #396d0f), color-stop(90%, #4a7c00), color-stop(95%, #4a7c00), color-stop(95%, #396d0f));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #4a7c00 5%, #396d0f 5%, #396d0f 10%, #4a7c00 10%, #4a7c00 15%, #396d0f 15%, #396d0f 20%, #4a7c00 20%, #4a7c00 25%, #396d0f 25%, #396d0f 30%, #4a7c00 30%, #4a7c00 35%, #396d0f 35%, #396d0f 40%, #4a7c00 40%, #4a7c00 45%, #396d0f 45%, #396d0f 50%, #4a7c00 50%, #4a7c00 55%, #396d0f 55%, #396d0f 60%, #4a7c00 60%, #4a7c00 65%, #396d0f 65%, #396d0f 70%, #4a7c00 70%, #4a7c00 75%, #396d0f 75%, #396d0f 80%, #4a7c00 80%, #4a7c00 85%, #396d0f 85%, #396d0f 90%, #4a7c00 90%, #4a7c00 95%, #396d0f 95%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #4a7c00 5%, #396d0f 5%, #396d0f 10%, #4a7c00 10%, #4a7c00 15%, #396d0f 15%, #396d0f 20%, #4a7c00 20%, #4a7c00 25%, #396d0f 25%, #396d0f 30%, #4a7c00 30%, #4a7c00 35%, #396d0f 35%, #396d0f 40%, #4a7c00 40%, #4a7c00 45%, #396d0f 45%, #396d0f 50%, #4a7c00 50%, #4a7c00 55%, #396d0f 55%, #396d0f 60%, #4a7c00 60%, #4a7c00 65%, #396d0f 65%, #396d0f 70%, #4a7c00 70%, #4a7c00 75%, #396d0f 75%, #396d0f 80%, #4a7c00 80%, #4a7c00 85%, #396d0f 85%, #396d0f 90%, #4a7c00 90%, #4a7c00 95%, #396d0f 95%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #4a7c00 5%, #396d0f 5%, #396d0f 10%, #4a7c00 10%, #4a7c00 15%, #396d0f 15%, #396d0f 20%, #4a7c00 20%, #4a7c00 25%, #396d0f 25%, #396d0f 30%, #4a7c00 30%, #4a7c00 35%, #396d0f 35%, #396d0f 40%, #4a7c00 40%, #4a7c00 45%, #396d0f 45%, #396d0f 50%, #4a7c00 50%, #4a7c00 55%, #396d0f 55%, #396d0f 60%, #4a7c00 60%, #4a7c00 65%, #396d0f 65%, #396d0f 70%, #4a7c00 70%, #4a7c00 75%, #396d0f 75%, #396d0f 80%, #4a7c00 80%, #4a7c00 85%, #396d0f 85%, #396d0f 90%, #4a7c00 90%, #4a7c00 95%, #396d0f 95%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #4a7c00 5%, #396d0f 5%, #396d0f 10%, #4a7c00 10%, #4a7c00 15%, #396d0f 15%, #396d0f 20%, #4a7c00 20%, #4a7c00 25%, #396d0f 25%, #396d0f 30%, #4a7c00 30%, #4a7c00 35%, #396d0f 35%, #396d0f 40%, #4a7c00 40%, #4a7c00 45%, #396d0f 45%, #396d0f 50%, #4a7c00 50%, #4a7c00 55%, #396d0f 55%, #396d0f 60%, #4a7c00 60%, #4a7c00 65%, #396d0f 65%, #396d0f 70%, #4a7c00 70%, #4a7c00 75%, #396d0f 75%, #396d0f 80%, #4a7c00 80%, #4a7c00 85%, #396d0f 85%, #396d0f 90%, #4a7c00 90%, #4a7c00 95%, #396d0f 95%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a7c00', endColorstr='#396d0f', GradientType=0);
+  /* IE6-9 */
+
 }
 header h1 {
   position: absolute;
@@ -603,12 +684,17 @@ header h1:after {
   font-family: 'Playball', serif;
   font-size: 96px;
   color: red;
-  text-shadow: 0 0 10px #000;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+header h1:after:first-letter {
+  display: block;
+  clear: both;
 }
 header h2 {
   font-family: 'Playball', sans-serif;
   font-weight: 300;
-  color: #ffffff;
+  color: #cfe0b3;
+  margin: 30px 0 0 150px;
 }
 .intro {
   display: block;
@@ -622,6 +708,12 @@ header h2 {
 
   /* PITCHING RUBBER */
 
+}
+.summary p {
+  font: 300 32px/1.5em 'Playball';
+  color: #cfe0b3;
+  margin-top: 30px;
+  margin-left: 160px;
 }
 .summary:before,
 .summary:after {
@@ -682,6 +774,12 @@ header h2 {
   /*.rotate(45deg);*/
 
 }
+.summary p:last-child {
+  /* download file */
+
+  font: 300 21px 'Roboto';
+  margin: 0 0 0 0;
+}
 .summary p:last-child:before {
   top: 513.359px;
   left: 513.359px;
@@ -693,6 +791,9 @@ header h2 {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 10;
+  -webkit-box-shadow: 0 0 5px #603a02;
+  -moz-box-shadow: 0 0 5px #603a02;
+  box-shadow: 0 0 5px #603a02;
 }
 .preamble {
   /* First Base */
