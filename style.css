@@ -554,6 +554,7 @@ abbr {
   border-bottom: none;
 }
 /* specific divs */
+/* INFIELD */
 .page-wrapper {
   position: absolute;
   top: 100px;
@@ -609,11 +610,14 @@ header h2 {
   font-weight: 300;
   color: #ffffff;
 }
-/* INFIELD */
 .intro {
   display: block;
 }
 .summary {
+  /* Home Plate Dirt */
+
+  /* PITCHING MOUND */
+
   /* HOME BASE */
 
   /* PITCHING RUBBER */
@@ -636,6 +640,14 @@ header h2 {
   height: 216px;
   top: -108px;
   left: -108px;
+}
+.summary:after {
+  width: 216px;
+  height: 216px;
+  top: 500px;
+  left: 500px;
+  margin-left: -108px;
+  margin-top: -108px;
 }
 .summary p {
   display: block;

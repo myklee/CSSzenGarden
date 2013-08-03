@@ -35,6 +35,8 @@
 @globalFontColor: rgba(255,255,255,1);
 
 @baseTS: 5px 5px 0 rgba(0,0,0,.15);
+
+@baseShadow: 0 0 16px #7c4a03;
 /* basic elements */
 html {
 	margin: 0;
@@ -81,6 +83,7 @@ abbr {
 
 
 /* specific divs */
+/* INFIELD */
 .page-wrapper { 
 	position: absolute;
 	top: 100px;
@@ -118,7 +121,7 @@ header {
 		color:@globalFontColor;
 	}
 }
-/* INFIELD */
+
 .intro {
 	display: block;
 }
@@ -131,11 +134,22 @@ header {
 		.border-radius(50%);
 		/*z-index: 10;*/
 	}
+	/* Home Plate Dirt */
 	&:before {
 		.square(216px);
 		top:-108px;
 		left:-108px;
 	}
+	/* PITCHING MOUND */
+	&:after {
+		.square(216px);
+		top:500px;
+		left:500px;
+		margin-left:-108px;
+		margin-top:-108px;
+
+	}
+
 	p {
 		display: block;
 
@@ -147,6 +161,7 @@ header {
 			display: block;
 			background-color: white;
 			z-index: 10;
+
 		}
 	}
 	/* HOME BASE */
