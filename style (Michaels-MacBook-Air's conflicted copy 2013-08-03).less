@@ -35,6 +35,7 @@
 		content:'';
 		position: absolute;
 		display: block;
+		/*z-index: 10;*/
 	}
 }
 
@@ -64,16 +65,13 @@ body {
 	background: #4a7c00;
 	text-shadow:@bodyTS;
 
-	/*-webkit-backface-visibility: hidden;*/
+
 }
 
 aside {
-	position: absolute;
-	top:200px;
-	right:0px;
-	background-color: #526F35;
-	.box-shadow(0 0 30px rgba(0,0,0,0.33));
-	padding:30px 0;
+	position: fixed;
+	top:100px;
+	right:10px;
 }
 h1,h2,h3,p { 
 	max-width: 66%;
@@ -82,8 +80,15 @@ h1,h2,h3,p {
 	line-height: 1.33em;
 }
 
+h3 { 
+	font-size: 32px;
+	position: absolute;
+
+}
 p {
 	font-size: 18px;
+
+	margin:100px;
 }
 /* links */
 a {
@@ -107,13 +112,16 @@ abbr {
 	position: absolute;
 	top: 150px;
 	left: 150px;
-	border-top:@baseLines;
-	border-left:@baseLines;
+	/*background: #587c19;*/
+	/*border:4px solid rgba(255,255,255,.33);*/
+		border-top:@baseLines;
+		border-left:@baseLines;
 
 
 	.square(1080px); 
 	.before-after;
 	z-index: -1;
+	/*.box-shadow(0 0 25px #4a7c00);*/
 	&:before {
 		top:0;
 		left:0;
@@ -164,28 +172,24 @@ header {
 		display: block;
 
 		.before-after;
-
-		/* strike-through */
 		&:before {
 			content:'^';
-			line-height:7rem;
 			color:#c00;
-			.absolute(60px, auto, auto, 190px, 2);
-			width:170px;
-			height:8.5px;
+			.absolute(60px, auto, auto, 200px, 2);
+			width:160px;
+			height:5px;
 			text-shadow:none;
-			background-color: @globalFontColor;
-			background-color: rgba(255,255,255,1);
-			color: rgba(255,255,255,1);
 
+			background-color: @globalFontColor;
+			background-color: #c00;
+			/*.box-shadow(5px 5px 0 rgba(0,0,0,.15));*/
 		}
-		/* Correction */
 		&:after {
-			.absolute(65px, auto, auto, 210px, 2);
+			.absolute(75px, auto, auto, 210px, 2);
 			content:'Ball';
 			font-family: 'Playball', serif;
 			font-size: 96px;
-			color: rgba(255,255,255,1);
+			color: #c00;
 			text-shadow:none;
 
 			/*text-shadow: 0 0 4px rgba(255,255,255,0.6);*/
@@ -199,7 +203,7 @@ header {
 	h2 {
 		font-family: 'Simonetta', sans-serif;
 		text-transform: uppercase;
-		font-size:32px;
+		font-size:42px;
 		font-weight: 300;
 		letter-spacing: 3px;
 		color:@globalFontColor;
@@ -226,6 +230,7 @@ header {
 		display: block;
 		background-color: @dirtBg;
 		.border-radius(50%);
+		/*z-index: 10;*/
 	}
 	/* Home Plate Dirt */
 	&:before {
@@ -240,7 +245,6 @@ header {
 		left:500px;
 		margin-left:-108px;
 		margin-top:-108px;
-		.box-shadow(0 0 70px #c07719 inset);
 
 	}
 
@@ -279,8 +283,8 @@ header {
 	p:last-child {
 
 		/* download file */
-		/*font:300 21px 'Roboto';*/
-		margin:0px 0 240px 280px;
+		font:300 21px 'Roboto';
+		margin:-60px 0 240px 280px;
 		
 		&:before {
 			top:513.359px;
@@ -295,13 +299,7 @@ header {
 	}
 	
 }
-/* MAIN CONTENT */
-.main, .preamble {
-	h3 { 
-		font-size: 32px;
-		/*position: absolute;*/
-	}
-}
+
 .preamble {
 	h3 {
 		margin:-50px 0 0 40px;
@@ -390,12 +388,10 @@ header {
 	p {
 	}
 }
-
+/* MAIN CONTENT */
 .main {
 	position: absolute;
 	top:800px;
-
-	
 }
 
 
