@@ -502,48 +502,12 @@ you can use the generic selector below, but it's slower:
   content: "\e06d";
 }
 /* decent fonts */
-@font-face {
-  font-family: 'Averia';
-  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/af38150b362561bdbfb36265336fa2b1/AveriaBold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Averia';
-  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/227b245e968a844982fccb2201e87a37/AveriaBoldItalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Averia';
-  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/92d926a8b004c607f96784e453f0b7fa/AveriaGruesa.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Averia';
-  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/a3a28d5cd3ff6719302066b28d5ffebf/AveriaItalic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Averia';
-  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/2e4799893da402448d36904376b46154/AveriaLight.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Averia';
-  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/eadbd6eeba74e6e2817ee281fdee1308/AveriaLightItalic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Averia';
-  src: url('/assets/fonts/averia/dc61396d0f8e3b0130933b1227022c20/912c25a8d8247523a59280df83f09841/AveriaRegular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+/* basic elements */
+/* links */
+/* INFIELD  - page wrapper*/
+/* Summary */
+/* MAIN CONTENT */
+/*@import url('http://openfontlibrary.org/face/averia');*/
 .hide-text {
   text-indent: 100%;
   white-space: nowrap;
@@ -573,26 +537,34 @@ body {
   /*-webkit-backface-visibility: hidden;*/
 
 }
-aside {
+aside.sidebar {
+  display: none;
   position: absolute;
-  top: 200px;
-  right: 0px;
-  /*background-color: #526F35;*/
-
-  /*.box-shadow(0 0 30px rgba(0,0,0,0.33));*/
-
+  top: 100px;
+  left: -150px;
   padding: 30px 0;
 }
-aside h3 {
+aside.sidebar h3 {
   font-size: 21px;
 }
-aside a {
-  font: 62.5% 'Roboto', 'Open Sans' sans-serif;
-  font-size: 14px;
+aside.sidebar a {
+  font: 1rem 'Roboto', 'Open Sans' sans-serif;
+  /*font-size: 14px;*/
+
 }
-aside .wrapper > div {
+aside.sidebar a.designer-name {
+  font-size: .6rem;
+}
+aside.sidebar .wrapper > div {
   /*float:left;*/
 
+}
+aside.sidebar ul {
+  margin: 0;
+  padding: 0 0 0 0;
+}
+.design-name {
+  display: block;
 }
 h1,
 h2,
@@ -604,12 +576,12 @@ p {
   line-height: 1.33em;
 }
 p {
-  font-size: 18px;
+  font: 300 24px/1.5em 'Simonetta';
 }
 /* links */
 a {
   text-shadow: none;
-  color: #fff;
+  color: #eee;
 }
 a:hover {
   color: #fff;
@@ -619,14 +591,17 @@ abbr {
 }
 /* specific divs */
 /* INFIELD */
+/*@baseLines: 4px solid rgba(255,255,255,.66);*/
 .page-wrapper {
   position: absolute;
   top: 150px;
   left: 150px;
-  border-top: 4px solid rgba(255, 255, 255, 0.66);
-  border-left: 4px solid rgba(255, 255, 255, 0.66);
+  border-top: 1px dotted rgba(255, 255, 255, 0.33);
+  border-left: 1px dotted rgba(255, 255, 255, 0.33);
   width: 1080px;
   height: 1080px;
+  /* infield mow pattern */
+
   z-index: -1;
 }
 .page-wrapper:before,
@@ -692,46 +667,41 @@ section.intro:before {
 header {
   /* batters box */
 
-}
-header:before,
-header:after {
-  content: '';
-  position: absolute;
-  display: block;
-}
-header:before,
-header:after {
-  width: 48px;
-  height: 72px;
-  border: 4px solid rgba(255, 255, 255, 0.33);
-  z-index: 100;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-header:before {
-  top: -65px;
-  left: 12px;
-  border-left: none;
-}
-header:after {
-  top: 0px;
-  left: -52px;
-  border-right: none;
+  /*
+	.before-after;
+	&:before, &:after {
+		width:48px;
+		height:72px;	
+		border: 4px solid rgba(255,255,255,.33);
+		z-index: 100;		
+		.rotate(-45deg);
+	}
+	&:before {
+		top:-65px;	
+		left:12px;
+		border-left: none;
+	}
+	&:after {
+		top:-0px;	
+		left:-52px;
+		border-right: none;
+	}
+	*/
+
 }
 header h1,
 header h2 {
   text-align: center;
 }
 header h1 {
-  font-size: 96px;
-  position: absolute;
-  top: -130px;
-  left: 180px;
+  font-size: 128px;
+  position: relative;
   text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
   display: block;
+  width: 100%;
+  margin-top: -150px;
+  text-align: center;
+  text-indent: -99999px;
   /* strike-through */
 
   /* Correction */
@@ -743,44 +713,49 @@ header h1:after {
   position: absolute;
   display: block;
 }
-header h1:before {
-  content: '^';
+header h1:after {
+  content: '';
   line-height: 7rem;
   color: #c00;
   position: absolute;
   top: 60px;
   right: auto;
   bottom: auto;
-  left: 190px;
+  left: 230px;
   z-index: 2;
-  width: 170px;
-  height: 8.5px;
-  text-shadow: none;
+  width: 470px;
+  height: 16px;
+  /*text-shadow:none;*/
+
   background-color: #cfe0b3;
   background-color: #ffffff;
   color: #ffffff;
+  -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+  display: none;
 }
-header h1:after {
-  position: absolute;
-  top: 65px;
-  right: auto;
-  bottom: auto;
-  left: 210px;
-  z-index: 2;
-  content: 'Ball';
+header h1:before {
+  text-indent: 0;
+  text-align: center;
+  /*.absolute(-100px, auto, auto, 240px, 2);*/
+
+  content: 'CSS Ball Park';
   font-family: 'Playball', serif;
-  font-size: 96px;
+  font-size: 112px;
   color: #ffffff;
-  text-shadow: none;
+  /*text-shadow:none;*/
+
   /*text-shadow: 0 0 4px rgba(255,255,255,0.6);*/
 
-  -webkit-transform: rotate(-15deg);
-  -moz-transform: rotate(-15deg);
-  -ms-transform: rotate(-15deg);
-  -o-transform: rotate(-15deg);
-  transform: rotate(-15deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  margin: 0 0 0 20px;
 }
-header h1:after:first-letter {
+header h1:before:first-letter {
   display: block;
   clear: both;
 }
@@ -791,10 +766,10 @@ header h2 {
   font-weight: 300;
   letter-spacing: 3px;
   color: #cfe0b3;
-  /*.opacity(33);*/
+  /*margin: 100px 0 0 150px;*/
 
-  margin: 60px 0 0 150px;
 }
+/* Summary */
 .intro {
   display: block;
 }
@@ -809,10 +784,10 @@ header h2 {
 
 }
 .summary p {
-  font: 300 24px/1.5em 'Simonetta';
   color: #cfe0b3;
   margin-top: 0;
-  margin-left: 150px;
+  /*margin-left:150px;*/
+
 }
 .summary:before,
 .summary:after {
@@ -885,9 +860,12 @@ header h2 {
 .summary p:last-child {
   /* download file */
 
-  /*font:300 21px 'Roboto';*/
-
-  margin: 0px 0 240px 280px;
+  font: 300 16px 'Roboto';
+  margin: 20px 0 240px 320px;
+  padding: 30px;
+  width: auto;
+  display: inline-block;
+  background: #14782d;
 }
 .summary p:last-child:before {
   top: 513.359px;
@@ -905,13 +883,24 @@ header h2 {
   box-shadow: 0 0 5px #603a02;
 }
 /* MAIN CONTENT */
+.main,
+.preamble {
+  padding-top: 300px;
+  text-align: center;
+}
 .main h3,
 .preamble h3 {
-  font-size: 32px;
+  font-size: 48px;
   /*position: absolute;*/
 
 }
 .preamble {
+  /* infield dirt */
+
+  /* first base side dirt */
+
+  /* third base side dirt */
+
   /* First Base */
 
   /* Second Base */
@@ -919,14 +908,44 @@ header h2 {
   /* Third Base */
 
 }
+.preamble:before,
+.preamble:after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+.preamble:before,
+.preamble:after {
+  background-color: #af8843;
+}
+.preamble:before {
+  height: 360px;
+  width: 1080px;
+  top: 1050px;
+  left: 0px;
+  z-index: 0;
+}
+.preamble:after {
+  height: 1410px;
+  width: 360px;
+  top: 0;
+  right: -330px;
+  z-index: 0;
+  -webkit-border-bottom-right-radius: 360px;
+  -moz-border-radius-bottomright: 360px;
+  border-bottom-right-radius: 360px;
+}
 .preamble h3 {
-  margin: -175px 0 0 40px;
+  margin: -175px auto 0 auto;
 }
 .preamble p {
   font-family: 'Simonetta';
   display: block;
-  margin: 0 0 20px 40px;
-  width: 300px;
+  margin: 0 auto;
+  /*margin:0 0 20px 40px;*/
+
+  /*width:300px;	*/
+
 }
 .preamble p:before {
   content: '';
@@ -938,6 +957,7 @@ header h2 {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
+  z-index: 1;
 }
 .preamble p:nth-child(2):before {
   bottom: 0;
@@ -955,6 +975,7 @@ header h2 {
 .participation p,
 .benefits p,
 .requirements p {
+  font-family: 'Simonetta';
   display: block;
 }
 /*2nd base */

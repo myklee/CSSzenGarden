@@ -19,10 +19,19 @@
 @import url('http://fonts.googleapis.com/css?family=Playball');
 @import url('http://fonts.googleapis.com/css?family=Rye');
 
+/* basic elements */
+/* links */
+/* INFIELD  - page wrapper*/
+/* Summary */
+/* MAIN CONTENT */
 
 
 
-@import url('http://openfontlibrary.org/face/averia');
+
+
+
+
+/*@import url('http://openfontlibrary.org/face/averia');*/
 
 .hide-text {
 	text-indent: 100%;
@@ -49,6 +58,9 @@
 @baseShadow: 0 0 16px #7c4a03;
 
 @dirtBg:#af8843;
+
+
+
 /* basic elements */
 html {
 	margin: 0;
@@ -67,26 +79,36 @@ body {
 	/*-webkit-backface-visibility: hidden;*/
 }
 
-aside {
+aside.sidebar {
+	display:none;
 	position: absolute;
-	top:200px;
-	right:0px;
-	/*background-color: #526F35;*/
-	/*.box-shadow(0 0 30px rgba(0,0,0,0.33));*/
+	top:100px;
+	left:-150px;
 	padding:30px 0;
 	h3 {
 		font-size: 21px;
 	}
 	a {
-		font: 62.5% 'Roboto', 'Open Sans' sans-serif;
-		font-size: 14px;
+		font: 1rem 'Roboto', 'Open Sans' sans-serif;
+		/*font-size: 14px;*/
+		&.designer-name {
+			font-size:.6rem;
+		}
 	}
 	.wrapper {
 		> div {
 			/*float:left;*/
 		}
 	}
+	ul {
+		margin:0;
+		padding:0 0 0 0;
+	}
 }
+.design-name {
+	display:block;
+}
+
 h1,h2,h3,p { 
 	max-width: 66%;
 	margin:0 auto;
@@ -95,12 +117,13 @@ h1,h2,h3,p {
 }
 
 p {
-	font-size: 18px;
+	font:300 24px/1.5em 'Simonetta';
+
 }
 /* links */
 a {
 	text-shadow:none;
-	color:#fff;
+	color:#eee;
 	&:hover {
 		color:#fff;
 	}
@@ -113,18 +136,23 @@ abbr {
 
 
 /* specific divs */
+
 /* INFIELD */
-@baseLines: 4px solid rgba(255,255,255,.66);
+
+/*@baseLines: 4px solid rgba(255,255,255,.66);*/
+@baseLines: 1px dotted rgba(255,255,255,.33);
+
 .page-wrapper { 
 	position: absolute;
 	top: 150px;
 	left: 150px;
 	border-top:@baseLines;
 	border-left:@baseLines;
-
-
 	.square(1080px); 
 	.before-after;
+
+	/* infield mow pattern */
+
 	z-index: -1;
 	&:before {
 		top:0;
@@ -175,6 +203,7 @@ section.intro {
 header {
 
 	/* batters box */
+	/*
 	.before-after;
 	&:before, &:after {
 		width:48px;
@@ -187,54 +216,59 @@ header {
 		top:-65px;	
 		left:12px;
 		border-left: none;
-
 	}
 	&:after {
 		top:-0px;	
 		left:-52px;
 		border-right: none;
-
 	}
+	*/
 
 
 	h1, h2 {
 		text-align: center;
 	}
 	h1 {
-		font-size:96px;
-		position: absolute;
-		top:-130px;
-		left:180px;
+		font-size:128px;
+		position: relative;
 		text-shadow: @baseTS;
 		display: block;
-
+		width:100%;
+		margin-top:-150px;
+		text-align: center;
+		text-indent:-99999px;
 		.before-after;
 
 		/* strike-through */
-		&:before {
-			content:'^';
+		&:after {
+			content:'';
 			line-height:7rem;
 			color:#c00;
-			.absolute(60px, auto, auto, 190px, 2);
-			width:170px;
-			height:8.5px;
-			text-shadow:none;
+			.absolute(60px, auto, auto, 230px, 2);
+			width:470px;
+			height:16px;
+			/*text-shadow:none;*/
 			background-color: @globalFontColor;
 			background-color: rgba(255,255,255,1);
 			color: rgba(255,255,255,1);
+			.box-shadow(@baseTS);
+			display: none;
 
 		}
 		/* Correction */
-		&:after {
-			.absolute(65px, auto, auto, 210px, 2);
-			content:'Ball';
-			font-family: 'Playball', serif;
-			font-size: 96px;
-			color: rgba(255,255,255,1);
-			text-shadow:none;
+		&:before {
+			text-indent:0;
+			text-align: center;
 
+			/*.absolute(-100px, auto, auto, 240px, 2);*/
+			content:'CSS Ball Park';
+			font-family: 'Playball', serif;
+			font-size: 112px;
+			color: rgba(255,255,255,1);
+			/*text-shadow:none;*/
 			/*text-shadow: 0 0 4px rgba(255,255,255,0.6);*/
-			.rotate(-15deg);
+			.rotate(-5deg);
+			margin:0 0 0 20px;
 			&:first-letter {
 				display:block;
 				clear:both;
@@ -248,21 +282,19 @@ header {
 		font-weight: 300;
 		letter-spacing: 3px;
 		color:@globalFontColor;
-		/*.opacity(33);*/
-		margin: 60px 0 0 150px;
+		/*margin: 100px 0 0 150px;*/
 
 	}
 }
-
+/* Summary */
 .intro {
 	display: block;
 }
 .summary {
 	p {
-		font:300 24px/1.5em 'Simonetta';
 		color: @globalFontColor;
 		margin-top:0;
-		margin-left:150px;
+		/*margin-left:150px;*/
 
 	}
 	&:before, &:after {
@@ -326,8 +358,12 @@ header {
 	p:last-child {
 
 		/* download file */
-		/*font:300 21px 'Roboto';*/
-		margin:0px 0 240px 280px;
+		font:300 16px 'Roboto';
+		margin:20px 0 240px 320px;
+		padding:30px;
+		width:auto;
+		display:inline-block;
+		background:rgba(20,120,45,1);
 		
 		&:before {
 			top:513.359px;
@@ -344,20 +380,47 @@ header {
 }
 /* MAIN CONTENT */
 .main, .preamble {
+	padding-top:300px;
+	text-align: center;
+
 	h3 { 
-		font-size: 32px;
+		font-size: 48px;
 		/*position: absolute;*/
 	}
-}
+}    
 .preamble {
+	/* infield dirt */
+	.before-after;
+	&:before, &:after {
+		background-color:@dirtBg;
+	} 
+	/* first base side dirt */
+	&:before {
+		height:360px;
+		width:1080px;
+		top:1050px;
+		left:0px;
+		z-index: 0;
+	}
+	/* third base side dirt */
+	&:after {
+		height:1410px;
+		width:360px;
+		top:0;
+		right:-330px;
+		z-index: 0;
+		.border-bottom-right-radius(360px);
+	}
 	h3 {
-		margin:-175px 0 0 40px;
+		margin:-175px auto 0 auto	;
+
 	}
 	p {
 		font-family: 'Simonetta';
 		display: block;
-		margin:0 0 20px 40px;
-		width:300px;	
+		margin:0 auto;
+		/*margin:0 0 20px 40px;*/
+		/*width:300px;	*/
 		&:before {
 			content:'';
 			position: absolute;
@@ -365,6 +428,7 @@ header {
 			background-color: white;
 			.square(15px);
 			.border-radius(1px);
+			z-index: 1;
 		}
 	}
 	/* First Base */
@@ -394,11 +458,15 @@ header {
 	}
 }
 
+.main {
 
+}
 
 .explanation, .participation, .benefits, .requirements {
 
 	p {
+		font-family: 'Simonetta';
+
 		display: block;
 	}
 }
