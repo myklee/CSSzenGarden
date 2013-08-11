@@ -10,7 +10,7 @@
 /* dependencies Thanks to Twitter Bootstrap */
 @import "mixins.less";
 @import "variables.less";
-@import "icons.less";
+/*@import "icons.less";*/
 /* decent fonts */
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,300italic');
 @import url('http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic');
@@ -58,7 +58,7 @@
 @baseShadow: 0 0 16px #7c4a03;
 
 @dirtBg:#af8843;
-
+/*@inDepth: 500;*/
 
 
 /* basic elements */
@@ -80,13 +80,11 @@ body {
 }
 
 aside.sidebar {
-	display:none;
-	position: absolute;
-	top:100px;
-	left:-150px;
-	padding:30px 0;
+	/*display:none;*/
+	
 	h3 {
 		font-size: 21px;
+		text-align: left;
 	}
 	a {
 		font: 1rem 'Roboto', 'Open Sans' sans-serif;
@@ -100,17 +98,30 @@ aside.sidebar {
 			/*float:left;*/
 		}
 	}
-	ul {
-		margin:0;
-		padding:0 0 0 0;
-	}
+	
 }
 .design-name {
 	display:block;
 }
+.design-selection, .design-archives, .zen-resources {
+	position: absolute;
+}
+.design-selection {
+	top:350px;
+	left:120px;
+}
+.design-archives {
+	left:700px;
+	top:350px;
+	
+}
+.zen-resources {
+	left:700px;
+	top:500px;
+}
 
 h1,h2,h3,p { 
-	max-width: 66%;
+	max-width: 75%;
 	margin:0 auto;
 	font-weight: 300;
 	line-height: 1.33em;
@@ -123,6 +134,7 @@ p {
 /* links */
 a {
 	text-shadow:none;
+	text-decoration: none;
 	color:#eee;
 	&:hover {
 		color:#fff;
@@ -255,20 +267,16 @@ header {
 			display: none;
 
 		}
-		/* Correction */
+		/* CSS Ball ParkTitle Correction */
 		&:before {
 			text-indent:0;
 			text-align: center;
-
-			/*.absolute(-100px, auto, auto, 240px, 2);*/
-			content:'CSS Ball Park';
+			content:'CSS Diamond';
 			font-family: 'Playball', serif;
 			font-size: 112px;
 			color: rgba(255,255,255,1);
-			/*text-shadow:none;*/
-			/*text-shadow: 0 0 4px rgba(255,255,255,0.6);*/
 			.rotate(-5deg);
-			margin:0 0 0 20px;
+			margin:0 0 0 70px;
 			&:first-letter {
 				display:block;
 				clear:both;
@@ -282,8 +290,6 @@ header {
 		font-weight: 300;
 		letter-spacing: 3px;
 		color:@globalFontColor;
-		/*margin: 100px 0 0 150px;*/
-
 	}
 }
 /* Summary */
@@ -294,7 +300,6 @@ header {
 	p {
 		color: @globalFontColor;
 		margin-top:0;
-		/*margin-left:150px;*/
 
 	}
 	&:before, &:after {
@@ -354,17 +359,17 @@ header {
 			/*.rotate(45deg);*/
 		}
 	}
-	/* PITCHING RUBBER */
+	
 	p:last-child {
-
 		/* download file */
-		font:300 16px 'Roboto';
-		margin:20px 0 240px 320px;
-		padding:30px;
-		width:auto;
-		display:inline-block;
-		background:rgba(20,120,45,1);
-		
+		font: 300 18px 'Simonetta';
+		margin: 50px auto 240px auto;
+		padding: 30px;
+		width: 325px;
+		display: block;
+		background: #14782d;
+
+		/* PITCHING RUBBER */
 		&:before {
 			top:513.359px;
 			left:513.359px;
@@ -380,15 +385,18 @@ header {
 }
 /* MAIN CONTENT */
 .main, .preamble {
-	padding-top:300px;
 	text-align: center;
-
 	h3 { 
 		font-size: 48px;
-		/*position: absolute;*/
 	}
 }    
+.main {
+	position: absolute;
+	top:1100px;
+}
 .preamble {
+	margin:0 auto 0 auto;
+	padding-top:160px;
 	/* infield dirt */
 	.before-after;
 	&:before, &:after {
@@ -396,31 +404,32 @@ header {
 	} 
 	/* first base side dirt */
 	&:before {
-		height:360px;
+		height:500px;
 		width:1080px;
 		top:1050px;
-		left:0px;
+		left:-20px;
 		z-index: 0;
+		.border-bottom-left-radius(100px);
+		.border-top-left-radius(5px);
 	}
 	/* third base side dirt */
 	&:after {
-		height:1410px;
-		width:360px;
-		top:0;
-		right:-330px;
+		height:1570px;
+		width:500px;
+		top:-20px;
+		right:-460px;
 		z-index: 0;
 		.border-bottom-right-radius(360px);
-	}
-	h3 {
-		margin:-175px auto 0 auto	;
+		.border-top-right-radius(100px);
+		.border-top-left-radius(5px);
 
 	}
 	p {
-		font-family: 'Simonetta';
+		font:300 21px/1.5em 'Simonetta';
 		display: block;
-		margin:0 auto;
-		/*margin:0 0 20px 40px;*/
-		/*width:300px;	*/
+		margin:10px auto 0 auto;
+
+		/* Bases global */
 		&:before {
 			content:'';
 			position: absolute;
@@ -458,36 +467,38 @@ header {
 	}
 }
 
-.main {
 
-}
-
-.explanation, .participation, .benefits, .requirements {
-
+.explanation, .participation, .benefits, .requirements, footer {
+	position: absolute;
+	width:640px;
+	text-align: left;
+	h3 {
+		font-size:32px;
+	}
 	p {
 		font-family: 'Simonetta';
-
+		font-size: 16px;
 		display: block;
 	}
 }
 /*2nd base */
-.explanation {
+.explanation {	
+	left:0px;
 	h3 {
-
 	}
 	p {
-		/*background: red;*/
 	}
 }
 .participation {
+	left:550px;
 	h3 {
 
 	}
 	p {
-		/*background: red;*/
 	}
 }
 .benefits {
+	top:500px;
 	h3 {
 		right:0;
 		top: 0;
@@ -497,6 +508,9 @@ header {
 	}
 }
 .requirements {
+	top:500px;
+	left:550px;
+	padding-bottom:100px;
 	h3 {
 		right:7.5px;
 		bottom:7.5px;
@@ -505,49 +519,160 @@ header {
 	p {
 	}
 }
+footer {
+	top:1200px;
+	padding:30px;
+	background-color: @dirtBg;
+	width:1600px;
+	a {
+		font-size:18px;
+	}
 
-.main {
-	position: absolute;
-	top:800px;
-
-	
 }
 
-
 footer { 
+	/*bottom:0;*/
 	text-align: center; 
 }
 footer a:link, footer a:visited { 
 	margin-right: 20px; 
 }
 
-.sidebar {
-	
-}
-.sidebar .wrapper { 
-
-}
-.sidebar h3.select { 
-}
-.sidebar h3.archives { 
-}
-.sidebar h3.resources { 
-}
 
 
-.sidebar ul {
-	
-}
-.sidebar li {
-	
-}
-.sidebar li a:link {
-	
-}
-.sidebar li a:visited {
-	
+@media all and (max-width: 1024px) {
+	body {
+
+	}
+	.page-wrapper {
+		top:75px;
+		left:75px;
+		.square(540px);
+	}
+	header {
+		h1 {
+			margin-top:-20px;
+			/* Correction */
+			&:before {
+				font-size: 60px;
+				margin:0 0 0 0;
+			}
+		}
+		h2 {
+			font-size: 21px;
+			margin-top:-30px;
+
+		}
+	}
+	.summary {
+		padding-top:180px;
+		/* Home Plate Dirt */
+		&:before {
+			.square(216/2px);
+			top:-108/2px;
+			left:-108/2px;
+		}
+		/* PITCHING MOUND */
+		&:after {
+			.square(216/2px);
+			top:500/2px;
+			left:500/2px;
+			margin-left:-108/2px;
+			margin-top:-108/2px;
+		}
+
+
+		/* HOME BASE */
+		p:first-child {	
+			padding-top:30/2px;
+			&:before {
+				top:1/2px;
+				left:5/2px;
+				height:17/2px;
+				width: 8.5/2px;
+			}
+			&:after {
+				.square(12/2px);
+			}
+		}
+		/* PITCHING RUBBER */
+		p:last-child {		
+			&:before {
+				top:513.359/2px;
+				left:513.359/2px;
+				height:24/2px;
+				width: 6/2px;
+			}
+		}
+
+
+	}
+
+	.preamble {
+		/* infield dirt */
+		.before-after;
+		&:before, &:after {
+			background-color:@dirtBg;
+		} 
+		/* first base side dirt */
+		&:before {
+			height:500/2px;
+			width:1080/2px;
+			top:1050/2px;
+			left:-10px;
+			z-index: 0;
+			.border-bottom-left-radius(50px);
+		}
+		/* third base side dirt */
+		&:after {
+			height:1570/2px;
+			width:500/2px;
+			top:-10px;
+			right:-470/2px;
+			z-index: 0;
+			.border-bottom-right-radius(360/2px);
+			.border-top-right-radius(50px);
+
+		}
+		h3 {
+			margin:-175/2px auto 0 auto	;
+		}
+		p {
+			/* Bases global */
+			&:before {
+				.square(15/2px);
+
+			}
+		}
+		/* Second Base */
+		p:nth-child(3) {
+			&:before {
+				bottom:-7.5/2px;
+				right:-7.5/2px;
+			}
+
+
+		}
+	}
+	.explanation, .participation, .benefits, .requirements, footer {
+		position: relative;
+		left:0;
+		top:0;
+		bottom:0;
+		right:0;
+		width:auto;
+		text-align: left;
+		h3 {
+			font-size:32px;
+		}
+		p {
+			font-family: 'Simonetta';
+			font-size: 16px;
+			display: block;
+		}
+	}
+
 }
 
 
-.extra1 {
-}
+

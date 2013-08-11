@@ -66,441 +66,7 @@
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-/* icon fonts */
-@font-face {
-  font-family: 'icomoon';
-  src: url('../fonts/icomoon/icomoon.eot');
-  src: url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.svg#icomoon') format('svg'), url('../fonts/icomoon/icomoon.woff') format('woff'), url('../fonts/icomoon/icomoon.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-.icon-video,
-.icon-user-profile,
-.icon-list,
-.icon-list-big,
-.icon-laptop,
-.icon-blog,
-.icon-up,
-.icon-trophy,
-.icon-temp,
-.icon-teacher,
-.icon-tablet,
-.icon-settings,
-.icon-search,
-.icon-rss,
-.icon-portfolio,
-.icon-pin,
-.icon-phone,
-.icon-minimize,
-.icon-mailbox,
-.icon-logout,
-.icon-login,
-.icon-lock,
-.icon-location,
-.icon-location-map,
-.icon-image,
-.icon-home,
-.icon-group,
-.icon-grid,
-.icon-gear,
-.icon-gallery,
-.icon-filter,
-.icon-download,
-.icon-down,
-.icon-desktop,
-.icon-dashboard,
-.icon-chat,
-.icon-chalkboard,
-.icon-carousel,
-.icon-cal-number,
-.icon-cal-list,
-.icon-cal-grid,
-.icon-bullhorn,
-.icon-close,
-.icon-checkmark,
-.icon-minus,
-.icon-plus,
-.icon-attachment,
-.icon-flag,
-.icon-switch,
-.icon-mug,
-.icon-food,
-.icon-play,
-.icon-folder-open,
-.icon-folder,
-.icon-book,
-.icon-clock,
-.icon-tags,
-.icon-tag,
-.icon-bubble,
-.icon-bubbles,
-.icon-envelope,
-.icon-graduate,
-.icon-exclaim,
-.icon-dot-menu,
-.icon-earth,
-.icon-umbrella,
-.icon-download-2,
-.icon-upload,
-.icon-refresh,
-.icon-close-2,
-.icon-graduate2,
-.icon-book-open,
-.icon-book-turn,
-.icon-news,
-.icon-info,
-.icon-paint-format,
-.icon-minus-hover,
-.icon-plus-hover,
-.icon-check-hover,
-.icon-minus-2,
-.icon-plus-2,
-.icon-check,
-.icon-arrow-right,
-.icon-arrow-left,
-.icon-pupil-default-mug,
-.icon-close-hover,
-.icon-close-3,
-.icon-radio1,
-.icon-radio,
-.icon-close-window,
-.icon-popout,
-.icon-arrow-down,
-.icon-arrow-up,
-.icon-cc,
-.icon-checkmark-2,
-.icon-warning,
-.icon-film,
-.icon-lab,
-.icon-sort,
-.icon-edit,
-.icon-copy,
-.icon-user-plain,
-.icon-group-2 {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-.icon-video:before {
-  content: "\e000";
-}
-.icon-user-profile:before {
-  content: "\e002";
-}
-.icon-list:before {
-  content: "\e003";
-}
-.icon-list-big:before {
-  content: "\e004";
-}
-.icon-laptop:before {
-  content: "\e005";
-}
-.icon-blog:before {
-  content: "\e007";
-}
-.icon-up:before {
-  content: "\e008";
-}
-.icon-trophy:before {
-  content: "\e009";
-}
-.icon-temp:before {
-  content: "\e00a";
-}
-.icon-teacher:before {
-  content: "\e00b";
-}
-.icon-tablet:before {
-  content: "\e00c";
-}
-.icon-settings:before {
-  content: "\e00d";
-}
-.icon-search:before {
-  content: "\e00e";
-}
-.icon-rss:before {
-  content: "\e00f";
-}
-.icon-portfolio:before {
-  content: "\e011";
-}
-.icon-pin:before {
-  content: "\e012";
-}
-.icon-phone:before {
-  content: "\e013";
-}
-.icon-minimize:before {
-  content: "\e014";
-}
-.icon-mailbox:before {
-  content: "\e015";
-}
-.icon-logout:before {
-  content: "\e016";
-}
-.icon-login:before {
-  content: "\e017";
-}
-.icon-lock:before {
-  content: "\e018";
-}
-.icon-location:before {
-  content: "\e019";
-}
-.icon-location-map:before {
-  content: "\e01a";
-}
-.icon-image:before {
-  content: "\e01b";
-}
-.icon-home:before {
-  content: "\e01c";
-}
-.icon-group:before {
-  content: "\e01d";
-}
-.icon-grid:before {
-  content: "\e01e";
-}
-.icon-gear:before {
-  content: "\e020";
-}
-.icon-gallery:before {
-  content: "\e021";
-}
-.icon-filter:before {
-  content: "\e022";
-}
-.icon-download:before {
-  content: "\e023";
-}
-.icon-down:before {
-  content: "\e024";
-}
-.icon-desktop:before {
-  content: "\e025";
-}
-.icon-dashboard:before {
-  content: "\e026";
-}
-.icon-chat:before {
-  content: "\e027";
-}
-.icon-chalkboard:before {
-  content: "\e028";
-}
-.icon-carousel:before {
-  content: "\e029";
-}
-.icon-cal-number:before {
-  content: "\e02a";
-}
-.icon-cal-list:before {
-  content: "\e02b";
-}
-.icon-cal-grid:before {
-  content: "\e02c";
-}
-.icon-bullhorn:before {
-  content: "\e02d";
-}
-.icon-close:before {
-  content: "\e02e";
-}
-.icon-checkmark:before {
-  content: "\e02f";
-}
-.icon-minus:before {
-  content: "\e030";
-}
-.icon-plus:before {
-  content: "\e031";
-}
-.icon-attachment:before {
-  content: "\e032";
-}
-.icon-flag:before {
-  content: "\e033";
-}
-.icon-switch:before {
-  content: "\e034";
-}
-.icon-mug:before {
-  content: "\e035";
-}
-.icon-food:before {
-  content: "\e036";
-}
-.icon-play:before {
-  content: "\e053";
-}
-.icon-folder-open:before {
-  content: "\e037";
-}
-.icon-folder:before {
-  content: "\e04d";
-}
-.icon-book:before {
-  content: "\e046";
-}
-.icon-clock:before {
-  content: "\e039";
-}
-.icon-tags:before {
-  content: "\e03a";
-}
-.icon-tag:before {
-  content: "\e03b";
-}
-.icon-bubble:before {
-  content: "\e03c";
-}
-.icon-bubbles:before {
-  content: "\e03d";
-}
-.icon-envelope:before {
-  content: "\e03e";
-}
-.icon-graduate:before {
-  content: "\e01f";
-}
-.icon-exclaim:before {
-  content: "\e041";
-}
-.icon-dot-menu:before {
-  content: "\e042";
-}
-.icon-earth:before {
-  content: "\e043";
-}
-.icon-umbrella:before {
-  content: "\e045";
-}
-.icon-download-2:before {
-  content: "\e047";
-}
-.icon-upload:before {
-  content: "\e048";
-}
-.icon-refresh:before {
-  content: "\e006";
-}
-.icon-close-2:before {
-  content: "\e010";
-}
-.icon-graduate2:before {
-  content: "\e04e";
-}
-.icon-book-open:before {
-  content: "\e04f";
-}
-.icon-book-turn:before {
-  content: "\e050";
-}
-.icon-news:before {
-  content: "\e03f";
-}
-.icon-info:before {
-  content: "\e052";
-}
-.icon-paint-format:before {
-  content: "\e054";
-}
-.icon-minus-hover:before {
-  content: "\e04a";
-}
-.icon-plus-hover:before {
-  content: "\e04b";
-}
-.icon-check-hover:before {
-  content: "\e04c";
-}
-.icon-minus-2:before {
-  content: "\e056";
-}
-.icon-plus-2:before {
-  content: "\e057";
-}
-.icon-check:before {
-  content: "\e058";
-}
-.icon-arrow-right:before {
-  content: "\e05b";
-}
-.icon-arrow-left:before {
-  content: "\e05c";
-}
-.icon-pupil-default-mug:before {
-  content: "\e059";
-}
-.icon-close-hover:before {
-  content: "\e049";
-}
-.icon-close-3:before {
-  content: "\e055";
-}
-.icon-radio1:before {
-  content: "\e060";
-}
-.icon-radio:before {
-  content: "\e061";
-}
-.icon-close-window:before {
-  content: "\e05a";
-}
-.icon-popout:before {
-  content: "\e05f";
-}
-.icon-arrow-down:before {
-  content: "\e062";
-}
-.icon-arrow-up:before {
-  content: "\e063";
-}
-.icon-cc:before {
-  content: "\e064";
-}
-.icon-checkmark-2:before {
-  content: "\e065";
-}
-.icon-warning:before {
-  content: "\e066";
-}
-.icon-film:before {
-  content: "\e067";
-}
-.icon-lab:before {
-  content: "\e068";
-}
-.icon-sort:before {
-  content: "\e069";
-}
-.icon-edit:before {
-  content: "\e06a";
-}
-.icon-copy:before {
-  content: "\e06b";
-}
-.icon-user-plain:before {
-  content: "\e06c";
-}
-.icon-group-2:before {
-  content: "\e06d";
-}
+/*@import "icons.less";*/
 /* decent fonts */
 /* basic elements */
 /* links */
@@ -519,6 +85,7 @@ you can use the generic selector below, but it's slower:
   position: absolute;
   display: block;
 }
+/*@inDepth: 500;*/
 /* basic elements */
 html {
   margin: 0;
@@ -538,14 +105,12 @@ body {
 
 }
 aside.sidebar {
-  display: none;
-  position: absolute;
-  top: 100px;
-  left: -150px;
-  padding: 30px 0;
+  /*display:none;*/
+
 }
 aside.sidebar h3 {
   font-size: 21px;
+  text-align: left;
 }
 aside.sidebar a {
   font: 1rem 'Roboto', 'Open Sans' sans-serif;
@@ -559,18 +124,31 @@ aside.sidebar .wrapper > div {
   /*float:left;*/
 
 }
-aside.sidebar ul {
-  margin: 0;
-  padding: 0 0 0 0;
-}
 .design-name {
   display: block;
+}
+.design-selection,
+.design-archives,
+.zen-resources {
+  position: absolute;
+}
+.design-selection {
+  top: 350px;
+  left: 120px;
+}
+.design-archives {
+  left: 700px;
+  top: 350px;
+}
+.zen-resources {
+  left: 700px;
+  top: 500px;
 }
 h1,
 h2,
 h3,
 p {
-  max-width: 66%;
+  max-width: 75%;
   margin: 0 auto;
   font-weight: 300;
   line-height: 1.33em;
@@ -581,6 +159,7 @@ p {
 /* links */
 a {
   text-shadow: none;
+  text-decoration: none;
   color: #eee;
 }
 a:hover {
@@ -704,7 +283,7 @@ header h1 {
   text-indent: -99999px;
   /* strike-through */
 
-  /* Correction */
+  /* CSS Ball ParkTitle Correction */
 
 }
 header h1:before,
@@ -738,22 +317,16 @@ header h1:after {
 header h1:before {
   text-indent: 0;
   text-align: center;
-  /*.absolute(-100px, auto, auto, 240px, 2);*/
-
-  content: 'CSS Ball Park';
+  content: 'CSS Diamond';
   font-family: 'Playball', serif;
   font-size: 112px;
   color: #ffffff;
-  /*text-shadow:none;*/
-
-  /*text-shadow: 0 0 4px rgba(255,255,255,0.6);*/
-
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
   transform: rotate(-5deg);
-  margin: 0 0 0 20px;
+  margin: 0 0 0 70px;
 }
 header h1:before:first-letter {
   display: block;
@@ -766,8 +339,6 @@ header h2 {
   font-weight: 300;
   letter-spacing: 3px;
   color: #cfe0b3;
-  /*margin: 100px 0 0 150px;*/
-
 }
 /* Summary */
 .intro {
@@ -780,14 +351,10 @@ header h2 {
 
   /* HOME BASE */
 
-  /* PITCHING RUBBER */
-
 }
 .summary p {
   color: #cfe0b3;
   margin-top: 0;
-  /*margin-left:150px;*/
-
 }
 .summary:before,
 .summary:after {
@@ -860,12 +427,14 @@ header h2 {
 .summary p:last-child {
   /* download file */
 
-  font: 300 16px 'Roboto';
-  margin: 20px 0 240px 320px;
+  font: 300 18px 'Simonetta';
+  margin: 50px auto 240px auto;
   padding: 30px;
-  width: auto;
-  display: inline-block;
+  width: 325px;
+  display: block;
   background: #14782d;
+  /* PITCHING RUBBER */
+
 }
 .summary p:last-child:before {
   top: 513.359px;
@@ -885,16 +454,19 @@ header h2 {
 /* MAIN CONTENT */
 .main,
 .preamble {
-  padding-top: 300px;
   text-align: center;
 }
 .main h3,
 .preamble h3 {
   font-size: 48px;
-  /*position: absolute;*/
-
+}
+.main {
+  position: absolute;
+  top: 1100px;
 }
 .preamble {
+  margin: 0 auto 0 auto;
+  padding-top: 160px;
   /* infield dirt */
 
   /* first base side dirt */
@@ -919,32 +491,39 @@ header h2 {
   background-color: #af8843;
 }
 .preamble:before {
-  height: 360px;
+  height: 500px;
   width: 1080px;
   top: 1050px;
-  left: 0px;
+  left: -20px;
   z-index: 0;
+  -webkit-border-bottom-left-radius: 100px;
+  -moz-border-radius-bottomleft: 100px;
+  border-bottom-left-radius: 100px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-left-radius: 5px;
 }
 .preamble:after {
-  height: 1410px;
-  width: 360px;
-  top: 0;
-  right: -330px;
+  height: 1570px;
+  width: 500px;
+  top: -20px;
+  right: -460px;
   z-index: 0;
   -webkit-border-bottom-right-radius: 360px;
   -moz-border-radius-bottomright: 360px;
   border-bottom-right-radius: 360px;
-}
-.preamble h3 {
-  margin: -175px auto 0 auto;
+  -webkit-border-top-right-radius: 100px;
+  -moz-border-radius-topright: 100px;
+  border-top-right-radius: 100px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-left-radius: 5px;
 }
 .preamble p {
-  font-family: 'Simonetta';
+  font: 300 21px/1.5em 'Simonetta';
   display: block;
-  margin: 0 auto;
-  /*margin:0 0 20px 40px;*/
-
-  /*width:300px;	*/
+  margin: 10px auto 0 auto;
+  /* Bases global */
 
 }
 .preamble p:before {
@@ -971,25 +550,49 @@ header h2 {
   top: 0;
   right: 0;
 }
+.explanation,
+.participation,
+.benefits,
+.requirements,
+footer {
+  position: absolute;
+  width: 640px;
+  text-align: left;
+}
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3,
+footer h3 {
+  font-size: 32px;
+}
 .explanation p,
 .participation p,
 .benefits p,
-.requirements p {
+.requirements p,
+footer p {
   font-family: 'Simonetta';
+  font-size: 16px;
   display: block;
 }
 /*2nd base */
-.explanation p {
-  /*background: red;*/
-
+.explanation {
+  left: 0px;
 }
-.participation p {
-  /*background: red;*/
-
+.participation {
+  left: 550px;
+}
+.benefits {
+  top: 500px;
 }
 .benefits h3 {
   right: 0;
   top: 0;
+}
+.requirements {
+  top: 500px;
+  left: 550px;
+  padding-bottom: 100px;
 }
 .requirements h3 {
   right: 7.5px;
@@ -997,14 +600,173 @@ header h2 {
   /*.rotate(45deg);*/
 
 }
-.main {
-  position: absolute;
-  top: 800px;
+footer {
+  top: 1200px;
+  padding: 30px;
+  background-color: #af8843;
+  width: 1600px;
+}
+footer a {
+  font-size: 18px;
 }
 footer {
+  /*bottom:0;*/
+
   text-align: center;
 }
 footer a:link,
 footer a:visited {
   margin-right: 20px;
+}
+@media all and (max-width: 1024px) {
+  .page-wrapper {
+    top: 75px;
+    left: 75px;
+    width: 540px;
+    height: 540px;
+  }
+  header h1 {
+    margin-top: -20px;
+    /* Correction */
+  
+  }
+  header h1:before {
+    font-size: 60px;
+    margin: 0 0 0 0;
+  }
+  header h2 {
+    font-size: 21px;
+    margin-top: -30px;
+  }
+  .summary {
+    padding-top: 180px;
+    /* Home Plate Dirt */
+  
+    /* PITCHING MOUND */
+  
+    /* HOME BASE */
+  
+    /* PITCHING RUBBER */
+  
+  }
+  .summary:before {
+    width: 108px;
+    height: 108px;
+    top: -54px;
+    left: -54px;
+  }
+  .summary:after {
+    width: 108px;
+    height: 108px;
+    top: 250px;
+    left: 250px;
+    margin-left: -54px;
+    margin-top: -54px;
+  }
+  .summary p:first-child {
+    padding-top: 15px;
+  }
+  .summary p:first-child:before {
+    top: 0.5px;
+    left: 2.5px;
+    height: 8.5px;
+    width: 4.25px;
+  }
+  .summary p:first-child:after {
+    width: 6px;
+    height: 6px;
+  }
+  .summary p:last-child:before {
+    top: 256.6795px;
+    left: 256.6795px;
+    height: 12px;
+    width: 3px;
+  }
+  .preamble {
+    /* infield dirt */
+  
+    /* first base side dirt */
+  
+    /* third base side dirt */
+  
+    /* Second Base */
+  
+  }
+  .preamble:before,
+  .preamble:after {
+    content: '';
+    position: absolute;
+    display: block;
+  }
+  .preamble:before,
+  .preamble:after {
+    background-color: #af8843;
+  }
+  .preamble:before {
+    height: 250px;
+    width: 540px;
+    top: 525px;
+    left: -10px;
+    z-index: 0;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .preamble:after {
+    height: 785px;
+    width: 250px;
+    top: -10px;
+    right: -235px;
+    z-index: 0;
+    -webkit-border-bottom-right-radius: 180px;
+    -moz-border-radius-bottomright: 180px;
+    border-bottom-right-radius: 180px;
+    -webkit-border-top-right-radius: 50px;
+    -moz-border-radius-topright: 50px;
+    border-top-right-radius: 50px;
+  }
+  .preamble h3 {
+    margin: -87.5px auto 0 auto;
+  }
+  .preamble p {
+    /* Bases global */
+  
+  }
+  .preamble p:before {
+    width: 7.5px;
+    height: 7.5px;
+  }
+  .preamble p:nth-child(3):before {
+    bottom: -3.75px;
+    right: -3.75px;
+  }
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements,
+  footer {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    text-align: left;
+  }
+  .explanation h3,
+  .participation h3,
+  .benefits h3,
+  .requirements h3,
+  footer h3 {
+    font-size: 32px;
+  }
+  .explanation p,
+  .participation p,
+  .benefits p,
+  .requirements p,
+  footer p {
+    font-family: 'Simonetta';
+    font-size: 16px;
+    display: block;
+  }
 }
