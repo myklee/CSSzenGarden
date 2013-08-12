@@ -1,14 +1,8 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,300italic');
-
 @import url('http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic');
-
-@import url('http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300');
-
-@import url('http://fonts.googleapis.com/css?family=Simonetta:400,900,400italic,900italic');
 
 @import url('http://fonts.googleapis.com/css?family=Playball');
 
-@import url('http://fonts.googleapis.com/css?family=Rye');
+@import url('http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
 /* css Zen Garden default style v1.02 */
 /* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
 /* This file based on 'Tranquille' by Dave Shea */
@@ -66,8 +60,57 @@
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-/*@import "icons.less";*/
-/* decent fonts */
+/* font icons */
+/* icon fonts */
+@font-face {
+  font-family: 'icomoon';
+  src: url('http://myklee.com/csszengarden/fonts/icomoon.eot');
+  src: url('http://myklee.com/csszengarden/fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('http://myklee.com/csszengarden/fonts/icomoon.svg#icomoon') format('svg'), url('http://myklee.com/csszengarden/fonts/icomoon.woff') format('woff'), url('http://myklee.com/csszengarden/fonts/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-ampersand:before {
+  content: "\e000";
+}
+.icon-html5:before {
+  content: "\e001";
+}
+.icon-css3:before {
+  content: "\e002";
+}
+.icon-download:before {
+  content: "\e003";
+}
+.icon-cloud-download:before {
+  content: "\e004";
+}
+.icon-trophy:before {
+  content: "\e005";
+}
+.icon-earth:before {
+  content: "\e006";
+}
+.icon-html5-2:before {
+  content: "\e007";
+}
+.icon-cc:before {
+  content: "\e009";
+}
+.icon-mt:before {
+  content: "\e00a";
+}
+.icon-paperplane:before {
+  content: "\e008";
+}
+.icon-brush:before {
+  content: "\e00b";
+}
+.icon-paint-format:before {
+  content: "\e00c";
+}
+.icon-finder:before {
+  content: "\e00d";
+}
 /* basic elements */
 /* links */
 /* INFIELD  - page wrapper*/
@@ -92,21 +135,20 @@ html {
   padding: 0;
 }
 body {
-  font: 62.5% 'Roboto', 'Open Sans' sans-serif;
-  font-family: 'Playball', georgia, serif;
+  font-size: 62.5%;
+  font-family: 'Roboto Slab', serif;
   color: #cfe0b3;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  background: #4a7c00;
+  background: url(tx-grass.png) #4a7c00;
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
   /*-webkit-backface-visibility: hidden;*/
 
 }
 aside.sidebar {
-  /*display:none;*/
-
+  display: none;
   position: fixed;
   top: 100px;
   right: 10px;
@@ -116,7 +158,7 @@ aside.sidebar h3 {
   text-align: left;
 }
 aside.sidebar a {
-  font: 1rem 'Roboto', 'Open Sans' sans-serif;
+  font: 1rem 'Roboto', sans-serif;
   /*font-size: 14px;*/
 
 }
@@ -155,10 +197,15 @@ p {
   margin: 0;
   padding: 0;
 }
+h3 {
+  font-family: 'Playball';
+  color: #ffffff;
+}
 p {
-  font-family: 'Simonetta';
-  font-size: 18px;
-  line-height: 1.5em;
+  font-family: 'Roboto Slab';
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 2em;
   display: block;
 }
 /* links */
@@ -171,7 +218,9 @@ a:hover {
   color: #fff;
 }
 abbr {
-  border-bottom: none;
+  /*border-bottom: 3px dotted rgba(255,255,255,.15);*/
+
+  color: #ffffff;
 }
 /* specific divs */
 /* INFIELD */
@@ -277,6 +326,9 @@ abbr {
   border-radius: 1px;
   z-index: 100;
 }
+.main .explanation {
+  width: 120%;
+}
 .main .explanation:before,
 .main .explanation:after {
   content: '';
@@ -376,6 +428,8 @@ abbr {
   border-radius: 50%;
 }
 header {
+  position: relative;
+  z-index: 5;
   width: 100%;
   /* Title */
 
@@ -383,14 +437,12 @@ header {
 
 }
 header h1 {
-  font-size: 128px;
   position: relative;
   text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
   display: block;
-  /*width:100%;*/
+  /*padding-top:100px;*/
 
-  margin-top: 150px;
-  text-indent: -99999px;
+  text-indent: -999999px;
   /* CSS Ball Park Title Correction */
 
 }
@@ -401,34 +453,47 @@ header h1:after {
   display: block;
 }
 header h1:before {
-  /*width:100%;*/
-
   text-indent: 0;
   text-align: left;
-  margin: 0 0 0 200px;
+  margin: 100px 0 0 230px;
   content: 'CSS Diamond';
   font-family: 'Playball', serif;
   font-size: 112px;
+  line-height: 1em;
   color: #ffffff;
-  -webkit-transform: rotate(-5deg);
-  -moz-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
-  -o-transform: rotate(-5deg);
-  transform: rotate(-5deg);
+  /*.rotate(-5deg);*/
+
 }
 header h1:before:first-letter {
   display: block;
   clear: both;
 }
 header h2 {
-  font-family: 'Simonetta', sans-serif;
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 52px;
+  font-weight: 200;
+  line-height: 1.15em;
+  /*.rotate(-5deg);*/
+
+  /*margin-top: -30px;*/
+
   color: #cfe0b3;
   width: 100%;
-  margin-left: 220px;
+  margin-top: 200px;
+  margin-left: 240px;
+}
+/* summary text */
+.summary {
+  position: relative;
+  z-index: 5;
+}
+.summary p:first-child {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.618em;
+  padding-left: 250px;
+  margin-top: 10px;
+  width: 48%;
 }
 /* Summary */
 .intro {
@@ -484,24 +549,97 @@ header h2 {
 }
 /* download HTML and CSS file */
 .summary p:last-child {
-  font: 400 14px 'Simonetta';
-  padding: 30px;
-  width: 200px;
   display: block;
   background: #14782d;
-  margin: 90px 0 0 110px;
+  margin: 70px 0 0 250px;
   text-transform: uppercase;
   position: relative;
   z-index: 3;
+  width: 150px;
+  height: 75px;
+  text-shadow: none;
+  /*hide text easy*/
+
+  color: #14782d;
+  /* download label icon */
+
+  /* HTML5 CSS3 icons */
+
 }
-/* summary */
-.summary p {
-  font-size: 21px;
-  margin-left: 220px;
-  width: 48%;
+.summary p:last-child:before,
+.summary p:last-child:after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+.summary p:last-child:before,
+.summary p:last-child a:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+}
+.summary p:last-child:before {
+  margin-top: -50px;
+  margin-left: 59px;
+  color: rgba(255, 255, 255, 0.33);
+  content: "\e004";
+  font-size: 32px;
+}
+.summary p:last-child a {
+  position: absolute;
+  top: 0;
+  display: block;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  width: 50%;
+  height: 75px;
+  line-height: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #cfe0b3;
+  -webkit-transition: all 50ms ease-in-out;
+  -moz-transition: all 50ms ease-in-out;
+  -o-transition: all 50ms ease-in-out;
+  transition: all 50ms ease-in-out;
+  -webkit-font-smoothing: antialiased;
+}
+.summary p:last-child a:hover,
+.summary p:last-child a:active {
+  -webkit-transition: all 50ms ease-in-out;
+  -moz-transition: all 50ms ease-in-out;
+  -o-transition: all 50ms ease-in-out;
+  transition: all 50ms ease-in-out;
+  background-color: #cfe0b3;
+  color: #14782d;
+}
+.summary p:last-child a:before {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  line-height: 60px;
+}
+.summary p:last-child a:first-child:hover:before,
+.summary p:last-child a:last-child:hover:before {
+  content: "\e004";
+}
+.summary p:last-child a:first-child {
+  left: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.summary p:last-child a:first-child:before {
+  content: "\e001";
+}
+.summary p:last-child a:last-child {
+  left: 50%;
+}
+.summary p:last-child a:last-child:before {
+  content: "\e002";
 }
 .preamble {
-  margin-top: 150px;
+  margin-top: 250px;
 }
 .preamble h3,
 .preamble p {
@@ -511,7 +649,9 @@ header h2 {
   font-size: 40px;
 }
 .preamble p {
-  width: 45%;
+  position: relative;
+  z-index: 5;
+  width: 55%;
   text-align: left;
 }
 /* MAIN CONTENT */
@@ -541,6 +681,26 @@ footer h3 {
 footer p {
   text-align: left;
   width: 75%;
+}
+.explanation p a,
+.participation p a,
+.benefits p a,
+.requirements p a,
+footer p a {
+  display: inline-block;
+  padding: 3px 16px;
+  background-color: #14782d;
+}
+.explanation p a:hover,
+.participation p a:hover,
+.benefits p a:hover,
+.requirements p a:hover,
+footer p a:hover {
+  background-color: #cfe0b3;
+  color: #14782d;
+}
+.participation h3 {
+  margin: 90px 0 0 0;
 }
 footer {
   text-align: center;

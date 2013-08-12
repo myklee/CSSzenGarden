@@ -1,0 +1,39 @@
+/* icon fonts */
+@font-face {
+  font-family: 'icomoon';
+  src: url('http://myklee.com/csszengarden/fonts/icomoon.eot');
+  src: url('http://myklee.com/csszengarden/fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('http://myklee.com/csszengarden/fonts/icomoon.svg#icomoon') format('svg'), url('http://myklee.com/csszengarden/fonts/icomoon.woff') format('woff'), url('http://myklee.com/csszengarden/fonts/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-ampersand,
+.icon-html5,
+.icon-css3,
+.icon-cloud-download {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-ampersand:before {
+  content: "\e000";
+}
+.icon-html5:before {
+  content: "\e001";
+}
+.icon-css3:before {
+  content: "\e002";
+}
+.icon-cloud-download:before {
+  content: "\e004";
+}
