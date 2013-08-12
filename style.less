@@ -25,12 +25,6 @@
 /* Summary */
 /* MAIN CONTENT */
 
-
-
-
-
-
-
 /*@import url('http://openfontlibrary.org/face/averia');*/
 
 .hide-text {
@@ -81,7 +75,9 @@ body {
 
 aside.sidebar {
 	/*display:none;*/
-	
+	position: fixed;
+	top:200px;
+	right:50px;
 	h3 {
 		font-size: 21px;
 		text-align: left;
@@ -104,7 +100,7 @@ aside.sidebar {
 	display:block;
 }
 .design-selection, .design-archives, .zen-resources {
-	position: absolute;
+	/*position: absolute;*/
 }
 .design-selection {
 	top:350px;
@@ -121,15 +117,12 @@ aside.sidebar {
 }
 
 h1,h2,h3,p { 
-	max-width: 75%;
 	margin:0 auto;
-	font-weight: 300;
-	line-height: 1.33em;
 }
-
 p {
-	font:300 24px/1.5em 'Simonetta';
-
+	font-family: 'Simonetta';
+		font-size: 18px;
+		display: block;
 }
 /* links */
 a {
@@ -139,32 +132,29 @@ a {
 	&:hover {
 		color:#fff;
 	}
-
 }
 
 abbr {
 	border-bottom: none;
 }
 
-
 /* specific divs */
-
 /* INFIELD */
 
 /*@baseLines: 4px solid rgba(255,255,255,.66);*/
 @baseLines: 1px dotted rgba(255,255,255,.33);
 
-.page-wrapper { 
+.main { 
 	position: absolute;
 	top: 150px;
 	left: 150px;
 	border-top:@baseLines;
 	border-left:@baseLines;
 	.square(1080px); 
-	.before-after;
+	max-height:1080px;
 
 	/* infield mow pattern */
-
+	.before-after;
 	z-index: -1;
 	&:before {
 		top:0;
@@ -181,8 +171,6 @@ abbr {
 		background: -ms-linear-gradient(left,  #4a7c00 5%,#396d0f 5%,#396d0f 10%,#4a7c00 10%,#4a7c00 15%,#396d0f 15%,#396d0f 20%,#4a7c00 20%,#4a7c00 25%,#396d0f 25%,#396d0f 30%,#4a7c00 30%,#4a7c00 35%,#396d0f 35%,#396d0f 40%,#4a7c00 40%,#4a7c00 45%,#396d0f 45%,#396d0f 50%,#4a7c00 50%,#4a7c00 55%,#396d0f 55%,#396d0f 60%,#4a7c00 60%,#4a7c00 64%,#396d0f 65%,#396d0f 70%,#4a7c00 70%,#4a7c00 74%,#396d0f 75%,#396d0f 80%,#4a7c00 80%,#4a7c00 84%,#396d0f 85%,#396d0f 90%,#4a7c00 90%,#4a7c00 94%,#396d0f 95%);
 		background: linear-gradient(to right,  #4a7c00 5%,#396d0f 5%,#396d0f 10%,#4a7c00 10%,#4a7c00 15%,#396d0f 15%,#396d0f 20%,#4a7c00 20%,#4a7c00 25%,#396d0f 25%,#396d0f 30%,#4a7c00 30%,#4a7c00 35%,#396d0f 35%,#396d0f 40%,#4a7c00 40%,#4a7c00 45%,#396d0f 45%,#396d0f 50%,#4a7c00 50%,#4a7c00 55%,#396d0f 55%,#396d0f 60%,#4a7c00 60%,#4a7c00 64%,#396d0f 65%,#396d0f 70%,#4a7c00 70%,#4a7c00 74%,#396d0f 75%,#396d0f 80%,#4a7c00 80%,#4a7c00 84%,#396d0f 85%,#396d0f 90%,#4a7c00 90%,#4a7c00 94%,#396d0f 95%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a7c00', endColorstr='#396d0f',GradientType=1 );
-
-
 	}
 	&:after {
 		.square(100%);
@@ -199,19 +187,109 @@ abbr {
 		background: -ms-linear-gradient(top,  #4a7c00 5%,#396d0f 5%,#396d0f 10%,#4a7c00 10%,#4a7c00 15%,#396d0f 15%,#396d0f 20%,#4a7c00 20%,#4a7c00 25%,#396d0f 25%,#396d0f 30%,#4a7c00 30%,#4a7c00 35%,#396d0f 35%,#396d0f 40%,#4a7c00 40%,#4a7c00 45%,#396d0f 45%,#396d0f 50%,#4a7c00 50%,#4a7c00 55%,#396d0f 55%,#396d0f 60%,#4a7c00 60%,#4a7c00 64%,#396d0f 65%,#396d0f 70%,#4a7c00 70%,#4a7c00 74%,#396d0f 75%,#396d0f 80%,#4a7c00 80%,#4a7c00 84%,#396d0f 85%,#396d0f 90%,#4a7c00 90%,#4a7c00 94%,#396d0f 95%);
 		background: linear-gradient(to bottom,  #4a7c00 5%,#396d0f 5%,#396d0f 10%,#4a7c00 10%,#4a7c00 15%,#396d0f 15%,#396d0f 20%,#4a7c00 20%,#4a7c00 25%,#396d0f 25%,#396d0f 30%,#4a7c00 30%,#4a7c00 35%,#396d0f 35%,#396d0f 40%,#4a7c00 40%,#4a7c00 45%,#396d0f 45%,#396d0f 50%,#4a7c00 50%,#4a7c00 55%,#396d0f 55%,#396d0f 60%,#4a7c00 60%,#4a7c00 64%,#396d0f 65%,#396d0f 70%,#4a7c00 70%,#4a7c00 74%,#396d0f 75%,#396d0f 80%,#4a7c00 80%,#4a7c00 84%,#396d0f 85%,#396d0f 90%,#4a7c00 90%,#4a7c00 94%,#396d0f 95%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a7c00', endColorstr='#396d0f',GradientType=0 );
+	}
+
+	/* bases */
+	.explanation, .participation, .benefits, .requirements, footer {
+		.before-after;
+		/* Bases global */
+		&:before {
+			background-color: white;
+			.square(15px);
+			.border-radius(1px);
+			z-index: 1;
+		}
+	}
+	/* Home Plate */
+	.explanation {
+		.before-after;
+		&:before {
+			top:1px;
+			left:5px;
+			height:17px;
+			width: 8.5px;
+			.rotate(45deg);
+		}
+		&:after {
+			.square(12px);
+			top:0px;
+			left:0px;
+			background-color: white;
+			/*.rotate(45deg);*/
+		}
+		p {
+			/* Home Plate Dirt */
+			.before-after;
+			&:before {
+				.square(216px);
+				top:-108px;
+				left:-108px;
+				.box-shadow(0 0 70px #f2c26e inset);
+				background-color: @dirtBg;
+				.border-radius(50%);
+			}
+
+		}
 
 	}
+	/* First Base */
+	.participation {
+		&:before {
+			bottom:0;
+			left:0;
+		}
+	}
+	/* Second Base */
+	.benefits {
+		&:before {
+			bottom:-7.5px;
+			right:-7.5px;
+		}
+	}
+	/* Third Base */
+	.requirements {
+		&:before {
+			top:0;
+			right:0;
+		}
+	}
+
+	footer {
+		/* pitching rubber */
+		&:before {
+			top:513.359px;
+			left:513.359px;
+			height:24px;
+			width: 6px;
+			.rotate(45deg);
+			z-index: 10;
+			.box-shadow(0 0 5px #603a02);
+		}
+		/* PITCHING MOUND */
+		&:after {
+			.square(216px);
+			top:500px;
+			left:500px;
+			margin-left:-108px;
+			margin-top:-108px;
+			.box-shadow(0 0 70px #c07719 inset);
+			background-color: @dirtBg;
+			.border-radius(50%);
+		}
+	}
 }
-section.intro {
+
+
+/*section.intro {
 	.before-after;
 	&:before {
 		width:48px;
 		height:72px;	
-		/*border: 4px solid rgba(255,255,255,.6);*/
+		border: 4px solid rgba(255,255,255,.6);
 		z-index: 100;		
 		.rotate(-45deg);
 	}
-}
+}*/
 header {
 
 	/* batters box */
@@ -236,39 +314,23 @@ header {
 	}
 	*/
 
-
+	width:100%;
 	h1, h2 {
 		text-align: center;
 	}
+	/* Title */
 	h1 {
 		font-size:128px;
 		position: relative;
 		text-shadow: @baseTS;
 		display: block;
 		width:100%;
-		margin-top:-150px;
 		text-align: center;
 		text-indent:-99999px;
 		.before-after;
-
-		/* strike-through */
-		&:after {
-			content:'';
-			line-height:7rem;
-			color:#c00;
-			.absolute(60px, auto, auto, 230px, 2);
-			width:470px;
-			height:16px;
-			/*text-shadow:none;*/
-			background-color: @globalFontColor;
-			background-color: rgba(255,255,255,1);
-			color: rgba(255,255,255,1);
-			.box-shadow(@baseTS);
-			display: none;
-
-		}
-		/* CSS Ball ParkTitle Correction */
+		/* CSS Ball Park Title Correction */
 		&:before {
+			width:100%;
 			text-indent:0;
 			text-align: center;
 			content:'CSS Diamond';
@@ -276,13 +338,13 @@ header {
 			font-size: 112px;
 			color: rgba(255,255,255,1);
 			.rotate(-5deg);
-			margin:0 0 0 70px;
 			&:first-letter {
 				display:block;
 				clear:both;
 			}
 		}
 	}
+	/* subtitle */
 	h2 {
 		font-family: 'Simonetta', sans-serif;
 		text-transform: uppercase;
@@ -295,243 +357,67 @@ header {
 /* Summary */
 .intro {
 	display: block;
+	p {
+		width:50%;
+		margin:10px auto;
+	}
 }
 .summary {
-	p {
-		color: @globalFontColor;
-		margin-top:0;
-
-	}
-	&:before, &:after {
-		content:'';
-		position: absolute;
-		display: block;
-		background-color: @dirtBg;
-		.border-radius(50%);
-	}
-	/* Home Plate Dirt */
-	&:before {
-		.square(216px);
-		top:-108px;
-		left:-108px;
-		.box-shadow(0 0 70px #f2c26e inset);
-
-	}
-	/* PITCHING MOUND */
-	&:after {
-		.square(216px);
-		top:500px;
-		left:500px;
-		margin-left:-108px;
-		margin-top:-108px;
-		.box-shadow(0 0 70px #c07719 inset);
-
-	}
-
-	p {
-		display: block;
-		&:before, &:after {
-			content:'';
-			position: absolute;
-			display: block;
-			background-color: white;
-			z-index: 10;
-			.border-radius(1px);
-
-		}
-	}
-	/* HOME BASE */
-	p:first-child {	
-		text-align: center;
-		padding-top:30px;
-		z-index: 0;
-		&:before {
-			top:1px;
-			left:5px;
-			height:17px;
-			width: 8.5px;
-			.rotate(45deg);
-		}
-		&:after {
-			.square(12px);
-			top:0px;
-			left:0px;
-			/*.rotate(45deg);*/
-		}
-	}
-	
 	p:last-child {
 		/* download file */
-		font: 300 18px 'Simonetta';
-		margin: 50px auto 240px auto;
+		font: 300 13px 'Simonetta';
 		padding: 30px;
-		width: 325px;
+		width: 200px;
 		display: block;
 		background: #14782d;
-
-		/* PITCHING RUBBER */
-		&:before {
-			top:513.359px;
-			left:513.359px;
-			height:24px;
-			width: 6px;
-			.rotate(45deg);
-			z-index: 10;
-			.box-shadow(0 0 5px #603a02);
-
-		}
+		position: absolute;
+		top:600px;
+		left:150px;
+		text-transform: uppercase;
 	}
-	
 }
 /* MAIN CONTENT */
 .main, .preamble {
-	text-align: center;
+	/*text-align: center;*/
 	h3 { 
 		font-size: 48px;
+		margin-left:40px;
 	}
 }    
-.main {
-	position: absolute;
-	top:1100px;
+.explanation {
+	margin-top:650px;
 }
-.preamble {
-	margin:0 auto 0 auto;
-	padding-top:160px;
-	/* infield dirt */
-	.before-after;
-	&:before, &:after {
-		background-color:@dirtBg;
-	} 
-	/* first base side dirt */
-	&:before {
-		height:500px;
-		width:1080px;
-		top:1050px;
-		left:-20px;
-		z-index: 0;
-		.border-bottom-left-radius(100px);
-		.border-top-left-radius(5px);
-	}
-	/* third base side dirt */
-	&:after {
-		height:1570px;
-		width:500px;
-		top:-20px;
-		right:-460px;
-		z-index: 0;
-		.border-bottom-right-radius(360px);
-		.border-top-right-radius(100px);
-		.border-top-left-radius(5px);
-
-	}
-	p {
-		font:300 21px/1.5em 'Simonetta';
-		display: block;
-		margin:10px auto 0 auto;
-
-		/* Bases global */
-		&:before {
-			content:'';
-			position: absolute;
-			display: block;
-			background-color: white;
-			.square(15px);
-			.border-radius(1px);
-			z-index: 1;
-		}
-	}
-	/* First Base */
-	p:nth-child(2) {
-
-		&:before {			
-			bottom:0;
-			left:0;			
-		}
-
-	}
-	/* Second Base */
-	p:nth-child(3) {
-		&:before {
-			bottom:-7.5px;
-			right:-7.5px;
-		}
-
-
-	}
-	/* Third Base */
-	p:last-child {
-		&:before {
-			top:0;
-			right:0;
-		}
-	}
-}
-
-
+/* content styles */
 .explanation, .participation, .benefits, .requirements, footer {
-	position: absolute;
-	width:640px;
-	text-align: left;
+	padding-left:100px;
 	h3 {
 		font-size:32px;
+		margin-top:50px;
 	}
 	p {
-		font-family: 'Simonetta';
-		font-size: 16px;
-		display: block;
+		text-align: left;
+		margin:10px 500px 0 80px;
+		/*margin:10px auto;*/
+		width:65%;
 	}
 }
-/*2nd base */
-.explanation {	
-	left:0px;
-	h3 {
-	}
-	p {
-	}
-}
-.participation {
-	left:550px;
-	h3 {
+.summary, .preamble {
+
+
+	h3, p {
+		margin:10px auto;
+		text-align: center;
 
 	}
 	p {
+		font-size: 21px;
+		width:60%;
 	}
 }
-.benefits {
-	top:500px;
-	h3 {
-		right:0;
-		top: 0;
-	}
-	p {
-		
-	}
-}
-.requirements {
-	top:500px;
-	left:550px;
-	padding-bottom:100px;
-	h3 {
-		right:7.5px;
-		bottom:7.5px;
-		/*.rotate(45deg);*/
-	}
-	p {
-	}
-}
-footer {
-	top:1200px;
-	padding:30px;
-	background-color: @dirtBg;
-	width:1600px;
-	a {
-		font-size:18px;
-	}
 
-}
+
 
 footer { 
-	/*bottom:0;*/
 	text-align: center; 
 }
 footer a:link, footer a:visited { 
@@ -544,133 +430,7 @@ footer a:link, footer a:visited {
 	body {
 
 	}
-	.page-wrapper {
-		top:75px;
-		left:75px;
-		.square(540px);
-	}
-	header {
-		h1 {
-			margin-top:-20px;
-			/* Correction */
-			&:before {
-				font-size: 60px;
-				margin:0 0 0 0;
-			}
-		}
-		h2 {
-			font-size: 21px;
-			margin-top:-30px;
-
-		}
-	}
-	.summary {
-		padding-top:180px;
-		/* Home Plate Dirt */
-		&:before {
-			.square(216/2px);
-			top:-108/2px;
-			left:-108/2px;
-		}
-		/* PITCHING MOUND */
-		&:after {
-			.square(216/2px);
-			top:500/2px;
-			left:500/2px;
-			margin-left:-108/2px;
-			margin-top:-108/2px;
-		}
-
-
-		/* HOME BASE */
-		p:first-child {	
-			padding-top:30/2px;
-			&:before {
-				top:1/2px;
-				left:5/2px;
-				height:17/2px;
-				width: 8.5/2px;
-			}
-			&:after {
-				.square(12/2px);
-			}
-		}
-		/* PITCHING RUBBER */
-		p:last-child {		
-			&:before {
-				top:513.359/2px;
-				left:513.359/2px;
-				height:24/2px;
-				width: 6/2px;
-			}
-		}
-
-
-	}
-
-	.preamble {
-		/* infield dirt */
-		.before-after;
-		&:before, &:after {
-			background-color:@dirtBg;
-		} 
-		/* first base side dirt */
-		&:before {
-			height:500/2px;
-			width:1080/2px;
-			top:1050/2px;
-			left:-10px;
-			z-index: 0;
-			.border-bottom-left-radius(50px);
-		}
-		/* third base side dirt */
-		&:after {
-			height:1570/2px;
-			width:500/2px;
-			top:-10px;
-			right:-470/2px;
-			z-index: 0;
-			.border-bottom-right-radius(360/2px);
-			.border-top-right-radius(50px);
-
-		}
-		h3 {
-			margin:-175/2px auto 0 auto	;
-		}
-		p {
-			/* Bases global */
-			&:before {
-				.square(15/2px);
-
-			}
-		}
-		/* Second Base */
-		p:nth-child(3) {
-			&:before {
-				bottom:-7.5/2px;
-				right:-7.5/2px;
-			}
-
-
-		}
-	}
-	.explanation, .participation, .benefits, .requirements, footer {
-		position: relative;
-		left:0;
-		top:0;
-		bottom:0;
-		right:0;
-		width:auto;
-		text-align: left;
-		h3 {
-			font-size:32px;
-		}
-		p {
-			font-family: 'Simonetta';
-			font-size: 16px;
-			display: block;
-		}
-	}
+	
 
 }
 
