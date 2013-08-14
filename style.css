@@ -149,12 +149,12 @@ body {
 }
 aside.sidebar {
   display: none;
-  position: fixed;
-  top: 100px;
-  right: 10px;
+  position: absolute;
+  top: 110px;
+  right: 16px;
 }
 aside.sidebar h3 {
-  font-size: 21px;
+  font-size: 16px;
   text-align: left;
 }
 aside.sidebar a {
@@ -224,18 +224,13 @@ abbr {
 }
 /* specific divs */
 /* INFIELD */
-/*@baseLines: 14px solid @dirtBg;*/
 .main {
   position: absolute;
   top: 50px;
   left: 50px;
-  /*z-index:1;*/
-
-  border-top: 1px dotted rgba(255, 255, 255, 0.33);
-  border-left: 1px dotted rgba(255, 255, 255, 0.33);
+  max-height: 1080px;
   width: 1080px;
   height: 1080px;
-  max-height: 1080px;
   /* infield mow pattern */
 
   /* bases */
@@ -325,9 +320,9 @@ abbr {
   -moz-border-radius: 1px;
   border-radius: 1px;
   z-index: 100;
-}
-.main .explanation {
-  width: 120%;
+  -webkit-box-shadow: 0 0 15px #8a6b35;
+  -moz-box-shadow: 0 0 15px #8a6b35;
+  box-shadow: 0 0 15px #8a6b35;
 }
 .main .explanation:before,
 .main .explanation:after {
@@ -345,6 +340,9 @@ abbr {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .main .explanation:after {
   width: 12px;
@@ -352,8 +350,6 @@ abbr {
   top: 0px;
   left: 0px;
   background-color: white;
-  /*.rotate(45deg);*/
-
 }
 .main .explanation p {
   /* Home Plate Dirt */
@@ -366,10 +362,10 @@ abbr {
   display: block;
 }
 .main .explanation p:before {
-  width: 216px;
-  height: 216px;
-  top: -108px;
-  left: -108px;
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  left: -150px;
   -webkit-box-shadow: 0 0 70px #f2c26e inset;
   -moz-box-shadow: 0 0 70px #f2c26e inset;
   box-shadow: 0 0 70px #f2c26e inset;
@@ -428,6 +424,8 @@ abbr {
   border-radius: 50%;
 }
 header {
+  /* batters box */
+
   position: relative;
   z-index: 5;
   width: 100%;
@@ -435,6 +433,38 @@ header {
 
   /* subtitle */
 
+}
+header:before,
+header:after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+header:before,
+header:after {
+  width: 48px;
+  height: 72px;
+  border: 4px solid rgba(255, 255, 255, 0.55);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: 100;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+header:before {
+  top: -12px;
+  left: 62px;
+  border-left: none;
+}
+header:after {
+  top: 48px;
+  left: 0px;
+  border-right: none;
 }
 header h1 {
   position: relative;
@@ -444,6 +474,8 @@ header h1 {
 
   text-indent: -999999px;
   /* CSS Ball Park Title Correction */
+
+  /*catcher's box*/
 
 }
 header h1:before,
@@ -455,7 +487,7 @@ header h1:after {
 header h1:before {
   text-indent: 0;
   text-align: left;
-  margin: 100px 0 0 230px;
+  margin: 160px 0 0 230px;
   content: 'CSS Diamond';
   font-family: 'Playball', serif;
   font-size: 112px;
@@ -468,6 +500,21 @@ header h1:before:first-letter {
   display: block;
   clear: both;
 }
+header h1:after {
+  top: -25px;
+  left: -12px;
+  border: 4px solid rgba(255, 255, 255, 0.55);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  border-bottom: none;
+  width: 29px;
+  height: 60px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 header h2 {
   font-family: 'Roboto Slab', serif;
   font-size: 52px;
@@ -479,8 +526,36 @@ header h2 {
 
   color: #cfe0b3;
   width: 100%;
-  margin-top: 200px;
+  margin-top: 260px;
   margin-left: 240px;
+  /* Baselines */
+
+  /*3rd Base Line*/
+
+  /*1st Base Line*/
+
+}
+header h2:before,
+header h2:after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+header h2:before {
+  top: 50px;
+  left: 115px;
+  height: 4px;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+header h2:after {
+  top: 115px;
+  left: 50px;
+  width: 4px;
+  height: 2800px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.55);
 }
 /* summary text */
 .summary {
@@ -499,8 +574,6 @@ header h2 {
 .intro {
   position: absolute;
   display: block;
-  /*z-index:1;*/
-
   /* infield dirt */
 
   /* first base side dirt */
@@ -519,30 +592,22 @@ header h2 {
   background-color: #af8843;
 }
 .intro:before {
-  height: 350px;
+  height: 375px;
   width: 1130px;
   top: 1100px;
   left: 0;
-  /*z-index:0;*/
-
-  /*.border-bottom-left-radius(100px);*/
-
   -webkit-border-top-left-radius: 5px;
   -moz-border-radius-topleft: 5px;
   border-top-left-radius: 5px;
 }
 .intro:after {
-  height: 1470px;
-  width: 350px;
+  height: 1495px;
+  width: 375px;
   top: -20px;
   left: 1100px;
-  /*z-index: 0;*/
-
   -webkit-border-bottom-right-radius: 360px;
   -moz-border-radius-bottomright: 360px;
   border-bottom-right-radius: 360px;
-  /*.border-top-right-radius(100px);*/
-
   -webkit-border-top-left-radius: 5px;
   -moz-border-radius-topleft: 5px;
   border-top-left-radius: 5px;
@@ -583,7 +648,7 @@ header h2 {
 .summary p:last-child:before {
   margin-top: -50px;
   margin-left: 59px;
-  color: rgba(255, 255, 255, 0.33);
+  color: rgba(255, 255, 255, 0.75);
   content: "\e004";
   font-size: 32px;
 }
@@ -639,11 +704,13 @@ header h2 {
   content: "\e002";
 }
 .preamble {
-  margin-top: 250px;
+  margin-top: 200px;
+  margin-left: 230px;
 }
 .preamble h3,
 .preamble p {
-  margin-left: 190px;
+  /*margin-left:190px;*/
+
 }
 .preamble h3 {
   font-size: 40px;
@@ -651,7 +718,7 @@ header h2 {
 .preamble p {
   position: relative;
   z-index: 5;
-  width: 55%;
+  width: 800px;
   text-align: left;
 }
 /* MAIN CONTENT */
@@ -664,7 +731,9 @@ header h2 {
 .benefits,
 .requirements,
 footer {
-  padding-left: 40px;
+  /*width:120%;*/
+
+  padding-left: 180px;
 }
 .explanation h3,
 .participation h3,
@@ -680,7 +749,7 @@ footer h3 {
 .requirements p,
 footer p {
   text-align: left;
-  width: 75%;
+  width: 900px;
 }
 .explanation p a,
 .participation p a,
@@ -703,6 +772,7 @@ footer p a:hover {
   margin: 90px 0 0 0;
 }
 footer {
+  width: 800px;
   text-align: center;
   padding: 130px;
   /*background-color: @dirtBg;*/
