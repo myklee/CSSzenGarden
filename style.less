@@ -103,14 +103,17 @@
 
 
 @baseTS: 5px 5px 0 rgba(0,0,0,.15);
-@bodyTS: 3px 3px 0 rgba(0,0,0,.1);
+@baseTS: 0 0 0 rgba(0,0,0,.15);
+
+@bodyTS:none;
+/*@bodyTS: 3px 3px 0 rgba(0,0,0,.1);*/
 
 
 @baseShadow: 0 0 16px #7c4a03;
 
 @dirtBg:#af8843;
 
-@btnGreen: #14782d;
+@btnGreen: rgba(30,160,65, .33);
 
 @lineColor: rgba(255,255,255,0.55);
 
@@ -129,7 +132,8 @@ body {
 	margin: 0; 
 	padding: 0;
 	.square(100%);
-	background: url(tx-grass.png) #4a7c00;
+	background-color: #4a7c00;
+	/*background: url(tx-grass.png) #4a7c00;*/
 	text-shadow:@bodyTS;
 
 	/*-webkit-backface-visibility: hidden;*/
@@ -190,8 +194,10 @@ p {
 	font-family: 'Roboto Slab';
 	font-size: 16px;
 	font-weight: 200;
-	line-height: 2em;
+	line-height: 1.67em;
 	display: block;
+	
+
 }
 /* links */
 a {
@@ -199,7 +205,7 @@ a {
 	text-decoration: none;
 	color:#eee;
 	&:hover {
-		color:#fff;
+		color:rgba(255,255,255, .1);
 	}
 }
 
@@ -297,11 +303,24 @@ abbr {
 		}
 
 	}
+	.participation, .benefits, .requirements {
+		&:after {
+			.square(316px);
+			background-color: @dirtBg;
+			.border-radius(50%);
+
+
+		}
+	}
 	/* First Base */
 	.participation {
-		&:before {
+		&:before , &:after{
 			bottom:0;
 			left:0;
+		}
+		&:after {
+			bottom:-158px;
+			left:-158px;
 		}
 	}
 	/* Second Base */
@@ -310,12 +329,20 @@ abbr {
 			bottom:-7.5px;
 			right:-7.5px;
 		}
+		&:after {
+			bottom:-158px;
+			right:-158px;
+		}
 	}
 	/* Third Base */
 	.requirements {
-		&:before {
+		&:before, &:after {
 			top:0;
 			right:0;
+		}
+		&:after {
+			top:-158px;
+			right:-158px;
 		}
 	}
 
@@ -429,7 +456,7 @@ header {
 			top:50px;
 			left:115px;
 			height:4px;
-			width:100%;
+			width:1600px;
 			z-index: 1;
 
 			background-color: @lineColor;
@@ -489,8 +516,9 @@ header {
 
 	}
 }
-/* download HTML and CSS file */
 .summary {
+
+	/* download HTML and CSS file */
 	p:last-child {		
 		display: block;
 		background: @btnGreen;
@@ -514,11 +542,16 @@ header {
 		/* download label icon */
 		&:before {
 			margin-top:-50px;
-			margin-left:59px;
-			color: rgba(255,255,255,.75);			
+			margin-left:50px;
 			content: "\e004";
 			font-size:32px;
-
+			text-align: center;
+			line-height:50px;
+			.square(50px);
+			.border-radius(50%);
+			z-index: 3;
+			color: rgba(0,0,0,.33);	
+			color: @globalFontColor;			
 		}
 		/* HTML5 CSS3 icons */
 		a {
@@ -527,20 +560,27 @@ header {
 			display:block;
 			font-family: 'Roboto';
 			font-size: 12px;
-			font-weight: 400;
+			font-weight: 600;
 			width: 50%;
 			height: 75px;
 			line-height: 0;
 			text-align: center;
 			text-transform: uppercase;
 			color: @globalFontColor;
-			.animate50;
-
+			.animate400eio;
 			-webkit-font-smoothing: antialiased;
+
 			&:hover, &:active {
-				.animate50;
+				.animate100ei;	
 				background-color:@globalFontColor;
-				color:#14782d;
+				background-color: rgba(255,255,255,.15);
+				/*color:@btnGreen*/
+			}
+			&:hover, &:active {
+				.animate100ei;	
+				background-color:@globalFontColor;
+				background-color: rgba(30,60,40,1);
+				/*color:white;*/
 			}
 			&:before {
 				display: block;
@@ -548,15 +588,8 @@ header {
 				font-size:28px;
 				line-height:60px;
 			}
-			&:first-child:hover, &:last-child:hover {
-				&:before {
-					content: "\e004";
-				}
-			}
-
-
 		}
-
+		/*HTML5 icon*/
 		a:first-child {
 			left:0;
 			border-right:1px solid rgba(255,255,255,.15);
@@ -565,6 +598,7 @@ header {
 
 			}
 		}
+		/*CSS3 icon */
 		a:last-child {
 			left:50%;
 			&:before {
@@ -579,11 +613,9 @@ header {
 .preamble {
 	margin-top:200px;
 	margin-left:230px;
-	h3, p {
-		/*margin-left:190px;*/
-	}
 	h3 {
-		font-size:40px;
+		font-size:48px;
+		.opacity(66);
 	}
 	p {
 		position: relative;
@@ -595,60 +627,80 @@ header {
 
 /* MAIN CONTENT */
 
-.explanation {
-	margin-top:1100px;
-}
+
 /* content styles */
 .explanation, .participation, .benefits, .requirements, footer {
-	/*width:120%;*/
 	padding-left:180px;
 	h3 {
-		font-size:32px;
+		font-size:48px;
 		margin-top:50px;
 	}
 	p {
 		text-align: left;
 		width:900px;
-	}
-	p {
 		a {
 			display: inline-block;
 			padding: 3px 16px;
 			background-color:@btnGreen;
-			&:hover {
+			/*&:hover {
 				background-color:@globalFontColor;
+				background-color: rgba(255,255,255,.1);
 				color: @btnGreen;
+				}*/
+				&:hover, &:active {
+					.animate100ei;	
+					background-color:@globalFontColor;
+					background-color: rgba(30,60,40,1);
+					color:white;
+				}
 			}
 		}
-	}
-}
-.participation {
-	h3 {
-		margin: 90px 0 0 0;
-	}
-}
 
-
-
-footer { 
-	width:800px;
-	text-align: center; 
-	padding:130px;
-	/*background-color: @dirtBg;*/
-}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-}
-
-
-
-@media all and (max-width: 1024px) {
-	body {
 
 	}
-	
+	.explanation {
 
-}
+		margin-top:1100px;
+		h3, p, abbr {
+			font-weight: 400;
+			color: rgba(100,66,33,1);
+			text-shadow:none;
+
+		}
+		abbr {
+			font-weight: 700;
+			color: black;
+		}
+
+	}
+	.participation {
+		margin-top:160px;
+		h3 {
+			margin: 90px 0 0 0;
+		}
+	}
+
+
+
+	footer { 
+		width:800px;
+		text-align: center; 
+		padding:130px;
+		/*background-color: @dirtBg;*/
+	}
+	footer a:link, footer a:visited { 
+		margin-right: 20px; 
+	}
+
+
+
+	@media all and (max-width: 1024px) {
+		body {
+
+		}
+
+
+	}
 
 
 

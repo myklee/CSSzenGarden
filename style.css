@@ -54,11 +54,17 @@
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.animate200 {
+.animate200eio {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+.animate400eio {
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 /* font icons */
 /* icon fonts */
@@ -128,6 +134,7 @@
   position: absolute;
   display: block;
 }
+/*@bodyTS: 3px 3px 0 rgba(0,0,0,.1);*/
 /*@inDepth: 500;*/
 /* basic elements */
 html {
@@ -142,8 +149,10 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: url(tx-grass.png) #4a7c00;
-  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: #4a7c00;
+  /*background: url(tx-grass.png) #4a7c00;*/
+
+  text-shadow: none;
   /*-webkit-backface-visibility: hidden;*/
 
 }
@@ -205,7 +214,7 @@ p {
   font-family: 'Roboto Slab';
   font-size: 16px;
   font-weight: 200;
-  line-height: 2em;
+  line-height: 1.67em;
   display: block;
 }
 /* links */
@@ -215,7 +224,7 @@ a {
   color: #eee;
 }
 a:hover {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.1);
 }
 abbr {
   /*border-bottom: 3px dotted rgba(255,255,255,.15);*/
@@ -374,17 +383,41 @@ abbr {
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
-.main .participation:before {
+.main .participation:after,
+.main .benefits:after,
+.main .requirements:after {
+  width: 316px;
+  height: 316px;
+  background-color: #af8843;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.main .participation:before,
+.main .participation:after {
   bottom: 0;
   left: 0;
+}
+.main .participation:after {
+  bottom: -158px;
+  left: -158px;
 }
 .main .benefits:before {
   bottom: -7.5px;
   right: -7.5px;
 }
-.main .requirements:before {
+.main .benefits:after {
+  bottom: -158px;
+  right: -158px;
+}
+.main .requirements:before,
+.main .requirements:after {
   top: 0;
   right: 0;
+}
+.main .requirements:after {
+  top: -158px;
+  right: -158px;
 }
 .main footer {
   /* pitching rubber */
@@ -468,7 +501,7 @@ header:after {
 }
 header h1 {
   position: relative;
-  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
   display: block;
   /*padding-top:100px;*/
 
@@ -545,7 +578,7 @@ header h2:before {
   top: 50px;
   left: 115px;
   height: 4px;
-  width: 100%;
+  width: 1600px;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.55);
 }
@@ -612,10 +645,13 @@ header h2:after {
   -moz-border-radius-topleft: 5px;
   border-top-left-radius: 5px;
 }
-/* download HTML and CSS file */
+.summary {
+  /* download HTML and CSS file */
+
+}
 .summary p:last-child {
   display: block;
-  background: #14782d;
+  background: rgba(30, 160, 65, 0.33);
   margin: 70px 0 0 250px;
   text-transform: uppercase;
   position: relative;
@@ -625,10 +661,14 @@ header h2:after {
   text-shadow: none;
   /*hide text easy*/
 
-  color: #14782d;
+  color: rgba(30, 160, 65, 0.33);
   /* download label icon */
 
   /* HTML5 CSS3 icons */
+
+  /*HTML5 icon*/
+
+  /*CSS3 icon */
 
 }
 .summary p:last-child:before,
@@ -647,10 +687,19 @@ header h2:after {
 }
 .summary p:last-child:before {
   margin-top: -50px;
-  margin-left: 59px;
-  color: rgba(255, 255, 255, 0.75);
+  margin-left: 50px;
   content: "\e004";
   font-size: 32px;
+  text-align: center;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  z-index: 3;
+  color: rgba(0, 0, 0, 0.33);
+  color: #cfe0b3;
 }
 .summary p:last-child a {
   position: absolute;
@@ -658,37 +707,46 @@ header h2:after {
   display: block;
   font-family: 'Roboto';
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 600;
   width: 50%;
   height: 75px;
   line-height: 0;
   text-align: center;
   text-transform: uppercase;
   color: #cfe0b3;
-  -webkit-transition: all 50ms ease-in-out;
-  -moz-transition: all 50ms ease-in-out;
-  -o-transition: all 50ms ease-in-out;
-  transition: all 50ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
   -webkit-font-smoothing: antialiased;
 }
 .summary p:last-child a:hover,
 .summary p:last-child a:active {
-  -webkit-transition: all 50ms ease-in-out;
-  -moz-transition: all 50ms ease-in-out;
-  -o-transition: all 50ms ease-in-out;
-  transition: all 50ms ease-in-out;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
   background-color: #cfe0b3;
-  color: #14782d;
+  background-color: rgba(255, 255, 255, 0.15);
+  /*color:@btnGreen*/
+
+}
+.summary p:last-child a:hover,
+.summary p:last-child a:active {
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  background-color: #cfe0b3;
+  background-color: #1e3c28;
+  /*color:white;*/
+
 }
 .summary p:last-child a:before {
   display: block;
   text-align: center;
   font-size: 28px;
   line-height: 60px;
-}
-.summary p:last-child a:first-child:hover:before,
-.summary p:last-child a:last-child:hover:before {
-  content: "\e004";
 }
 .summary p:last-child a:first-child {
   left: 0;
@@ -707,13 +765,10 @@ header h2:after {
   margin-top: 200px;
   margin-left: 230px;
 }
-.preamble h3,
-.preamble p {
-  /*margin-left:190px;*/
-
-}
 .preamble h3 {
-  font-size: 40px;
+  font-size: 48px;
+  opacity: 0.66;
+  filter: alpha(opacity=66);
 }
 .preamble p {
   position: relative;
@@ -722,17 +777,12 @@ header h2:after {
   text-align: left;
 }
 /* MAIN CONTENT */
-.explanation {
-  margin-top: 1100px;
-}
 /* content styles */
 .explanation,
 .participation,
 .benefits,
 .requirements,
 footer {
-  /*width:120%;*/
-
   padding-left: 180px;
 }
 .explanation h3,
@@ -740,7 +790,7 @@ footer {
 .benefits h3,
 .requirements h3,
 footer h3 {
-  font-size: 32px;
+  font-size: 48px;
   margin-top: 50px;
 }
 .explanation p,
@@ -758,15 +808,48 @@ footer p {
 footer p a {
   display: inline-block;
   padding: 3px 16px;
-  background-color: #14782d;
+  background-color: rgba(30, 160, 65, 0.33);
+  /*&:hover {
+				background-color:@globalFontColor;
+				background-color: rgba(255,255,255,.1);
+				color: @btnGreen;
+				}*/
+
 }
 .explanation p a:hover,
 .participation p a:hover,
 .benefits p a:hover,
 .requirements p a:hover,
-footer p a:hover {
+footer p a:hover,
+.explanation p a:active,
+.participation p a:active,
+.benefits p a:active,
+.requirements p a:active,
+footer p a:active {
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
   background-color: #cfe0b3;
-  color: #14782d;
+  background-color: #1e3c28;
+  color: white;
+}
+.explanation {
+  margin-top: 1100px;
+}
+.explanation h3,
+.explanation p,
+.explanation abbr {
+  font-weight: 400;
+  color: #644221;
+  text-shadow: none;
+}
+.explanation abbr {
+  font-weight: 700;
+  color: black;
+}
+.participation {
+  margin-top: 160px;
 }
 .participation h3 {
   margin: 90px 0 0 0;

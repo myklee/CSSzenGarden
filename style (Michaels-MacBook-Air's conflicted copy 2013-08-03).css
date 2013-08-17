@@ -60,11 +60,17 @@
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.animate200 {
+.animate200eio {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+.animate400eio {
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 /* icon fonts */
 @font-face {
