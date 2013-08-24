@@ -19,7 +19,12 @@ window.onload = function() {
 			'icon-paperplane' : '&#xe008;',
 			'icon-brush' : '&#xe00b;',
 			'icon-paint-format' : '&#xe00c;',
-			'icon-finder' : '&#xe00d;'
+			'icon-github' : '&#xe00e;',
+			'icon-accessibility' : '&#xe00f;',
+			'icon-chrome' : '&#xe00d;',
+			'icon-key-fill' : '&#xe010;',
+			'icon-key-stroke' : '&#xe011;',
+			'icon-arrow-down-alt1' : '&#xe012;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;

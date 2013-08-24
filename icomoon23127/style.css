@@ -27,7 +27,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-ampersand, .icon-html5, .icon-css3, .icon-download, .icon-cloud-download, .icon-trophy, .icon-earth, .icon-html5-2, .icon-cc, .icon-mt, .icon-paperplane, .icon-brush, .icon-paint-format, .icon-finder {
+.icon-ampersand, .icon-html5, .icon-css3, .icon-download, .icon-cloud-download, .icon-trophy, .icon-earth, .icon-html5-2, .icon-cc, .icon-mt, .icon-paperplane, .icon-brush, .icon-paint-format, .icon-github, .icon-accessibility, .icon-chrome, .icon-key-fill, .icon-key-stroke, .icon-arrow-down-alt1 {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -76,6 +76,21 @@ you can use the generic selector below, but it's slower:
 .icon-paint-format:before {
 	content: "\e00c";
 }
-.icon-finder:before {
+.icon-github:before {
+	content: "\e00e";
+}
+.icon-accessibility:before {
+	content: "\e00f";
+}
+.icon-chrome:before {
 	content: "\e00d";
+}
+.icon-key-fill:before {
+	content: "\e010";
+}
+.icon-key-stroke:before {
+	content: "\e011";
+}
+.icon-arrow-down-alt1:before {
+	content: "\e012";
 }

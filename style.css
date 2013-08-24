@@ -114,12 +114,40 @@
 .icon-paint-format:before {
   content: "\e00c";
 }
-.icon-finder:before {
+.icon-github:before {
+  content: "\e00e";
+}
+.icon-accessibility:before {
+  content: "\e00f";
+}
+.icon-chrome:before {
   content: "\e00d";
+}
+.icon-key-fill:before {
+  content: "\e010";
+}
+.icon-key-stroke:before {
+  content: "\e011";
+}
+.icon-arrow-down-alt1:before {
+  content: "\e012";
+}
+summary:before,
+.summary a:before,
+.zen-validate-html,
+.zen-validate-css,
+.zen-license,
+.zen-accessibility,
+.zen-github {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
 }
 /* basic elements */
 /* links */
-/* INFIELD  - page wrapper*/
+/* INFIELD  - main */
 /* Summary */
 /* MAIN CONTENT */
 /*@import url('http://openfontlibrary.org/face/averia');*/
@@ -137,7 +165,8 @@
 /*@bodyTS: 3px 3px 0 rgba(0,0,0,.1);*/
 /*@inDepth: 500;*/
 /* basic elements */
-html {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -156,20 +185,40 @@ body {
   /*-webkit-backface-visibility: hidden;*/
 
 }
+.zen-github {
+  content: "\e00e";
+}
+/* warning track */
 aside.sidebar {
-  display: none;
+  /*display:none;	*/
+
   position: absolute;
-  top: 110px;
-  right: 16px;
+  top: 2800px;
+  width: 1800px;
+  height: 300px;
+  background-color: #af8843;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.33);
+  /* design-name */
+
 }
 aside.sidebar h3 {
-  font-size: 16px;
-  text-align: left;
+  font-size: 32px;
+}
+aside.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+aside.sidebar ul li {
+  margin: 0 30px 0 0;
+  padding: 0;
 }
 aside.sidebar a {
-  font: 1rem 'Roboto', sans-serif;
+  font: 300 1.1rem 'Roboto', sans-serif;
   /*font-size: 14px;*/
 
+  color: rgba(255, 255, 255, 0.66);
 }
 aside.sidebar a.designer-name {
   font-size: .6rem;
@@ -179,25 +228,27 @@ aside.sidebar .wrapper > div {
 
 }
 .design-name {
-  display: block;
+  /*display:block;*/
+
 }
 .design-selection,
 .design-archives,
 .zen-resources {
-  /*position: absolute;*/
-
+  position: absolute;
+  top: 30px;
 }
 .design-selection {
-  top: 350px;
-  left: 120px;
+  left: 220px;
 }
 .design-archives {
   left: 700px;
-  top: 350px;
+  /*top:350px;*/
+
 }
 .zen-resources {
   left: 700px;
-  top: 500px;
+  /*top:500px;*/
+
 }
 h1,
 h2,
@@ -231,8 +282,15 @@ abbr {
 
   color: #ffffff;
 }
-/* specific divs */
-/* INFIELD */
+.page-wrapper {
+  position: relative;
+  z-index: 5;
+  /*warning track*/
+
+  width: 100%;
+  background-color: #af8843;
+}
+/* infield */
 .main {
   position: absolute;
   top: 50px;
@@ -245,6 +303,8 @@ abbr {
   /* bases */
 
   /* Home Plate */
+
+  /* Base Dirt */
 
   /* First Base */
 
@@ -262,7 +322,7 @@ abbr {
 .main:before {
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   width: 100%;
   height: 100%;
   opacity: 0.3;
@@ -283,7 +343,7 @@ abbr {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   opacity: 0.3;
   filter: alpha(opacity=30);
   background: #4a7c00;
@@ -375,10 +435,10 @@ abbr {
   height: 300px;
   top: -150px;
   left: -150px;
+  background-color: #af8843;
   -webkit-box-shadow: 0 0 70px #f2c26e inset;
   -moz-box-shadow: 0 0 70px #f2c26e inset;
   box-shadow: 0 0 70px #f2c26e inset;
-  background-color: #af8843;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -392,6 +452,7 @@ abbr {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  z-index: -1;
 }
 .main .participation:before,
 .main .participation:after {
@@ -490,14 +551,16 @@ header:after {
   transform: rotate(-45deg);
 }
 header:before {
-  top: -12px;
-  left: 62px;
-  border-left: none;
+  top: -10px;
+  left: 60px;
+  /*border-left: none;*/
+
 }
 header:after {
   top: 48px;
-  left: 0px;
-  border-right: none;
+  left: 2px;
+  /*border-right: none;*/
+
 }
 header h1 {
   position: relative;
@@ -534,13 +597,13 @@ header h1:before:first-letter {
   clear: both;
 }
 header h1:after {
-  top: -25px;
-  left: -12px;
+  top: -24px;
+  left: -9px;
   border: 4px solid rgba(255, 255, 255, 0.55);
   opacity: 0.5;
   filter: alpha(opacity=50);
   border-bottom: none;
-  width: 29px;
+  width: 27px;
   height: 60px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -563,9 +626,9 @@ header h2 {
   margin-left: 240px;
   /* Baselines */
 
-  /*3rd Base Line*/
+  /*third Base Line*/
 
-  /*1st Base Line*/
+  /*first Base Line*/
 
 }
 header h2:before,
@@ -576,32 +639,19 @@ header h2:after {
 }
 header h2:before {
   top: 50px;
-  left: 115px;
+  left: 123px;
   height: 4px;
-  width: 1600px;
+  width: 1677px;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.55);
 }
 header h2:after {
-  top: 115px;
+  top: 123px;
   left: 50px;
   width: 4px;
-  height: 2800px;
+  height: 2977px;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.55);
-}
-/* summary text */
-.summary {
-  position: relative;
-  z-index: 5;
-}
-.summary p:first-child {
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 1.618em;
-  padding-left: 250px;
-  margin-top: 10px;
-  width: 48%;
 }
 /* Summary */
 .intro {
@@ -649,6 +699,14 @@ header h2:after {
   /* download HTML and CSS file */
 
 }
+.summary p:first-child {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.618em;
+  padding-left: 250px;
+  margin-top: 10px;
+  width: 48%;
+}
 .summary p:last-child {
   display: block;
   background: rgba(30, 160, 65, 0.33);
@@ -676,14 +734,6 @@ header h2:after {
   content: '';
   position: absolute;
   display: block;
-}
-.summary p:last-child:before,
-.summary p:last-child a:before {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
 }
 .summary p:last-child:before {
   margin-top: -50px;
@@ -767,8 +817,6 @@ header h2:after {
 }
 .preamble h3 {
   font-size: 48px;
-  opacity: 0.66;
-  filter: alpha(opacity=66);
 }
 .preamble p {
   position: relative;
@@ -809,12 +857,10 @@ footer p a {
   display: inline-block;
   padding: 3px 16px;
   background-color: rgba(30, 160, 65, 0.33);
-  /*&:hover {
-				background-color:@globalFontColor;
-				background-color: rgba(255,255,255,.1);
-				color: @btnGreen;
-				}*/
-
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .explanation p a:hover,
 .participation p a:hover,
@@ -840,13 +886,15 @@ footer p a:active {
 .explanation h3,
 .explanation p,
 .explanation abbr {
-  font-weight: 400;
-  color: #644221;
+  font-weight: 300;
+  /*color: rgba(60,50,20,1);*/
+
   text-shadow: none;
 }
 .explanation abbr {
   font-weight: 700;
-  color: black;
+  /*color: black;*/
+
 }
 .participation {
   margin-top: 160px;
