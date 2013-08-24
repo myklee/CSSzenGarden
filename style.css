@@ -190,6 +190,10 @@ body {
 .zen-github {
   content: "\e00e";
 }
+.main h3,
+.main p {
+  margin-left: 130px;
+}
 .preamble {
   position: absolute;
   top: 50px;
@@ -199,6 +203,8 @@ body {
   height: 1080px;
   /* infield mow pattern */
 
+  /* typeset / content positioning The road to enlightenment */
+
   /*home plate */
 
   /* First Base */
@@ -206,6 +212,16 @@ body {
   /* Second Base */
 
   /* Third Base */
+
+  /*	
+	1st and third base dirt
+	&:after {
+		.square(316px);
+		background-color: @dirtBg;
+		.border-radius(50%);
+		z-index: -1;
+	}
+	*/
 
 }
 .preamble:before,
@@ -272,6 +288,14 @@ body {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+.preamble h3,
+.preamble p {
+  margin-left: 130px;
+  width: 720px;
+}
+.preamble h3 {
+  margin-top: 650px;
 }
 .preamble h3:before,
 .preamble h3:after {
@@ -398,64 +422,22 @@ a:hover {
   color: rgba(255, 255, 255, 0.1);
 }
 abbr {
-  /*border-bottom: 3px dotted rgba(255,255,255,.15);*/
-
   color: #ffffff;
 }
 .page-wrapper {
   position: relative;
   z-index: 5;
-  /*warning track*/
-
   width: 100%;
   background-color: #af8843;
 }
 /* infield */
 .main {
   position: absolute;
-  top: 1200px;
-  /* bases */
-
-  /* Home Plate */
-
-  /* Base Dirt */
-
-  /*.participation, .benefits, .requirements {
-			&:after {
-				.square(316px);
-				background-color: @dirtBg;
-				.border-radius(50%);
-				z-index: -1;
-			}
-			}*/
-
-}
-.main .explanation,
-.main .participation,
-.main .benefits,
-.main .requirements,
-.main footer {
-  /*.before-after;*/
-
-  /* Bases global */
-
-  /*&:before {
-			background-color: white;
-			.square(15px);
-			.border-radius(1px);
-			z-index: 100;
-			.box-shadow(0 0 15px darken(@dirtBg, 10%));
-			}*/
-
+  top: 1150px;
+  left: 0;
 }
 header {
   /* batters box */
-
-  /*
-		position: relative;
-		z-index: 5;
-
-		width:100%;*/
 
   /* Title */
 
@@ -487,14 +469,10 @@ header:after {
 header:before {
   top: -10px;
   left: 60px;
-  /*border-left: none;*/
-
 }
 header:after {
   top: 48px;
   left: 2px;
-  /*border-right: none;*/
-
 }
 header h1 {
   position: relative;
@@ -517,10 +495,10 @@ header h1:after {
 header h1:before {
   text-indent: 0;
   text-align: left;
-  margin: 160px 0 0 230px;
+  margin: 160px 0 0 160px;
   content: 'CSS Diamond';
   font-family: 'Playball', serif;
-  font-size: 112px;
+  font-size: 96px;
   line-height: 1em;
   color: #ffffff;
   /*.rotate(-5deg);*/
@@ -547,7 +525,7 @@ header h1:after {
 }
 header h2 {
   font-family: 'Roboto Slab', serif;
-  font-size: 52px;
+  font-size: 32px;
   font-weight: 200;
   line-height: 1.15em;
   /*.rotate(-5deg);*/
@@ -556,8 +534,8 @@ header h2 {
 
   color: #cfe0b3;
   width: 100%;
-  margin-top: 260px;
-  margin-left: 240px;
+  margin-top: 240px;
+  margin-left: 170px;
   /* Baselines */
 
   /*third Base Line*/
@@ -680,20 +658,21 @@ header h2:after {
   font-size: 18px;
   font-weight: 200;
   line-height: 1.618em;
-  padding-left: 250px;
+  padding-left: 170px;
   margin-top: 10px;
   width: 48%;
 }
 .summary p:last-child {
   display: block;
-  background: rgba(30, 160, 65, 0.33);
-  margin: 70px 0 0 250px;
+  background-color: rgba(30, 160, 65, 0.33);
+  margin: 70px 0 0 170px;
   text-transform: uppercase;
   position: relative;
   z-index: 3;
   width: 150px;
   height: 75px;
   text-shadow: none;
+  text-indent: -99999px;
   /*hide text easy*/
 
   color: rgba(30, 160, 65, 0.33);
@@ -740,6 +719,7 @@ header h2:after {
   line-height: 0;
   text-align: center;
   text-transform: uppercase;
+  text-indent: 0;
   color: #cfe0b3;
   -webkit-transition: all 400ms ease-in-out;
   -moz-transition: all 400ms ease-in-out;
@@ -795,7 +775,8 @@ header h2:after {
 .benefits,
 .requirements,
 footer {
-  padding-left: 180px;
+  /*padding-left:180px;*/
+
 }
 .explanation h3,
 .participation h3,
@@ -803,7 +784,8 @@ footer {
 .requirements h3,
 footer h3 {
   font-size: 48px;
-  margin-top: 50px;
+  /*margin-top:50px;*/
+
 }
 .explanation p,
 .participation p,
@@ -861,7 +843,8 @@ footer p a:active {
   margin-top: 160px;
 }
 .participation h3 {
-  margin: 90px 0 0 0;
+  /*margin: 90px 0 0 0;*/
+
 }
 /* warning track */
 aside.sidebar {
