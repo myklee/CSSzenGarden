@@ -171,6 +171,13 @@ body {
 	content: "\e00e";
 
 }
+
+h3 {
+
+}
+.main h3, .main p {
+	margin-left:130px;
+}
 .preamble {
 	position: absolute;
 	top: 50px;
@@ -225,9 +232,14 @@ body {
 		}
 
 	}
-
+	/* typeset / content positioning The road to enlightenment */
+	h3, p {
+		margin-left: 130px;
+		width:720px;
+	}
 	/*home plate */
 	h3 {
+		margin-top:650px;
 		.before-after;
 		&:before {
 			top:1px;
@@ -294,8 +306,15 @@ body {
 			right:-158px;
 		}
 	}
-	
-
+	/*	
+	1st and third base dirt
+	&:after {
+		.square(316px);
+		background-color: @dirtBg;
+		.border-radius(50%);
+		z-index: -1;
+	}
+	*/
 
 	h3 {
 		font-size:48px;
@@ -335,442 +354,406 @@ a {
 }
 
 abbr {
-	/*border-bottom: 3px dotted rgba(255,255,255,.15);*/
 	color:rgba(255,255,255,1);
 }
 
 .page-wrapper {
 	position: relative;
 	z-index: 5;
-	/*warning track*/
 	width:100%;
 	background-color: @dirtBg;
 }
 /* infield */
 .main { 
 	position: absolute;
-	top:1200px;
-	/* bases */
-	.explanation, .participation, .benefits, .requirements, footer {
-		/*.before-after;*/
-		/* Bases global */
-		/*&:before {
-			background-color: white;
-			.square(15px);
-			.border-radius(1px);
-			z-index: 100;
-			.box-shadow(0 0 15px darken(@dirtBg, 10%));
-			}*/
-		}
-		/* Home Plate */
+	top:1150px;
+	left:0;
+}
 
-		/* Base Dirt */
-		/*.participation, .benefits, .requirements {
-			&:after {
-				.square(316px);
-				background-color: @dirtBg;
-				.border-radius(50%);
-				z-index: -1;
-			}
-			}*/
+header {
 
+	/* batters box */
 
-			footer {
-
-
-			}
-		}
-
-		header {
-
-			/* batters box */
-
-			.before-after;
-			&:before, &:after {
-				width:48px;
-				height:72px;	
-				border: 4px solid @lineColor;
-				.opacity(50);
-				z-index: 100;		
-				top:0;
-				left:0;
-				.rotate(-45deg);
-			}
-			&:before {
-				top:-10px;	
-				left:60px;
-				/*border-left: none;*/
-			}
-			&:after {
-				top:48px;	
-				left:2px;
-				/*border-right: none;*/
-			}
-/*
-		position: relative;
-		z-index: 5;
-
-		width:100%;*/
-		/* Title */
-		h1 {
-			position: relative;
-			text-shadow: @baseTS;
-			display: block;
-			/*padding-top:100px;*/
-			text-indent:-999999px;
-			.before-after;
-			/* CSS Ball Park Title Correction */
-			&:before {
-				text-indent:0;
-				text-align: left;
-				margin:160px 0 0 230px;
-				content:'CSS Diamond';
-				font-family: 'Playball', serif;
-				font-size: 112px;
-				line-height: 1em;
-				color: rgba(255,255,255,1);
-				/*.rotate(-5deg);*/
-				&:first-letter {
-					display:block;
-					clear:both;
-				}
-			}
-			/*catcher's box*/
-			&:after {
-				top:-24px;
-				left:-9px;
-				border:4px solid @lineColor;
-				.opacity(50);
-				border-bottom:none;
-				width:27px;
-				height:60px;
-				.rotate(-45deg);
-			}
-		}
-		/* subtitle */
-		h2 {
-			font-family: 'Roboto Slab', serif;
-			font-size:52px;
-			font-weight: 200;
-			line-height: 1.15em;
-			/*.rotate(-5deg);*/
-			/*margin-top: -30px;*/
-			color:@globalFontColor;
-			width:100%;
-			margin-top:260px;
-			margin-left:240px;
-
-			/* Baselines */
-			.before-after;
-			/*third Base Line*/
-			&:before {
-				top:50px;
-				left:123px;
-				height:4px;
-				width:1677px;
-				z-index: 1;
-				background-color: @lineColor;
-			}
-			/*first Base Line*/
-			&:after {
-				top:123px;
-				left:50px;
-				width:4px;
-				height:2977px;
-				z-index: 1;
-
-				background-color: @lineColor;
-			}
-		}
-
-	}
-
-	/* Summary */
-	.intro {
-		position: absolute;
+	.before-after;
+	&:before, &:after {
+		width:48px;
+		height:72px;	
+		border: 4px solid @lineColor;
+		.opacity(50);
+		z-index: 100;		
 		top:0;
 		left:0;
+		.rotate(-45deg);
+	}
+	&:before {
+		top:-10px;	
+		left:60px;
+	}
+	&:after {
+		top:48px;	
+		left:2px;
+	}
+	/* Title */
+	h1 {
+		position: relative;
+		text-shadow: @baseTS;
 		display: block;
-
-		/* infield dirt */
+		/*padding-top:100px;*/
+		text-indent:-999999px;
 		.before-after;
-		&:before, &:after {
-			background-color:@dirtBg;
-		} 
-		/* first base side dirt */
+		/* CSS Ball Park Title Correction */
 		&:before {
-			height:375px;
-			width:1130px;
-			top:1100px;
-			left:0;
-			.border-top-left-radius(5px);
-		}
-		/* third base side dirt */
-		&:after {
-			height:1495px;
-			width:375px;
-			top:-20px;
-			left:1100px;
-			.border-bottom-right-radius(360px);
-			.border-top-left-radius(5px);
-
-		}
-	}
-	.summary {
-		.before-after;
-		/* pitching rubber */
-		&:before {
-			top:513.359px;
-			left:513.359px;
-			height:24px;
-			width: 6px;
-			.rotate(45deg);
-			.box-shadow(0 0 5px #603a02);
-			background-color: white;
-			z-index: 100;
-		}
-		/* PITCHING MOUND */
-		&:after {
-			.square(216px);
-			top:500px;
-			left:500px;
-			margin-left:-108px;
-			margin-top:-108px;
-			.box-shadow(0 0 70px #c07719 inset);
-			background-color: @dirtBg;
-			.border-radius(50%);
-		}
-		p:first-child {
-			font-size: 18px;
-			font-weight: 200;
-			line-height: 1.618em;
-			padding-left:250px;
-			margin-top:10px;
-			width:48%;
-		}
-		/* download HTML and CSS file */
-		p:last-child {		
-			display: block;
-			background: @btnGreen;
-			margin:70px 0 0 250px;
-			text-transform: uppercase;
-			position: relative;
-			z-index: 3;
-			width: 150px;		
-			height:75px;
-			text-shadow:none;
-			/*hide text easy*/
-			color:@btnGreen;
-			.before-after;
-
-			/* download label icon */
-			&:before {
-				margin-top:-50px;
-				margin-left:50px;
-				content: "\e004";
-				font-size:32px;
-				text-align: center;
-				line-height:50px;
-				.square(50px);
-				.border-radius(50%);
-				z-index: 3;
-				color: rgba(0,0,0,.33);	
-				color: @globalFontColor;			
-			}
-			/* HTML5 CSS3 icons */
-			a {
-				position: absolute;
-				top:0;
-				display:block;
-				font-family: 'Roboto';
-				font-size: 12px;
-				font-weight: 600;
-				width: 50%;
-				height: 75px;
-				line-height: 0;
-				text-align: center;
-				text-transform: uppercase;
-				color: @globalFontColor;
-				.animate400eio;
-				-webkit-font-smoothing: antialiased;
-
-				&:hover, &:active {
-					.animate100ei;	
-					background-color:@globalFontColor;
-					background-color: rgba(255,255,255,.15);
-					/*color:@btnGreen*/
-				}
-				&:hover, &:active {
-					.animate100ei;	
-					background-color:@globalFontColor;
-					background-color: rgba(30,60,40,1);
-					/*color:white;*/
-				}
-				&:before {
-					display: block;
-					text-align: center;
-					font-size:28px;
-					line-height:60px;
-				}
-			}
-			/*HTML5 icon*/
-			a:first-child {
-				left:0;
-				border-right:1px solid rgba(255,255,255,.15);
-				&:before {
-					content: "\e001";
-
-				}
-			}
-			/*CSS3 icon */
-			a:last-child {
-				left:50%;
-				&:before {
-					content: "\e002";
-				}
-
-			}
-		}
-
-	}
-
-
-
-	/* MAIN CONTENT */
-
-
-	/* content styles */
-	.explanation, .participation, .benefits, .requirements, footer {
-		padding-left:180px;
-		h3 {
-			font-size:48px;
-			margin-top:50px;
-		}
-		p {
+			text-indent:0;
 			text-align: left;
-			width:900px;
-			a {
-				display: inline-block;
-				padding: 3px 16px;
-				background-color:@btnGreen;
-				.animate400eio;
-
-				&:hover, &:active {
-					.animate100ei;	
-					background-color:@globalFontColor;
-					background-color: rgba(30,60,40,1);
-					color:white;
-				}
+			margin:160px 0 0 160px;
+			content:'CSS Diamond';
+			font-family: 'Playball', serif;
+			font-size: 96px;
+			line-height: 1em;
+			color: rgba(255,255,255,1);
+			/*.rotate(-5deg);*/
+			&:first-letter {
+				display:block;
+				clear:both;
 			}
 		}
-
-
-	}
-	.explanation {
-		h3, p, abbr {
-			font-weight: 300;
-			/*color: rgba(60,50,20,1);*/
-			text-shadow:none;
-
-		}
-		abbr {
-			font-weight: 700;
-			/*color: black;*/
-		}
-
-	}
-	.participation {
-		margin-top:160px;
-		h3 {
-			margin: 90px 0 0 0;
+		/*catcher's box*/
+		&:after {
+			top:-24px;
+			left:-9px;
+			border:4px solid @lineColor;
+			.opacity(50);
+			border-bottom:none;
+			width:27px;
+			height:60px;
+			.rotate(-45deg);
 		}
 	}
+	/* subtitle */
+	h2 {
+		font-family: 'Roboto Slab', serif;
+		font-size:32px;
+		font-weight: 200;
+		line-height: 1.15em;
+		/*.rotate(-5deg);*/
+		/*margin-top: -30px;*/
+		color:@globalFontColor;
+		width:100%;
+		margin-top:240px;
+		margin-left:170px;
 
+		/* Baselines */
+		.before-after;
+		/*third Base Line*/
+		&:before {
+			top:50px;
+			left:123px;
+			height:4px;
+			width:1677px;
+			z-index: 1;
+			background-color: @lineColor;
+		}
+		/*first Base Line*/
+		&:after {
+			top:123px;
+			left:50px;
+			width:4px;
+			height:2977px;
+			z-index: 1;
 
+			background-color: @lineColor;
+		}
+	}
 
-	/* warning track */
-	aside.sidebar {
-		/*display:none;	*/
-		position: absolute;
-		top:2800px;
-		width:1800px;
-		height:300px;
+}
+
+/* Summary */
+.intro {
+	position: absolute;
+	top:0;
+	left:0;
+	display: block;
+
+	/* infield dirt */
+	.before-after;
+	&:before, &:after {
+		background-color:@dirtBg;
+	} 
+	/* first base side dirt */
+	&:before {
+		height:375px;
+		width:1130px;
+		top:1100px;
+		left:0;
+		.border-top-left-radius(5px);
+	}
+	/* third base side dirt */
+	&:after {
+		height:1495px;
+		width:375px;
+		top:-20px;
+		left:1100px;
+		.border-bottom-right-radius(360px);
+		.border-top-left-radius(5px);
+
+	}
+}
+.summary {
+	.before-after;
+	/* pitching rubber */
+	&:before {
+		top:513.359px;
+		left:513.359px;
+		height:24px;
+		width: 6px;
+		.rotate(45deg);
+		.box-shadow(0 0 5px #603a02);
+		background-color: white;
+		z-index: 100;
+	}
+	/* PITCHING MOUND */
+	&:after {
+		.square(216px);
+		top:500px;
+		left:500px;
+		margin-left:-108px;
+		margin-top:-108px;
+		.box-shadow(0 0 70px #c07719 inset);
 		background-color: @dirtBg;
-		text-align: left;
-		color:rgba(255,255,255,.33);
-		h3 {
-			font-size: 32px;
+		.border-radius(50%);
+	}
+	p:first-child {
+		font-size: 18px;
+		font-weight: 200;
+		line-height: 1.618em;
+		padding-left:170px;
+		margin-top:10px;
+		width:48%;
+	}
+	/* download HTML and CSS file */
+	p:last-child {		
+		display: block;
+		background-color: @btnGreen;
+		margin:70px 0 0 170px;
+		text-transform: uppercase;
+		position: relative;
+		z-index: 3;
+		width: 150px;		
+		height:75px;
+		text-shadow:none;
+		text-indent:-99999px;
+		/*hide text easy*/
+		color:@btnGreen;
+		.before-after;
+
+		/* download label icon */
+		&:before {
+			margin-top:-50px;
+			margin-left:50px;
+			content: "\e004";
+			font-size:32px;
+			text-align: center;
+			line-height:50px;
+			.square(50px);
+			.border-radius(50%);
+			z-index: 3;
+			color: rgba(0,0,0,.33);	
+			color: @globalFontColor;		
+
 		}
-		ul {
-			margin:0;
-			padding:0;
-			list-style-type: none;
-			li {
-				margin:0 30px 0 0;
-				padding:0;
-			}
-		}
-		/* design-name */
+		/* HTML5 CSS3 icons */
 		a {
-			font: 300 1.1rem 'Roboto', sans-serif;
-			/*font-size: 14px;*/
-			color:rgba(255,255,255,.66);
+			position: absolute;
+			top:0;
+			display:block;
+			font-family: 'Roboto';
+			font-size: 12px;
+			font-weight: 600;
+			width: 50%;
+			height: 75px;
+			line-height: 0;
+			text-align: center;
+			text-transform: uppercase;
+			text-indent:0;
+			color: @globalFontColor;
+			.animate400eio;
+			-webkit-font-smoothing: antialiased;
 
-			&.designer-name {
-				font-size:.6rem;
+			&:hover, &:active {
+				.animate100ei;	
+				background-color:@globalFontColor;
+				background-color: rgba(255,255,255,.15);
+				/*color:@btnGreen*/
+			}
+			&:hover, &:active {
+				.animate100ei;	
+				background-color:@globalFontColor;
+				background-color: rgba(30,60,40,1);
+				/*color:white;*/
+			}
+			&:before {
+				display: block;
+				text-align: center;
+				font-size:28px;
+				line-height:60px;
 			}
 		}
-		.wrapper {
-			> div {
-				/*float:left;*/
+		/*HTML5 icon*/
+		a:first-child {
+			left:0;
+			border-right:1px solid rgba(255,255,255,.15);
+			&:before {
+				content: "\e001";
+
 			}
 		}
+		/*CSS3 icon */
+		a:last-child {
+			left:50%;
+			&:before {
+				content: "\e002";
+			}
+
+		}
+	}
+
+}
+
+
+
+/* MAIN CONTENT */
+
+
+/* content styles */
+.explanation, .participation, .benefits, .requirements, footer {
+	/*padding-left:180px;*/
+	h3 {
+		font-size:48px;
+		/*margin-top:50px;*/
+	}
+	p {
+		text-align: left;
+		width:900px;
+		a {
+			display: inline-block;
+			padding: 3px 16px;
+			background-color:@btnGreen;
+			.animate400eio;
+
+			&:hover, &:active {
+				.animate100ei;	
+				background-color:@globalFontColor;
+				background-color: rgba(30,60,40,1);
+				color:white;
+			}
+		}
+	}
+}
+.explanation {
+	h3, p, abbr {
+		font-weight: 300;
+		/*color: rgba(60,50,20,1);*/
+		text-shadow:none;
 
 	}
-	.design-name {
-		/*display:block;*/
+	abbr {
+		font-weight: 700;
+		/*color: black;*/
 	}
-	.design-selection, .design-archives, .zen-resources {
-		position: absolute;
-		top:30px;
 
+}
+.participation {
+	margin-top:160px;
+	h3 {
+		/*margin: 90px 0 0 0;*/
 	}
-	.design-selection {
-		left:220px;
+}
+
+
+
+/* warning track */
+aside.sidebar {
+	/*display:none;	*/
+	position: absolute;
+	top:2800px;
+	width:1800px;
+	height:300px;
+	background-color: @dirtBg;
+	text-align: left;
+	color:rgba(255,255,255,.33);
+	h3 {
+		font-size: 32px;
+	}
+	ul {
+		margin:0;
+		padding:0;
+		list-style-type: none;
 		li {
-
+			margin:0 30px 0 0;
+			padding:0;
 		}
 	}
-	.design-archives {
-		left:700px;
-		/*top:350px;*/
+	/* design-name */
+	a {
+		font: 300 1.1rem 'Roboto', sans-serif;
+		/*font-size: 14px;*/
+		color:rgba(255,255,255,.66);
 
-	}
-	.zen-resources {
-		left:700px;
-		/*top:500px;*/
-	}
-
-
-	footer { 
-		width:800px;
-		text-align: center; 
-		padding:130px;
-		/*background-color: @dirtBg;*/
-	}
-	footer a:link, footer a:visited { 
-		margin-right: 20px; 
-	}
-
-
-
-	@media all and (max-width: 1024px) {
-		body {
-
+		&.designer-name {
+			font-size:.6rem;
 		}
+	}
+	.wrapper {
+		> div {
+			/*float:left;*/
+		}
+	}
 
+}
+.design-name {
+	/*display:block;*/
+}
+.design-selection, .design-archives, .zen-resources {
+	position: absolute;
+	top:30px;
+
+}
+.design-selection {
+	left:220px;
+	li {
 
 	}
+}
+.design-archives {
+	left:700px;
+	/*top:350px;*/
+
+}
+.zen-resources {
+	left:700px;
+	/*top:500px;*/
+}
+
+
+footer { 
+	width:800px;
+	text-align: center; 
+	padding:130px;
+	/*background-color: @dirtBg;*/
+}
+footer a:link, footer a:visited { 
+	margin-right: 20px; 
+}
+
+
+
+@media all and (max-width: 1024px) {
+	body {
+
+	}
+
+
+}
 
 
 
