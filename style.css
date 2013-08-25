@@ -181,8 +181,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: #4a7c00;
-  /*background: url(tx-grass.png) #4a7c00;*/
-
   text-shadow: none;
   /*-webkit-backface-visibility: hidden;*/
 
@@ -190,10 +188,7 @@ body {
 .zen-github {
   content: "\e00e";
 }
-.main h3,
-.main p {
-  margin-left: 130px;
-}
+/* infield */
 .preamble {
   position: absolute;
   top: 50px;
@@ -429,12 +424,6 @@ abbr {
   z-index: 5;
   width: 100%;
   background-color: #af8843;
-}
-/* infield */
-.main {
-  position: absolute;
-  top: 1150px;
-  left: 0;
 }
 header {
   /* batters box */
@@ -768,15 +757,20 @@ header h2:after {
 .summary p:last-child a:last-child:before {
   content: "\e002";
 }
-/* MAIN CONTENT */
-/* content styles */
-.explanation,
-.participation,
+/* MAIN CONTENT -mc */
+/* typesetting and content styles */
+.main {
+  position: absolute;
+  top: 1150px;
+  left: 0;
+}
+.main h3,
+.main p {
+  margin-left: 130px;
+}
 .benefits,
-.requirements,
-footer {
-  /*padding-left:180px;*/
-
+.requirements {
+  position: absolute;
 }
 .explanation h3,
 .participation h3,
@@ -784,8 +778,6 @@ footer {
 .requirements h3,
 footer h3 {
   font-size: 48px;
-  /*margin-top:50px;*/
-
 }
 .explanation p,
 .participation p,
