@@ -106,6 +106,7 @@ summary:before, .summary a:before,.zen-validate-html, .zen-validate-css, .zen-li
 
 /*@import url('http://openfontlibrary.org/face/averia');*/
 
+/* vars and mixins -vm */
 .hide-text {
 	text-indent: 100%;
 	white-space: nowrap;
@@ -130,28 +131,30 @@ summary:before, .summary a:before,.zen-validate-html, .zen-validate-css, .zen-li
 @bodyTS:none;
 /*@bodyTS: 3px 3px 0 rgba(0,0,0,.1);*/
 
+@fullWidth: 120rem;
+@fullHeight: 120rem;
 
-@baseShadow: 0 0 16px #7c4a03;
-
+@baseShadow: 0 0 1.6rem #7c4a03;
 @dirtBg:#af8843;
 
+@linkHoverBg:rgba(30,60,40,1);
 @btnGreen: rgba(30,160,65, .33);
-
-@lineColor: rgba(255,255,255,0.55);
+@lineColor: rgba(255,255,255,0.33);
 
 /*@inDepth: 500;*/
 
 
+/* global scale */
+html {
+	font-size:10px;
+}
 /* basic elements */
 html, body {
 	margin: 0;
 	padding: 0;
 	.square(100%);
-
 }
 body { 
-	font-size: 62.5%;
-	font-family: 'Roboto Slab', serif;
 	color: @globalFontColor; 
 	margin: 0; 
 	padding: 0;
@@ -174,10 +177,10 @@ body {
 /* infield */
 .preamble {
 	position: absolute;
-	top: 50px;
-	left: 50px;
-	max-height:1080px;
-	.square(1080px); 
+	top: 5rem;
+	left: 5rem;
+	max-height:108rem;
+	.square(108rem); 
 	/* infield mow pattern */
 	.before-after;
 	
@@ -217,29 +220,29 @@ body {
 		/* Home Plate Dirt */
 		.before-after;
 		&:before {
-			.square(300px);
-			top:-150px;
-			left:-150px;
+			.square(30rem);
+			top:-15rem;
+			left:-15rem;
 			background-color: @dirtBg;
-			.box-shadow(0 0 70px #f2c26e inset);
+			.box-shadow(0 0 7rem #f2c26e inset);
 			.border-radius(50%);
 		}
 
 	}
 	/* typeset / content positioning The road to enlightenment */
 	h3, p {
-		margin-left: 130px;
-		width:720px;
+		margin-left: 9rem;
+		width:72rem;
 	}
 	/*home plate */
 	h3 {
-		margin-top:650px;
+		margin-top:75rem;
 		.before-after;
 		&:before {
-			top:1px;
-			left:5px;
-			height:17px;
-			width: 8.5px;
+			top:.1rem;
+			left:.5rem;
+			height:1.7rem;
+			width: .85rem;
 			.rotate(45deg);
 			.box-shadow(none);
 			background-color: white;
@@ -247,9 +250,9 @@ body {
 
 		}
 		&:after {
-			.square(12px);
-			top:0px;
-			left:0px;
+			.square(1.2rem);
+			top:0;
+			left:0;
 			background-color: white;
 			z-index: 100;
 
@@ -260,10 +263,10 @@ body {
 		/* Bases global */
 		&:before {
 			background-color: white;
-			.square(15px);
-			.border-radius(1px);
+			.square(1.5rem);
+			.border-radius(.1rem);
 			z-index: 100;
-			.box-shadow(0 0 15px darken(@dirtBg, 10%));
+			.box-shadow(0 0 1.5rem darken(@dirtBg, 10%));
 		}
 	}
 
@@ -274,19 +277,19 @@ body {
 			left:0;
 		}
 		&:after {
-			bottom:-158px;
-			left:-158px;
+			bottom:-15.8rem;
+			left:-15.8rem;
 		}
 	}
 	/* Second Base */
 	p:nth-child(3) {
 		&:before {
-			bottom:-7.5px;
-			right:-7.5px;
+			bottom:-.75rem;
+			right:-.75rem;
 		}
 		&:after {
-			bottom:-158px;
-			right:-158px;
+			bottom:-15.8rem;
+			right:-15.8rem;
 		}
 	}
 	/* Third Base */
@@ -296,8 +299,8 @@ body {
 			right:0;
 		}
 		&:after {
-			top:-158px;
-			right:-158px;
+			top:-15.8rem;
+			right:-15.8rem;
 		}
 	}
 	/*	
@@ -311,12 +314,10 @@ body {
 	*/
 
 	h3 {
-		font-size:48px;
+		font-size:4.8rem;
 	}
 	p {
-		/*position: relative;*/
 		z-index: 5;
-		/*width:800px;*/
 		text-align: left;
 	}
 }
@@ -332,7 +333,7 @@ h3 {
 }
 p {
 	font-family: 'Roboto Slab';
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 200;
 	line-height: 1.67em;
 	display: block;
@@ -358,15 +359,16 @@ abbr {
 	background-color: @dirtBg;
 }
 
+@hleftIndent: 25rem;
 header {
 
 	/* batters box */
 
 	.before-after;
 	&:before, &:after {
-		width:48px;
-		height:72px;	
-		border: 4px solid @lineColor;
+		width:4.8rem;
+		height:7.2rem;	
+		border: .4rem solid @lineColor;
 		.opacity(50);
 		z-index: 100;		
 		top:0;
@@ -374,31 +376,31 @@ header {
 		.rotate(-45deg);
 	}
 	&:before {
-		top:-10px;	
-		left:60px;
+		top:-1rem;	
+		left:6rem;
 	}
 	&:after {
-		top:48px;	
-		left:2px;
+		top:4.8rem;	
+		left:.2rem;
 	}
 	/* Title */
 	h1 {
 		position: relative;
 		text-shadow: @baseTS;
 		display: block;
-		/*padding-top:100px;*/
 		text-indent:-999999px;
 		.before-after;
 		/* CSS Ball Park Title Correction */
 		&:before {
 			text-indent:0;
 			text-align: left;
-			margin:160px 0 0 160px;
+			margin:12rem 0 0 @hleftIndent;
 			content:'CSS Diamond';
 			font-family: 'Playball', serif;
-			font-size: 96px;
+			font-size: 9.6rem;
 			line-height: 1em;
 			color: rgba(255,255,255,1);
+			white-space: nowrap;
 			/*.rotate(-5deg);*/
 			&:first-letter {
 				display:block;
@@ -407,48 +409,45 @@ header {
 		}
 		/*catcher's box*/
 		&:after {
-			top:-24px;
-			left:-9px;
-			border:4px solid @lineColor;
+			top:-2.4rem;
+			left:-.9rem;
+			border:.4rem solid @lineColor;
 			.opacity(50);
 			border-bottom:none;
-			width:27px;
-			height:60px;
+			width:2.7rem;
+			height:6rem;
 			.rotate(-45deg);
 		}
 	}
 	/* subtitle */
 	h2 {
 		font-family: 'Roboto Slab', serif;
-		font-size:32px;
+		font-size:3.2rem;
 		font-weight: 200;
 		line-height: 1.15em;
-		/*.rotate(-5deg);*/
-		/*margin-top: -30px;*/
 		color:@globalFontColor;
 		width:100%;
-		margin-top:240px;
-		margin-left:170px;
+		margin-top:20rem;
+		margin-left:@hleftIndent;
 
 		/* Baselines */
 		.before-after;
-		/*third Base Line*/
 		&:before {
-			top:50px;
-			left:123px;
-			height:4px;
-			width:1677px;
+			/*third Base Line*/
+			top:5rem;
+			left:12.3rem;
+			height:.4rem;
+			width:135rem;
 			z-index: 1;
 			background-color: @lineColor;
 		}
-		/*first Base Line*/
 		&:after {
-			top:123px;
-			left:50px;
-			width:4px;
-			height:2977px;
+			/*first Base Line*/
+			top:12.3rem;
+			left:5rem;
+			width:.4rem;
+			height:230rem;
 			z-index: 1;
-
 			background-color: @lineColor;
 		}
 	}
@@ -467,98 +466,103 @@ header {
 	&:before, &:after {
 		background-color:@dirtBg;
 	} 
-	/* first base side dirt */
 	&:before {
-		height:375px;
-		width:1130px;
-		top:1100px;
+		/* first base side dirt */
+		height:37.5rem;
+		width:113rem;
+		top:110rem;
 		left:0;
-		.border-top-left-radius(5px);
+		.border-top-left-radius(.5rem);
 	}
-	/* third base side dirt */
 	&:after {
-		height:1495px;
-		width:375px;
-		top:-20px;
-		left:1100px;
-		.border-bottom-right-radius(360px);
-		.border-top-left-radius(5px);
+		/* third base side dirt */
+		height:149.5rem;
+		width:37.5rem;
+		top:-2rem;
+		left:110rem;
+		.border-bottom-right-radius(36rem);
+		.border-top-left-radius(.5rem);
 
 	}
 }
 .summary {
 	.before-after;
-	/* pitching rubber */
 	&:before {
-		top:513.359px;
-		left:513.359px;
-		height:24px;
-		width: 6px;
+		/* pitching rubber */
+		top:51.3359rem;
+		left:51.3359rem;
+		height:2.4rem;
+		width: .6rem;
 		.rotate(45deg);
-		.box-shadow(0 0 5px #603a02);
+		.box-shadow(0 0 .5rem #603a02);
 		background-color: white;
 		z-index: 100;
 	}
-	/* PITCHING MOUND */
 	&:after {
-		.square(216px);
-		top:500px;
-		left:500px;
-		margin-left:-108px;
-		margin-top:-108px;
-		.box-shadow(0 0 70px #c07719 inset);
+		/* PITCHING MOUND */
+		.square(21.6rem);
+		top:50rem;
+		left:50rem;
+		margin-left:-10.8rem;
+		margin-top:-10.8rem;
+		.box-shadow(0 0 7rem #c07719 inset);
 		background-color: @dirtBg;
 		.border-radius(50%);
 	}
 	p:first-child {
-		font-size: 18px;
+		/* THE SUMMARY summary text */
+		font-size: 1.8rem;
 		font-weight: 200;
 		line-height: 1.618em;
-		padding-left:170px;
-		margin-top:10px;
-		width:48%;
+		padding-left:@hleftIndent;
+		margin-top:1rem;
+		width:53%;
+		.before-after;
+		&:before {
+			content:;
+		}
 	}
-	/* download HTML and CSS file */
 	p:last-child {		
+		/* download HTML and CSS file */
 		display: block;
 		background-color: @btnGreen;
-		margin:70px 0 0 170px;
+		margin:89rem 0 0 92rem;
 		text-transform: uppercase;
 		position: relative;
 		z-index: 3;
-		width: 150px;		
-		height:75px;
+		width: 15rem;		
+		height:7.5rem;
 		text-shadow:none;
 		text-indent:-99999px;
 		/*hide text easy*/
 		color:@btnGreen;
 		.before-after;
 
-		/* download label icon */
 		&:before {
-			margin-top:-50px;
-			margin-left:50px;
+			/* download label icon */
+			margin-top:-5rem;
+			margin-left:5rem;
 			content: "\e004";
-			font-size:32px;
+			font-size:3.2rem;
 			text-align: center;
-			line-height:50px;
-			.square(50px);
+			line-height:5rem;
+			.square(5rem);
 			.border-radius(50%);
 			z-index: 3;
 			color: rgba(0,0,0,.33);	
 			color: @globalFontColor;		
 
 		}
-		/* HTML5 CSS3 icons */
 		a {
+			/* HTML5 CSS3 icons */
 			position: absolute;
 			top:0;
 			display:block;
 			font-family: 'Roboto';
-			font-size: 12px;
+			font-size: 1.2rem;
 			font-weight: 600;
 			width: 50%;
-			height: 75px;
+			height: 7.5rem;
 			line-height: 0;
 			text-align: center;
 			text-transform: uppercase;
@@ -566,37 +570,29 @@ header {
 			color: @globalFontColor;
 			.animate400eio;
 			-webkit-font-smoothing: antialiased;
-
 			&:hover, &:active {
 				.animate100ei;	
 				background-color:@globalFontColor;
-				background-color: rgba(255,255,255,.15);
-				/*color:@btnGreen*/
-			}
-			&:hover, &:active {
-				.animate100ei;	
-				background-color:@globalFontColor;
-				background-color: rgba(30,60,40,1);
-				/*color:white;*/
+				background-color: @linkHoverBg;
 			}
 			&:before {
 				display: block;
 				text-align: center;
-				font-size:28px;
-				line-height:60px;
+				font-size:2.8rem;
+				line-height:6rem;
 			}
 		}
-		/*HTML5 icon*/
 		a:first-child {
+			/*HTML5 icon*/
 			left:0;
-			border-right:1px solid rgba(255,255,255,.15);
+			border-right:.1rem solid rgba(255,255,255,.15);
 			&:before {
 				content: "\e001";
 
 			}
 		}
-		/*CSS3 icon */
 		a:last-child {
+			/*CSS3 icon */
 			left:50%;
 			&:before {
 				content: "\e002";
@@ -617,27 +613,60 @@ header {
 
 .main { 
 	position: absolute;
-	top:1150px;
+	top:115rem;
 	left:0;
 }
-
-.main h3, .main p {
-	margin-left:130px;
-}
-
-.benefits, .requirements {
-	position: absolute;
-}
-.explanation, .participation, .benefits, .requirements, footer {
+.explanation {
+	h3, p {
+		margin-left:13rem;
+	}
 	h3 {
-		font-size:48px;
+		font-size:4.8rem;
 	}
 	p {
 		text-align: left;
-		width:900px;
+		width:75rem;
 		a {
 			display: inline-block;
-			padding: 3px 16px;
+			padding: .3rem 1.6rem;
+			background-color:@btnGreen;
+			.animate400eio;
+
+			&:hover, &:active {
+				.animate100ei;	
+				background-color:@globalFontColor;
+				background-color: @linkHoverBg;
+				color:white;
+			}
+		}
+	}
+}
+.participation {
+	padding-left: 13rem;
+}
+.benefits, .requirements {
+	padding-left: 3rem;
+}
+.benefits {
+	background-color: rgba(0,0,0,0.15);
+}
+.participation, .benefits, .requirements {
+	height:90rem;
+	padding-right: 3rem;
+	margin-top:5.7rem;
+	padding-bottom:5rem;
+	float:left;
+	width:40rem;	
+	h3 {
+		margin-top:8rem;
+		font-size:3.2rem;
+	}
+	p {
+		font-size: 1.3rem;
+		text-align: left;
+		a {
+			display: inline-block;
+			padding: .3rem 1.6rem;
 			background-color:@btnGreen;
 			.animate400eio;
 
@@ -650,58 +679,43 @@ header {
 		}
 	}
 }
+footer {
+	position: absolute;
+	top:0rem;
+	left: 0;
+}
 .explanation {
 	h3, p, abbr {
 		font-weight: 300;
-		/*color: rgba(60,50,20,1);*/
 		text-shadow:none;
 
 	}
 	abbr {
 		font-weight: 700;
-		/*color: black;*/
 	}
 
 }
-.participation {
-	margin-top:160px;
-	h3 {
-		/*margin: 90px 0 0 0;*/
-	}
-}
-
-
 
 /* warning track */
 aside.sidebar {
 	/*display:none;	*/
 	position: absolute;
-	top:2800px;
-	width:1800px;
-	height:300px;
+	top:18rem;
+	height:30rem;
 	background-color: @dirtBg;
 	text-align: left;
 	color:rgba(255,255,255,.33);
 	h3 {
-		font-size: 32px;
-	}
-	ul {
-		margin:0;
-		padding:0;
-		list-style-type: none;
-		li {
-			margin:0 30px 0 0;
-			padding:0;
-		}
+		font: 300 1.1rem 'Roboto', sans-serif;
+		text-transform: uppercase;
+		.opacity(20);
 	}
 	/* design-name */
 	a {
-		font: 300 1.1rem 'Roboto', sans-serif;
-		/*font-size: 14px;*/
+		font: 300 1rem 'Roboto', sans-serif;
 		color:rgba(255,255,255,.66);
-
 		&.designer-name {
-			font-size:.6rem;
+			font-size:.75rem;
 		}
 	}
 	.wrapper {
@@ -712,39 +726,39 @@ aside.sidebar {
 
 }
 .design-name {
-	/*display:block;*/
+	display:block;
 }
-.design-selection, .design-archives, .zen-resources {
-	position: absolute;
-	top:30px;
 
-}
 .design-selection {
-	left:220px;
-	li {
+	position: absolute;
+	top:16rem;
+	left:65rem;
+	width:30rem;
+	padding:.5rem;
+	background-color: rgba(20,100,50,1);
 
+	ul {
+		margin:0;
+		padding:2rem;
+		list-style-type: decimal;
+		li {
+			margin:0;
+			padding:.5rem 1rem;
+		}
 	}
+
+}
+.select {
+	/* hide select design label/heading*/
+	display:none;
 }
 .design-archives {
-	left:700px;
-	/*top:350px;*/
-
+	left:70rem;
 }
 .zen-resources {
-	left:700px;
-	/*top:500px;*/
+	left:70rem;
 }
 
-
-footer { 
-	width:800px;
-	text-align: center; 
-	padding:130px;
-	/*background-color: @dirtBg;*/
-}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-}
 
 
 
