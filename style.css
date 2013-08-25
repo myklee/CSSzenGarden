@@ -165,6 +165,10 @@ summary:before,
 }
 /*@bodyTS: 3px 3px 0 rgba(0,0,0,.1);*/
 /*@inDepth: 500;*/
+/* global scale */
+html {
+  font-size: 5px;
+}
 /* basic elements */
 html,
 body {
@@ -174,8 +178,6 @@ body {
   height: 100%;
 }
 body {
-  font-size: 62.5%;
-  font-family: 'Roboto Slab', serif;
   color: #cfe0b3;
   margin: 0;
   padding: 0;
@@ -192,11 +194,11 @@ body {
 /* infield */
 .preamble {
   position: absolute;
-  top: 50px;
-  left: 50px;
-  max-height: 1080px;
-  width: 1080px;
-  height: 1080px;
+  top: 5rem;
+  left: 5rem;
+  max-height: 108rem;
+  width: 108rem;
+  height: 108rem;
   /* infield mow pattern */
 
   /* typeset / content positioning The road to enlightenment */
@@ -273,25 +275,25 @@ body {
   display: block;
 }
 .preamble abbr:before {
-  width: 300px;
-  height: 300px;
-  top: -150px;
-  left: -150px;
+  width: 30rem;
+  height: 30rem;
+  top: -15rem;
+  left: -15rem;
   background-color: #af8843;
-  -webkit-box-shadow: 0 0 70px #f2c26e inset;
-  -moz-box-shadow: 0 0 70px #f2c26e inset;
-  box-shadow: 0 0 70px #f2c26e inset;
+  -webkit-box-shadow: 0 0 7rem #f2c26e inset;
+  -moz-box-shadow: 0 0 7rem #f2c26e inset;
+  box-shadow: 0 0 7rem #f2c26e inset;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
 .preamble h3,
 .preamble p {
-  margin-left: 130px;
-  width: 720px;
+  margin-left: 9rem;
+  width: 72rem;
 }
 .preamble h3 {
-  margin-top: 670px;
+  margin-top: 75rem;
 }
 .preamble h3:before,
 .preamble h3:after {
@@ -300,10 +302,10 @@ body {
   display: block;
 }
 .preamble h3:before {
-  top: 1px;
-  left: 5px;
-  height: 17px;
-  width: 8.5px;
+  top: .1rem;
+  left: .5rem;
+  height: 1.7rem;
+  width: .85rem;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -316,10 +318,10 @@ body {
   z-index: 100;
 }
 .preamble h3:after {
-  width: 12px;
-  height: 12px;
-  top: 0px;
-  left: 0px;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 0;
+  left: 0;
   background-color: white;
   z-index: 100;
 }
@@ -343,15 +345,15 @@ body {
 .preamble p:nth-child(3):before,
 .preamble p:last-child:before {
   background-color: white;
-  width: 15px;
-  height: 15px;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
   z-index: 100;
-  -webkit-box-shadow: 0 0 15px #8a6b35;
-  -moz-box-shadow: 0 0 15px #8a6b35;
-  box-shadow: 0 0 15px #8a6b35;
+  -webkit-box-shadow: 0 0 1.5rem #8a6b35;
+  -moz-box-shadow: 0 0 1.5rem #8a6b35;
+  box-shadow: 0 0 1.5rem #8a6b35;
 }
 .preamble p:nth-child(2):before,
 .preamble p:nth-child(2):after {
@@ -359,16 +361,16 @@ body {
   left: 0;
 }
 .preamble p:nth-child(2):after {
-  bottom: -158px;
-  left: -158px;
+  bottom: -15.8rem;
+  left: -15.8rem;
 }
 .preamble p:nth-child(3):before {
-  bottom: -7.5px;
-  right: -7.5px;
+  bottom: -0.75rem;
+  right: -0.75rem;
 }
 .preamble p:nth-child(3):after {
-  bottom: -158px;
-  right: -158px;
+  bottom: -15.8rem;
+  right: -15.8rem;
 }
 .preamble p:last-child:before,
 .preamble p:last-child:after {
@@ -376,18 +378,14 @@ body {
   right: 0;
 }
 .preamble p:last-child:after {
-  top: -158px;
-  right: -158px;
+  top: -15.8rem;
+  right: -15.8rem;
 }
 .preamble h3 {
-  font-size: 48px;
+  font-size: 4.8rem;
 }
 .preamble p {
-  /*position: relative;*/
-
   z-index: 5;
-  /*width:800px;*/
-
   text-align: left;
 }
 h1,
@@ -403,7 +401,7 @@ h3 {
 }
 p {
   font-family: 'Roboto Slab';
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 200;
   line-height: 1.67em;
   display: block;
@@ -442,9 +440,9 @@ header:after {
 }
 header:before,
 header:after {
-  width: 48px;
-  height: 72px;
-  border: 4px solid rgba(255, 255, 255, 0.33);
+  width: 4.8rem;
+  height: 7.2rem;
+  border: 0.4rem solid rgba(255, 255, 255, 0.33);
   opacity: 0.5;
   filter: alpha(opacity=50);
   z-index: 100;
@@ -457,12 +455,12 @@ header:after {
   transform: rotate(-45deg);
 }
 header:before {
-  top: -10px;
-  left: 60px;
+  top: -1rem;
+  left: 6rem;
 }
 header:after {
-  top: 48px;
-  left: 2px;
+  top: 4.8rem;
+  left: .2rem;
 }
 header h1 {
   position: relative;
@@ -483,10 +481,10 @@ header h1:after {
 header h1:before {
   text-indent: 0;
   text-align: left;
-  margin: 120px 0 0 250px;
+  margin: 12rem 0 0 25rem;
   content: 'CSS Diamond';
   font-family: 'Playball', serif;
-  font-size: 96px;
+  font-size: 9.6rem;
   line-height: 1em;
   color: #ffffff;
   white-space: nowrap;
@@ -498,14 +496,14 @@ header h1:before:first-letter {
   clear: both;
 }
 header h1:after {
-  top: -24px;
-  left: -9px;
-  border: 4px solid rgba(255, 255, 255, 0.33);
+  top: -2.4rem;
+  left: -0.9rem;
+  border: 0.4rem solid rgba(255, 255, 255, 0.33);
   opacity: 0.5;
   filter: alpha(opacity=50);
   border-bottom: none;
-  width: 27px;
-  height: 60px;
+  width: 2.7rem;
+  height: 6rem;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -514,13 +512,13 @@ header h1:after {
 }
 header h2 {
   font-family: 'Roboto Slab', serif;
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 200;
   line-height: 1.15em;
   color: #cfe0b3;
   width: 100%;
-  margin-top: 200px;
-  margin-left: 260px;
+  margin-top: 20rem;
+  margin-left: 25rem;
   /* Baselines */
 
 }
@@ -533,20 +531,20 @@ header h2:after {
 header h2:before {
   /*third Base Line*/
 
-  top: 50px;
-  left: 123px;
-  height: 4px;
-  width: 1350px;
+  top: 5rem;
+  left: 12.3rem;
+  height: .4rem;
+  width: 135rem;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.33);
 }
 header h2:after {
   /*first Base Line*/
 
-  top: 123px;
-  left: 50px;
-  width: 4px;
-  height: 2300px;
+  top: 12.3rem;
+  left: 5rem;
+  width: .4rem;
+  height: 230rem;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.33);
 }
@@ -572,27 +570,27 @@ header h2:after {
 .intro:before {
   /* first base side dirt */
 
-  height: 375px;
-  width: 1130px;
-  top: 1100px;
+  height: 37.5rem;
+  width: 113rem;
+  top: 110rem;
   left: 0;
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  border-top-left-radius: 5px;
+  -webkit-border-top-left-radius: 0.5rem;
+  -moz-border-radius-topleft: 0.5rem;
+  border-top-left-radius: 0.5rem;
 }
 .intro:after {
   /* third base side dirt */
 
-  height: 1495px;
-  width: 375px;
-  top: -20px;
-  left: 1100px;
-  -webkit-border-bottom-right-radius: 360px;
-  -moz-border-radius-bottomright: 360px;
-  border-bottom-right-radius: 360px;
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  border-top-left-radius: 5px;
+  height: 149.5rem;
+  width: 37.5rem;
+  top: -2rem;
+  left: 110rem;
+  -webkit-border-bottom-right-radius: 36rem;
+  -moz-border-radius-bottomright: 36rem;
+  border-bottom-right-radius: 36rem;
+  -webkit-border-top-left-radius: 0.5rem;
+  -moz-border-radius-topleft: 0.5rem;
+  border-top-left-radius: 0.5rem;
 }
 .summary:before,
 .summary:after {
@@ -603,33 +601,33 @@ header h2:after {
 .summary:before {
   /* pitching rubber */
 
-  top: 513.359px;
-  left: 513.359px;
-  height: 24px;
-  width: 6px;
+  top: 51.3359rem;
+  left: 51.3359rem;
+  height: 2.4rem;
+  width: .6rem;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  -webkit-box-shadow: 0 0 5px #603a02;
-  -moz-box-shadow: 0 0 5px #603a02;
-  box-shadow: 0 0 5px #603a02;
+  -webkit-box-shadow: 0 0 0.5rem #603a02;
+  -moz-box-shadow: 0 0 0.5rem #603a02;
+  box-shadow: 0 0 0.5rem #603a02;
   background-color: white;
   z-index: 100;
 }
 .summary:after {
   /* PITCHING MOUND */
 
-  width: 216px;
-  height: 216px;
-  top: 500px;
-  left: 500px;
-  margin-left: -108px;
-  margin-top: -108px;
-  -webkit-box-shadow: 0 0 70px #c07719 inset;
-  -moz-box-shadow: 0 0 70px #c07719 inset;
-  box-shadow: 0 0 70px #c07719 inset;
+  width: 21.6rem;
+  height: 21.6rem;
+  top: 50rem;
+  left: 50rem;
+  margin-left: -10.8rem;
+  margin-top: -10.8rem;
+  -webkit-box-shadow: 0 0 7rem #c07719 inset;
+  -moz-box-shadow: 0 0 7rem #c07719 inset;
+  box-shadow: 0 0 7rem #c07719 inset;
   background-color: #af8843;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -638,11 +636,11 @@ header h2:after {
 .summary p:first-child {
   /* THE SUMMARY summary text */
 
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 200;
   line-height: 1.618em;
-  padding-left: 260px;
-  margin-top: 10px;
+  padding-left: 25rem;
+  margin-top: 1rem;
   width: 53%;
 }
 .summary p:first-child:before,
@@ -659,12 +657,12 @@ header h2:after {
 
   display: block;
   background-color: rgba(30, 160, 65, 0.33);
-  margin: 890px 0 0 920px;
+  margin: 89rem 0 0 92rem;
   text-transform: uppercase;
   position: relative;
   z-index: 3;
-  width: 150px;
-  height: 75px;
+  width: 15rem;
+  height: 7.5rem;
   text-shadow: none;
   text-indent: -99999px;
   /*hide text easy*/
@@ -680,14 +678,14 @@ header h2:after {
 .summary p:last-child:before {
   /* download label icon */
 
-  margin-top: -50px;
-  margin-left: 50px;
+  margin-top: -5rem;
+  margin-left: 5rem;
   content: "\e004";
-  font-size: 32px;
+  font-size: 3.2rem;
   text-align: center;
-  line-height: 50px;
-  width: 50px;
-  height: 50px;
+  line-height: 5rem;
+  width: 5rem;
+  height: 5rem;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -702,10 +700,10 @@ header h2:after {
   top: 0;
   display: block;
   font-family: 'Roboto';
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 600;
   width: 50%;
-  height: 75px;
+  height: 7.5rem;
   line-height: 0;
   text-align: center;
   text-transform: uppercase;
@@ -729,14 +727,14 @@ header h2:after {
 .summary p:last-child a:before {
   display: block;
   text-align: center;
-  font-size: 28px;
-  line-height: 60px;
+  font-size: 2.8rem;
+  line-height: 6rem;
 }
 .summary p:last-child a:first-child {
   /*HTML5 icon*/
 
   left: 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.15);
 }
 .summary p:last-child a:first-child:before {
   content: "\e001";
@@ -753,23 +751,23 @@ header h2:after {
 /* typesetting and content styles */
 .main {
   position: absolute;
-  top: 1150px;
+  top: 115rem;
   left: 0;
 }
 .explanation h3,
 .explanation p {
-  margin-left: 130px;
+  margin-left: 13rem;
 }
 .explanation h3 {
-  font-size: 48px;
+  font-size: 4.8rem;
 }
 .explanation p {
   text-align: left;
-  width: 750px;
+  width: 75rem;
 }
 .explanation p a {
   display: inline-block;
-  padding: 3px 16px;
+  padding: .3rem 1.6rem;
   background-color: rgba(30, 160, 65, 0.33);
   -webkit-transition: all 400ms ease-in-out;
   -moz-transition: all 400ms ease-in-out;
@@ -787,11 +785,11 @@ header h2:after {
   color: white;
 }
 .participation {
-  padding-left: 130px;
+  padding-left: 13rem;
 }
 .benefits,
 .requirements {
-  padding-left: 30px;
+  padding-left: 3rem;
 }
 .benefits {
   background-color: rgba(0, 0, 0, 0.15);
@@ -799,30 +797,30 @@ header h2:after {
 .participation,
 .benefits,
 .requirements {
-  height: 900px;
-  padding-right: 30px;
-  margin-top: 57px;
-  padding-bottom: 50px;
+  height: 90rem;
+  padding-right: 3rem;
+  margin-top: 5.7rem;
+  padding-bottom: 5rem;
   float: left;
-  width: 25%;
+  width: 40rem;
 }
 .participation h3,
 .benefits h3,
 .requirements h3 {
-  margin-top: 80px;
-  font-size: 32px;
+  margin-top: 8rem;
+  font-size: 3.2rem;
 }
 .participation p,
 .benefits p,
 .requirements p {
-  font-size: 13px;
+  font-size: 1.3rem;
   text-align: left;
 }
 .participation p a,
 .benefits p a,
 .requirements p a {
   display: inline-block;
-  padding: 3px 16px;
+  padding: .3rem 1.6rem;
   background-color: rgba(30, 160, 65, 0.33);
   -webkit-transition: all 400ms ease-in-out;
   -moz-transition: all 400ms ease-in-out;
@@ -845,29 +843,25 @@ header h2:after {
 }
 footer {
   position: absolute;
-  top: 00px;
+  top: 0rem;
   left: 0;
 }
 .explanation h3,
 .explanation p,
 .explanation abbr {
   font-weight: 300;
-  /*color: rgba(60,50,20,1);*/
-
   text-shadow: none;
 }
 .explanation abbr {
   font-weight: 700;
-  /*color: black;*/
-
 }
 /* warning track */
 aside.sidebar {
   /*display:none;	*/
 
   position: absolute;
-  top: 180px;
-  height: 300px;
+  top: 18rem;
+  height: 30rem;
   background-color: #af8843;
   text-align: left;
   color: rgba(255, 255, 255, 0.33);
@@ -896,20 +890,20 @@ aside.sidebar .wrapper > div {
 }
 .design-selection {
   position: absolute;
-  top: 160px;
-  left: 650px;
-  width: 300px;
-  padding: 5px;
+  top: 16rem;
+  left: 65rem;
+  width: 30rem;
+  padding: .5rem;
   background-color: #146432;
 }
 .design-selection ul {
   margin: 0;
-  padding: 20px;
+  padding: 2rem;
   list-style-type: decimal;
 }
 .design-selection ul li {
   margin: 0;
-  padding: 5px 10px;
+  padding: .5rem 1rem;
 }
 .select {
   /* hide select design label/heading*/
@@ -917,10 +911,10 @@ aside.sidebar .wrapper > div {
   display: none;
 }
 .design-archives {
-  left: 700px;
+  left: 70rem;
 }
 .zen-resources {
-  left: 700px;
+  left: 70rem;
 }
 @media all and (max-width: 1024px) {
   
