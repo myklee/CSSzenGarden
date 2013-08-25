@@ -106,6 +106,7 @@ summary:before, .summary a:before,.zen-validate-html, .zen-validate-css, .zen-li
 
 /*@import url('http://openfontlibrary.org/face/averia');*/
 
+/* vars and mixins -vm */
 .hide-text {
 	text-indent: 100%;
 	white-space: nowrap;
@@ -131,13 +132,18 @@ summary:before, .summary a:before,.zen-validate-html, .zen-validate-css, .zen-li
 /*@bodyTS: 3px 3px 0 rgba(0,0,0,.1);*/
 
 
+@fullWidth: 1200px;
+@fullHeight: 1200px;
+
+
+
 @baseShadow: 0 0 16px #7c4a03;
 
 @dirtBg:#af8843;
 
+@linkHoverBg:rgba(30,60,40,1);
 @btnGreen: rgba(30,160,65, .33);
-
-@lineColor: rgba(255,255,255,0.55);
+@lineColor: rgba(255,255,255,0.33);
 
 /*@inDepth: 500;*/
 
@@ -147,6 +153,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	.square(100%);
+
 
 }
 body { 
@@ -233,7 +240,7 @@ body {
 	}
 	/*home plate */
 	h3 {
-		margin-top:650px;
+		margin-top:670px;
 		.before-after;
 		&:before {
 			top:1px;
@@ -358,6 +365,7 @@ abbr {
 	background-color: @dirtBg;
 }
 
+@hleftIndent: 250px;
 header {
 
 	/* batters box */
@@ -386,19 +394,19 @@ header {
 		position: relative;
 		text-shadow: @baseTS;
 		display: block;
-		/*padding-top:100px;*/
 		text-indent:-999999px;
 		.before-after;
 		/* CSS Ball Park Title Correction */
 		&:before {
 			text-indent:0;
 			text-align: left;
-			margin:160px 0 0 160px;
+			margin:120px 0 0 @hleftIndent;
 			content:'CSS Diamond';
 			font-family: 'Playball', serif;
 			font-size: 96px;
 			line-height: 1em;
 			color: rgba(255,255,255,1);
+			white-space: nowrap;
 			/*.rotate(-5deg);*/
 			&:first-letter {
 				display:block;
@@ -423,30 +431,28 @@ header {
 		font-size:32px;
 		font-weight: 200;
 		line-height: 1.15em;
-		/*.rotate(-5deg);*/
-		/*margin-top: -30px;*/
 		color:@globalFontColor;
 		width:100%;
-		margin-top:240px;
-		margin-left:170px;
+		margin-top:200px;
+		margin-left:@hleftIndent + 10;
 
 		/* Baselines */
 		.before-after;
-		/*third Base Line*/
 		&:before {
+			/*third Base Line*/
 			top:50px;
 			left:123px;
 			height:4px;
-			width:1677px;
+			width:1350px;
 			z-index: 1;
 			background-color: @lineColor;
 		}
-		/*first Base Line*/
 		&:after {
+			/*first Base Line*/
 			top:123px;
 			left:50px;
 			width:4px;
-			height:2977px;
+			height:2300px;
 			z-index: 1;
 
 			background-color: @lineColor;
@@ -467,16 +473,16 @@ header {
 	&:before, &:after {
 		background-color:@dirtBg;
 	} 
-	/* first base side dirt */
 	&:before {
+		/* first base side dirt */
 		height:375px;
 		width:1130px;
 		top:1100px;
 		left:0;
 		.border-top-left-radius(5px);
 	}
-	/* third base side dirt */
 	&:after {
+		/* third base side dirt */
 		height:1495px;
 		width:375px;
 		top:-20px;
@@ -488,8 +494,8 @@ header {
 }
 .summary {
 	.before-after;
-	/* pitching rubber */
 	&:before {
+		/* pitching rubber */
 		top:513.359px;
 		left:513.359px;
 		height:24px;
@@ -499,8 +505,8 @@ header {
 		background-color: white;
 		z-index: 100;
 	}
-	/* PITCHING MOUND */
 	&:after {
+		/* PITCHING MOUND */
 		.square(216px);
 		top:500px;
 		left:500px;
@@ -511,18 +517,23 @@ header {
 		.border-radius(50%);
 	}
 	p:first-child {
+		/* THE SUMMARY summary text */
 		font-size: 18px;
 		font-weight: 200;
 		line-height: 1.618em;
-		padding-left:170px;
+		padding-left:@hleftIndent + 10;
 		margin-top:10px;
-		width:48%;
+		width:53%;
+		.before-after;
+		&:before {
+			content:;
+		}
 	}
-	/* download HTML and CSS file */
 	p:last-child {		
+		/* download HTML and CSS file */
 		display: block;
 		background-color: @btnGreen;
-		margin:70px 0 0 170px;
+		margin:890px 0 0 920px;
 		text-transform: uppercase;
 		position: relative;
 		z-index: 3;
@@ -534,8 +545,8 @@ header {
 		color:@btnGreen;
 		.before-after;
 
-		/* download label icon */
 		&:before {
+			/* download label icon */
 			margin-top:-50px;
 			margin-left:50px;
 			content: "\e004";
@@ -549,8 +560,8 @@ header {
 			color: @globalFontColor;		
 
 		}
-		/* HTML5 CSS3 icons */
 		a {
+			/* HTML5 CSS3 icons */
 			position: absolute;
 			top:0;
 			display:block;
@@ -566,18 +577,10 @@ header {
 			color: @globalFontColor;
 			.animate400eio;
 			-webkit-font-smoothing: antialiased;
-
 			&:hover, &:active {
 				.animate100ei;	
 				background-color:@globalFontColor;
-				background-color: rgba(255,255,255,.15);
-				/*color:@btnGreen*/
-			}
-			&:hover, &:active {
-				.animate100ei;	
-				background-color:@globalFontColor;
-				background-color: rgba(30,60,40,1);
-				/*color:white;*/
+				background-color: @linkHoverBg;
 			}
 			&:before {
 				display: block;
@@ -586,8 +589,8 @@ header {
 				line-height:60px;
 			}
 		}
-		/*HTML5 icon*/
 		a:first-child {
+			/*HTML5 icon*/
 			left:0;
 			border-right:1px solid rgba(255,255,255,.15);
 			&:before {
@@ -595,8 +598,8 @@ header {
 
 			}
 		}
-		/*CSS3 icon */
 		a:last-child {
+			/*CSS3 icon */
 			left:50%;
 			&:before {
 				content: "\e002";
@@ -620,21 +623,54 @@ header {
 	top:1150px;
 	left:0;
 }
-
-.main h3, .main p {
-	margin-left:130px;
-}
-
-.benefits, .requirements {
-	position: absolute;
-}
-.explanation, .participation, .benefits, .requirements, footer {
+.explanation {
+	h3, p {
+		margin-left:130px;
+	}
 	h3 {
 		font-size:48px;
 	}
 	p {
 		text-align: left;
-		width:900px;
+		width:750px;
+		a {
+			display: inline-block;
+			padding: 3px 16px;
+			background-color:@btnGreen;
+			.animate400eio;
+
+			&:hover, &:active {
+				.animate100ei;	
+				background-color:@globalFontColor;
+				background-color: @linkHoverBg;
+				color:white;
+			}
+		}
+	}
+}
+.participation {
+	padding-left: 130px;
+}
+.benefits, .requirements {
+	padding-left: 30px;
+}
+.benefits {
+	background-color: rgba(0,0,0,0.15);
+}
+.participation, .benefits, .requirements {
+	height:900px;
+	padding-right: 30px;
+	margin-top:57px;
+	padding-bottom:50px;
+	float:left;
+	width:25%;	
+	h3 {
+		margin-top:80px;
+		font-size:32px;
+	}
+	p {
+		font-size: 13px;
+		text-align: left;
 		a {
 			display: inline-block;
 			padding: 3px 16px;
@@ -650,6 +686,11 @@ header {
 		}
 	}
 }
+footer {
+	position: absolute;
+	top:00px;
+	left: 0;
+}
 .explanation {
 	h3, p, abbr {
 		font-weight: 300;
@@ -663,45 +704,27 @@ header {
 	}
 
 }
-.participation {
-	margin-top:160px;
-	h3 {
-		/*margin: 90px 0 0 0;*/
-	}
-}
-
-
 
 /* warning track */
 aside.sidebar {
 	/*display:none;	*/
 	position: absolute;
-	top:2800px;
-	width:1800px;
+	top:180px;
 	height:300px;
 	background-color: @dirtBg;
 	text-align: left;
 	color:rgba(255,255,255,.33);
 	h3 {
-		font-size: 32px;
-	}
-	ul {
-		margin:0;
-		padding:0;
-		list-style-type: none;
-		li {
-			margin:0 30px 0 0;
-			padding:0;
-		}
+		font: 300 1.1rem 'Roboto', sans-serif;
+		text-transform: uppercase;
+		.opacity(20);
 	}
 	/* design-name */
 	a {
-		font: 300 1.1rem 'Roboto', sans-serif;
-		/*font-size: 14px;*/
+		font: 300 1rem 'Roboto', sans-serif;
 		color:rgba(255,255,255,.66);
-
 		&.designer-name {
-			font-size:.6rem;
+			font-size:.75rem;
 		}
 	}
 	.wrapper {
@@ -712,39 +735,39 @@ aside.sidebar {
 
 }
 .design-name {
-	/*display:block;*/
+	display:block;
 }
-.design-selection, .design-archives, .zen-resources {
-	position: absolute;
-	top:30px;
 
-}
 .design-selection {
-	left:220px;
-	li {
+	position: absolute;
+	top:160px;
+	left:650px;
+	width:300px;
+	padding:5px;
+	background-color: rgba(20,100,50,1);
 
+	ul {
+		margin:0;
+		padding:20px;
+		list-style-type: decimal;
+		li {
+			margin:0;
+			padding:5px 10px;
+		}
 	}
+
+}
+.select {
+	/* hide select design label/heading*/
+	display:none;
 }
 .design-archives {
 	left:700px;
-	/*top:350px;*/
-
 }
 .zen-resources {
 	left:700px;
-	/*top:500px;*/
 }
 
-
-footer { 
-	width:800px;
-	text-align: center; 
-	padding:130px;
-	/*background-color: @dirtBg;*/
-}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-}
 
 
 

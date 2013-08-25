@@ -151,6 +151,7 @@ summary:before,
 /* Summary */
 /* MAIN CONTENT */
 /*@import url('http://openfontlibrary.org/face/averia');*/
+/* vars and mixins -vm */
 .hide-text {
   text-indent: 100%;
   white-space: nowrap;
@@ -290,7 +291,7 @@ body {
   width: 720px;
 }
 .preamble h3 {
-  margin-top: 650px;
+  margin-top: 670px;
 }
 .preamble h3:before,
 .preamble h3:after {
@@ -443,7 +444,7 @@ header:before,
 header:after {
   width: 48px;
   height: 72px;
-  border: 4px solid rgba(255, 255, 255, 0.55);
+  border: 4px solid rgba(255, 255, 255, 0.33);
   opacity: 0.5;
   filter: alpha(opacity=50);
   z-index: 100;
@@ -467,8 +468,6 @@ header h1 {
   position: relative;
   text-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
   display: block;
-  /*padding-top:100px;*/
-
   text-indent: -999999px;
   /* CSS Ball Park Title Correction */
 
@@ -484,12 +483,13 @@ header h1:after {
 header h1:before {
   text-indent: 0;
   text-align: left;
-  margin: 160px 0 0 160px;
+  margin: 120px 0 0 250px;
   content: 'CSS Diamond';
   font-family: 'Playball', serif;
   font-size: 96px;
   line-height: 1em;
   color: #ffffff;
+  white-space: nowrap;
   /*.rotate(-5deg);*/
 
 }
@@ -500,7 +500,7 @@ header h1:before:first-letter {
 header h1:after {
   top: -24px;
   left: -9px;
-  border: 4px solid rgba(255, 255, 255, 0.55);
+  border: 4px solid rgba(255, 255, 255, 0.33);
   opacity: 0.5;
   filter: alpha(opacity=50);
   border-bottom: none;
@@ -517,19 +517,11 @@ header h2 {
   font-size: 32px;
   font-weight: 200;
   line-height: 1.15em;
-  /*.rotate(-5deg);*/
-
-  /*margin-top: -30px;*/
-
   color: #cfe0b3;
   width: 100%;
-  margin-top: 240px;
-  margin-left: 170px;
+  margin-top: 200px;
+  margin-left: 260px;
   /* Baselines */
-
-  /*third Base Line*/
-
-  /*first Base Line*/
 
 }
 header h2:before,
@@ -539,20 +531,24 @@ header h2:after {
   display: block;
 }
 header h2:before {
+  /*third Base Line*/
+
   top: 50px;
   left: 123px;
   height: 4px;
-  width: 1677px;
+  width: 1350px;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 0.33);
 }
 header h2:after {
+  /*first Base Line*/
+
   top: 123px;
   left: 50px;
   width: 4px;
-  height: 2977px;
+  height: 2300px;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 0.33);
 }
 /* Summary */
 .intro {
@@ -561,10 +557,6 @@ header h2:after {
   left: 0;
   display: block;
   /* infield dirt */
-
-  /* first base side dirt */
-
-  /* third base side dirt */
 
 }
 .intro:before,
@@ -578,6 +570,8 @@ header h2:after {
   background-color: #af8843;
 }
 .intro:before {
+  /* first base side dirt */
+
   height: 375px;
   width: 1130px;
   top: 1100px;
@@ -587,6 +581,8 @@ header h2:after {
   border-top-left-radius: 5px;
 }
 .intro:after {
+  /* third base side dirt */
+
   height: 1495px;
   width: 375px;
   top: -20px;
@@ -598,14 +594,6 @@ header h2:after {
   -moz-border-radius-topleft: 5px;
   border-top-left-radius: 5px;
 }
-.summary {
-  /* pitching rubber */
-
-  /* PITCHING MOUND */
-
-  /* download HTML and CSS file */
-
-}
 .summary:before,
 .summary:after {
   content: '';
@@ -613,6 +601,8 @@ header h2:after {
   display: block;
 }
 .summary:before {
+  /* pitching rubber */
+
   top: 513.359px;
   left: 513.359px;
   height: 24px;
@@ -629,6 +619,8 @@ header h2:after {
   z-index: 100;
 }
 .summary:after {
+  /* PITCHING MOUND */
+
   width: 216px;
   height: 216px;
   top: 500px;
@@ -644,17 +636,30 @@ header h2:after {
   border-radius: 50%;
 }
 .summary p:first-child {
+  /* THE SUMMARY summary text */
+
   font-size: 18px;
   font-weight: 200;
   line-height: 1.618em;
-  padding-left: 170px;
+  padding-left: 260px;
   margin-top: 10px;
-  width: 48%;
+  width: 53%;
+}
+.summary p:first-child:before,
+.summary p:first-child:after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+.summary p:first-child:before {
+  content: ;
 }
 .summary p:last-child {
+  /* download HTML and CSS file */
+
   display: block;
   background-color: rgba(30, 160, 65, 0.33);
-  margin: 70px 0 0 170px;
+  margin: 890px 0 0 920px;
   text-transform: uppercase;
   position: relative;
   z-index: 3;
@@ -665,14 +670,6 @@ header h2:after {
   /*hide text easy*/
 
   color: rgba(30, 160, 65, 0.33);
-  /* download label icon */
-
-  /* HTML5 CSS3 icons */
-
-  /*HTML5 icon*/
-
-  /*CSS3 icon */
-
 }
 .summary p:last-child:before,
 .summary p:last-child:after {
@@ -681,6 +678,8 @@ header h2:after {
   display: block;
 }
 .summary p:last-child:before {
+  /* download label icon */
+
   margin-top: -50px;
   margin-left: 50px;
   content: "\e004";
@@ -697,6 +696,8 @@ header h2:after {
   color: #cfe0b3;
 }
 .summary p:last-child a {
+  /* HTML5 CSS3 icons */
+
   position: absolute;
   top: 0;
   display: block;
@@ -723,20 +724,7 @@ header h2:after {
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
   background-color: #cfe0b3;
-  background-color: rgba(255, 255, 255, 0.15);
-  /*color:@btnGreen*/
-
-}
-.summary p:last-child a:hover,
-.summary p:last-child a:active {
-  -webkit-transition: all 100ms ease-in;
-  -moz-transition: all 100ms ease-in;
-  -o-transition: all 100ms ease-in;
-  transition: all 100ms ease-in;
-  background-color: #cfe0b3;
   background-color: #1e3c28;
-  /*color:white;*/
-
 }
 .summary p:last-child a:before {
   display: block;
@@ -745,6 +733,8 @@ header h2:after {
   line-height: 60px;
 }
 .summary p:last-child a:first-child {
+  /*HTML5 icon*/
+
   left: 0;
   border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -752,6 +742,8 @@ header h2:after {
   content: "\e001";
 }
 .summary p:last-child a:last-child {
+  /*CSS3 icon */
+
   left: 50%;
 }
 .summary p:last-child a:last-child:before {
@@ -764,34 +756,18 @@ header h2:after {
   top: 1150px;
   left: 0;
 }
-.main h3,
-.main p {
+.explanation h3,
+.explanation p {
   margin-left: 130px;
 }
-.benefits,
-.requirements {
-  position: absolute;
-}
-.explanation h3,
-.participation h3,
-.benefits h3,
-.requirements h3,
-footer h3 {
+.explanation h3 {
   font-size: 48px;
 }
-.explanation p,
-.participation p,
-.benefits p,
-.requirements p,
-footer p {
+.explanation p {
   text-align: left;
-  width: 900px;
+  width: 750px;
 }
-.explanation p a,
-.participation p a,
-.benefits p a,
-.requirements p a,
-footer p a {
+.explanation p a {
   display: inline-block;
   padding: 3px 16px;
   background-color: rgba(30, 160, 65, 0.33);
@@ -801,15 +777,7 @@ footer p a {
   transition: all 400ms ease-in-out;
 }
 .explanation p a:hover,
-.participation p a:hover,
-.benefits p a:hover,
-.requirements p a:hover,
-footer p a:hover,
-.explanation p a:active,
-.participation p a:active,
-.benefits p a:active,
-.requirements p a:active,
-footer p a:active {
+.explanation p a:active {
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
   -o-transition: all 100ms ease-in;
@@ -817,6 +785,68 @@ footer p a:active {
   background-color: #cfe0b3;
   background-color: #1e3c28;
   color: white;
+}
+.participation {
+  padding-left: 130px;
+}
+.benefits,
+.requirements {
+  padding-left: 30px;
+}
+.benefits {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.participation,
+.benefits,
+.requirements {
+  height: 900px;
+  padding-right: 30px;
+  margin-top: 57px;
+  padding-bottom: 50px;
+  float: left;
+  width: 25%;
+}
+.participation h3,
+.benefits h3,
+.requirements h3 {
+  margin-top: 80px;
+  font-size: 32px;
+}
+.participation p,
+.benefits p,
+.requirements p {
+  font-size: 13px;
+  text-align: left;
+}
+.participation p a,
+.benefits p a,
+.requirements p a {
+  display: inline-block;
+  padding: 3px 16px;
+  background-color: rgba(30, 160, 65, 0.33);
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+.participation p a:hover,
+.benefits p a:hover,
+.requirements p a:hover,
+.participation p a:active,
+.benefits p a:active,
+.requirements p a:active {
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  background-color: #cfe0b3;
+  background-color: #1e3c28;
+  color: white;
+}
+footer {
+  position: absolute;
+  top: 00px;
+  left: 0;
 }
 .explanation h3,
 .explanation p,
@@ -831,20 +861,12 @@ footer p a:active {
   /*color: black;*/
 
 }
-.participation {
-  margin-top: 160px;
-}
-.participation h3 {
-  /*margin: 90px 0 0 0;*/
-
-}
 /* warning track */
 aside.sidebar {
   /*display:none;	*/
 
   position: absolute;
-  top: 2800px;
-  width: 1800px;
+  top: 180px;
   height: 300px;
   background-color: #af8843;
   text-align: left;
@@ -853,63 +875,52 @@ aside.sidebar {
 
 }
 aside.sidebar h3 {
-  font-size: 32px;
-}
-aside.sidebar ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-aside.sidebar ul li {
-  margin: 0 30px 0 0;
-  padding: 0;
+  font: 300 1.1rem 'Roboto', sans-serif;
+  text-transform: uppercase;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
 }
 aside.sidebar a {
-  font: 300 1.1rem 'Roboto', sans-serif;
-  /*font-size: 14px;*/
-
+  font: 300 1rem 'Roboto', sans-serif;
   color: rgba(255, 255, 255, 0.66);
 }
 aside.sidebar a.designer-name {
-  font-size: .6rem;
+  font-size: .75rem;
 }
 aside.sidebar .wrapper > div {
   /*float:left;*/
 
 }
 .design-name {
-  /*display:block;*/
-
-}
-.design-selection,
-.design-archives,
-.zen-resources {
-  position: absolute;
-  top: 30px;
+  display: block;
 }
 .design-selection {
-  left: 220px;
+  position: absolute;
+  top: 160px;
+  left: 650px;
+  width: 300px;
+  padding: 5px;
+  background-color: #146432;
+}
+.design-selection ul {
+  margin: 0;
+  padding: 20px;
+  list-style-type: decimal;
+}
+.design-selection ul li {
+  margin: 0;
+  padding: 5px 10px;
+}
+.select {
+  /* hide select design label/heading*/
+
+  display: none;
 }
 .design-archives {
   left: 700px;
-  /*top:350px;*/
-
 }
 .zen-resources {
   left: 700px;
-  /*top:500px;*/
-
-}
-footer {
-  width: 800px;
-  text-align: center;
-  padding: 130px;
-  /*background-color: @dirtBg;*/
-
-}
-footer a:link,
-footer a:visited {
-  margin-right: 20px;
 }
 @media all and (max-width: 1024px) {
   
