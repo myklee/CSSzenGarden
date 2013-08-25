@@ -801,7 +801,7 @@ header h2:after {
 .requirements {
   height: 90rem;
   padding-right: 3rem;
-  margin-top: 5.7rem;
+  margin-top: 5.3rem;
   padding-bottom: 5rem;
   float: left;
   width: 25%;
@@ -861,37 +861,34 @@ aside.sidebar {
   color: rgba(255, 255, 255, 0.33);
 }
 .design-name {
-  font: 300 1.4rem/3.5rem 'Roboto', sans-serif;
+  font: 300 1.8rem/3.5rem 'Roboto', sans-serif;
   color: rgba(255, 255, 255, 0.66);
   /*display:block;*/
 
 }
 .designer-name {
-  font: 300 1.1rem/1em 'Roboto Slab', serif;
+  font: 300 1.6rem/1em 'Roboto Slab', serif;
 }
 /* design list layout */
 .design-selection {
   position: absolute;
   top: 21rem;
-  left: 70rem;
-  width: 40rem;
+  left: 110rem;
+  width: 37rem;
   height: 23rem;
-  /*padding:.5rem;*/
-
   background-color: rgba(20, 100, 50, 0.66);
 }
 .design-selection ul {
   margin: 0;
-  padding: 0 0 0 1rem;
+  padding: 0;
   list-style-type: none;
 }
 .design-selection ul li {
-  margin: 0;
-  padding: .5rem 1rem;
-  position: relative;
-  width: 1.6rem;
-  height: 1.6rem;
-  white-space: nowrap;
+  /*width:37rem;*/
+
+  padding: 2rem;
+  /*white-space: nowrap;*/
+
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -904,7 +901,16 @@ aside.sidebar {
 .design-archives,
 .zen-resources {
   position: absolute;
-  top: 51rem;
+  top: 44rem;
+  height: 3rem;
+  background-color: rgba(30, 160, 65, 0.33);
+}
+.design-archives a,
+.zen-resources a {
+  line-height: 3rem;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 .design-archives h3,
 .zen-resources h3 {
@@ -914,27 +920,180 @@ aside.sidebar {
 .zen-resources ul {
   margin: 0;
   padding: 0;
+  width: 50rem;
+}
+.design-archives ul li,
+.zen-resources ul li {
+  list-style-type: none;
+  display: inline-block;
+  /*float:left;*/
+
+  /*width:50%;*/
+
 }
 .design-archives {
-  left: 70rem;
+  left: 110rem;
 }
 .zen-resources {
+  top: 60rem;
   left: 70rem;
 }
 /* RESPONSIVE */
 /* Ensure the infield always displays in full */
-@media all and (min-width: 850px) and (max-width: 1135px) {
+@media all and (max-width: 800px) {
   html {
-    font-size: 7.5px;
+    font-size: 5.5px;
   }
 }
-@media all and (min-width: 575px) and (max-width: 850px) {
+@media all and (min-width: 800px) and (max-width: 1023px) {
   html {
-    font-size: 5px;
+    font-size: 6px;
   }
 }
-@media all and (max-width: 575px) {
+/* 1024 x 768 full screen */
+@media all and (min-width: 1024px) and (max-width: 1248px) {
   html {
-    font-size: 4px;
+    font-size: 7px;
+  }
+}
+@media all and (min-width: 1248px) and (max-width: 1365px) {
+  html {
+    font-size: 8.5px;
+  }
+}
+/* 1366 x 768 max macbook air 11" (2013) size */
+@media all and (min-width: 1365px) and (max-width: 1366px) {
+  html {
+    font-size: 9.5px;
+  }
+}
+/* full size */
+@media all and (min-width: 1367px) {
+  html {
+    font-size: 10px;
+  }
+}
+/* galaxy nexus 360px */
+@media all and (max-width: 480px) and (orientation: portrait) {
+  html {
+    font-size: 3px;
+  }
+  header {
+    /* Title */
+  
+    /* subtitle */
+  
+  }
+  header h1:before {
+    text-indent: 0;
+    text-align: left;
+    margin: 20rem 0 0 15rem;
+    content: 'CSS Diamond';
+    font-family: 'Playball', serif;
+    font-size: 15rem;
+    line-height: 1em;
+    color: #ffffff;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+    /*.rotate(-5deg);*/
+  
+  }
+  header h1:before:first-letter {
+    display: block;
+    clear: both;
+  }
+  header h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 1.15em;
+    color: #cfe0b3;
+    width: 100%;
+    margin-top: 65rem;
+    margin-left: 16rem;
+  }
+  .summary p:first-child {
+    /* THE SUMMARY summary text */
+  
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.618em;
+    padding-left: 16rem;
+    margin-top: 1rem;
+    width: 53%;
+  }
+  .summary p:first-child:before,
+  .summary p:first-child:after {
+    content: '';
+    position: absolute;
+    display: block;
+  }
+  .summary p:first-child:before {
+    content: ;
+  }
+  .preamble h3 {
+    margin-top: 150rem;
+    font-size: 6rem;
+  }
+  .preamble p {
+    font-size: 3.5rem;
+    width: 90rem;
+  }
+  .main {
+    margin-top: 200rem;
+  }
+  .main h3 {
+    margin-top: 8rem;
+    font-size: 6rem;
+  }
+  .participation,
+  .benefits,
+  .requirements {
+    height: auto;
+    margin-top: 3rem;
+    padding-left: 10rem;
+    padding-bottom: 5rem;
+    width: 90%;
+    float: none;
+    max-width: none;
+  }
+  .participation p,
+  .benefits p,
+  .requirements p {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+  .participation p a,
+  .benefits p a,
+  .requirements p a {
+    display: inline-block;
+    padding: .3rem 1.6rem;
+    background-color: rgba(30, 160, 65, 0.33);
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+  }
+  .participation p a:hover,
+  .benefits p a:hover,
+  .requirements p a:hover,
+  .participation p a:active,
+  .benefits p a:active,
+  .requirements p a:active {
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    -o-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    background-color: #cfe0b3;
+    background-color: #1e3c28;
+    color: white;
+  }
+  .design-selection {
+    /*position: absolute;
+  		top:21rem;
+  		left:70rem;
+  		width:40rem;
+  		height:23rem;*/
+  
   }
 }
