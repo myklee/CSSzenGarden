@@ -755,13 +755,13 @@ header h2:after {
 .preamble h3,
 .preamble p {
   font-family: 'Roboto Slab', serif;
-  margin-left: 0rem;
+  margin-left: .4rem;
   width: 60%;
   background: rgba(0, 0, 0, 0.15);
-  padding: 8px 40px;
+  padding: 8px 50px;
 }
 .preamble h3 {
-  margin-top: 61rem;
+  margin-top: 63rem;
   font-size: 3.2rem;
 }
 .preamble h3:first-child {
@@ -838,6 +838,7 @@ header h2:after {
 .benefits h3,
 .requirements h3 {
   margin-top: 8rem;
+  font-family: 'Roboto Slab';
   font-size: 3.2rem;
 }
 .participation p,
@@ -912,23 +913,24 @@ aside.sidebar {
   list-style-type: none;
 }
 .design-selection ul li {
-  padding: 2rem;
   -webkit-transition: all 400ms ease-in-out;
   -moz-transition: all 400ms ease-in-out;
   -o-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
-  /*white-space: nowrap;*/
-
-  /*.border-radius(50%);*/
-
+  border-left: 0px solid rgba(0, 0, 0, 0.33);
+  padding: 2rem 4rem;
 }
-.design-selection ul li:hover {
-  border-left: 10px solid white;
-  -webkit-transition: all 50ms ease-in-out;
-  -moz-transition: all 50ms ease-in-out;
-  -o-transition: all 50ms ease-in-out;
-  transition: all 50ms ease-in-out;
+.design-selection ul li:hover,
+.design-selection ul li:active {
+  border-left: 30px solid rgba(0, 0, 0, 0.33);
   background-color: rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  /*text-decoration: underline;*/
+
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
 }
 .select {
   /* hide select design label/heading*/

@@ -613,14 +613,14 @@ header {
 .preamble {
 	h3,p {
 		font-family:  'Roboto Slab', serif;
-		margin-left: 0rem;
+		margin-left: .4rem;
 		width:60%;
 		background: rgba(0,0,0,.15);
-		padding:8px 40px;
+		padding:8px 50px;
 
 	}
 	h3 {
-		margin-top:61rem;
+		margin-top:63rem;
 		font-size:3.2rem;
 		&:first-child {
 			padding-top:30px;
@@ -692,6 +692,7 @@ header {
 	max-width:34rem;	
 	h3 {
 		margin-top:8rem;
+		font-family: 'Roboto Slab';
 		font-size:3.2rem;
 	}
 	p {
@@ -750,16 +751,18 @@ aside.sidebar {
 		padding:0;
 		list-style-type: none;
 		li {
-			padding:2rem;
 			.animate400eio;
-
-			/*white-space: nowrap;*/
-			/*.border-radius(50%);*/
-			&:hover {
-				border-left:10px solid white;
-				.animate50;
+			border-left:0px solid rgba(0,0,0,.33);
+			padding:2rem 4rem;
+			&:hover, &:active {
+				border-left:30px solid rgba(0,0,0,.33);
 				background-color:rgba(0,0,0,.15);
+				font-weight: 700;
+				/*text-decoration: underline;*/
+				.animate100ei;
+
 			}
+
 		}
 	}
 }
