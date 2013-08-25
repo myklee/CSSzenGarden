@@ -125,11 +125,11 @@ summary:before, .summary a:before,.zen-validate-html, .zen-validate-css, .zen-li
 @globalFontColor: #cfe0b3;
 
 
-@baseTS: 5px 5px 0 rgba(0,0,0,.15);
+@headerTS: .5rem .5rem 0 rgba(0,0,0,.15);
 @baseTS: 0 0 0 rgba(0,0,0,.15);
 
 @bodyTS:none;
-/*@bodyTS: 3px 3px 0 rgba(0,0,0,.1);*/
+@bodyTS: .2rem .2rem 0 rgba(0,0,0,.15);
 
 @fullWidth: 120rem;
 @fullHeight: 120rem;
@@ -161,6 +161,8 @@ body {
 	.square(100%);
 	background-color: #4a7c00;
 	text-shadow:@bodyTS;
+	/*-webkit-text-stroke: 0.015rem;*/
+	-webkit-font-smoothing:antialiased;
 
 	/*-webkit-backface-visibility: hidden;*/
 }
@@ -224,7 +226,7 @@ body {
 			top:-15rem;
 			left:-15rem;
 			background-color: @dirtBg;
-			.box-shadow(0 0 7rem #f2c26e inset);
+			.box-shadow(0 0 7rem rgba(255,255,255,.15) inset);
 			.border-radius(50%);
 		}
 
@@ -334,7 +336,6 @@ h3 {
 p {
 	font-family: 'Roboto Slab';
 	font-size: 1.6rem;
-	font-weight: 200;
 	line-height: 1.67em;
 	display: block;
 }
@@ -343,9 +344,6 @@ a {
 	text-shadow:none;
 	text-decoration: none;
 	color:#eee;
-	&:hover {
-		color:rgba(255,255,255, .1);
-	}
 }
 
 abbr {
@@ -386,7 +384,7 @@ header {
 	/* Title */
 	h1 {
 		position: relative;
-		text-shadow: @baseTS;
+		text-shadow: @headerTS;
 		display: block;
 		text-indent:-999999px;
 		.before-after;
@@ -401,6 +399,7 @@ header {
 			line-height: 1em;
 			color: rgba(255,255,255,1);
 			white-space: nowrap;
+			-webkit-font-smoothing: antialiased;
 			/*.rotate(-5deg);*/
 			&:first-letter {
 				display:block;
@@ -423,7 +422,7 @@ header {
 	h2 {
 		font-family: 'Roboto Slab', serif;
 		font-size:3.2rem;
-		font-weight: 200;
+		font-weight: 400;
 		line-height: 1.15em;
 		color:@globalFontColor;
 		width:100%;
@@ -512,7 +511,7 @@ header {
 	p:first-child {
 		/* THE SUMMARY summary text */
 		font-size: 1.8rem;
-		font-weight: 200;
+		font-weight: 300;
 		line-height: 1.618em;
 		padding-left:@hleftIndent;
 		margin-top:1rem;
@@ -615,6 +614,9 @@ header {
 	position: absolute;
 	top:115rem;
 	left:0;
+	h3 {
+		text-shadow:@headerTS;
+	}
 }
 .explanation {
 	h3, p {
@@ -631,7 +633,6 @@ header {
 			padding: .3rem 1.6rem;
 			background-color:@btnGreen;
 			.animate400eio;
-
 			&:hover, &:active {
 				.animate100ei;	
 				background-color:@globalFontColor;
@@ -656,7 +657,8 @@ header {
 	margin-top:5.7rem;
 	padding-bottom:5rem;
 	float:left;
-	width:40rem;	
+	width:25%;
+	max-width:34rem;	
 	h3 {
 		margin-top:8rem;
 		font-size:3.2rem;
@@ -684,19 +686,8 @@ footer {
 	top:0rem;
 	left: 0;
 }
-.explanation {
-	h3, p, abbr {
-		font-weight: 300;
-		text-shadow:none;
 
-	}
-	abbr {
-		font-weight: 700;
-	}
-
-}
-
-/* warning track */
+/* position side bar aside design list navigation */
 aside.sidebar {
 	/*display:none;	*/
 	position: absolute;
@@ -705,45 +696,37 @@ aside.sidebar {
 	background-color: @dirtBg;
 	text-align: left;
 	color:rgba(255,255,255,.33);
-	h3 {
-		font: 300 1.1rem 'Roboto', sans-serif;
-		text-transform: uppercase;
-		.opacity(20);
-	}
-	/* design-name */
-	a {
-		font: 300 1rem 'Roboto', sans-serif;
-		color:rgba(255,255,255,.66);
-		&.designer-name {
-			font-size:.75rem;
-		}
-	}
-	.wrapper {
-		> div {
-			/*float:left;*/
-		}
-	}
-
 }
 .design-name {
-	display:block;
-}
+	font: 300 1.4rem/3.5rem 'Roboto', sans-serif;
+	color:rgba(255,255,255,.66);
+	/*display:block;*/
 
+}
+.designer-name {
+	font:300 1.1rem/1em 'Roboto Slab', serif;
+}
+/* design list layout */
 .design-selection {
 	position: absolute;
-	top:16rem;
-	left:65rem;
-	width:30rem;
-	padding:.5rem;
-	background-color: rgba(20,100,50,1);
-
+	top:21rem;
+	left:70rem;
+	width:40rem;
+	height:23rem;
+	/*padding:.5rem;*/
+	background-color: rgba(20,100,50,.66);
 	ul {
 		margin:0;
-		padding:2rem;
-		list-style-type: decimal;
+		padding:0 0 0 1rem;
+		list-style-type: none;
 		li {
 			margin:0;
 			padding:.5rem 1rem;
+			position: relative;
+			width:1.6rem;
+			height:1.6rem;
+			white-space: nowrap;
+			.border-radius(50%);
 		}
 	}
 
@@ -751,6 +734,18 @@ aside.sidebar {
 .select {
 	/* hide select design label/heading*/
 	display:none;
+}
+.design-archives, .zen-resources {
+	position: absolute;
+	top:51rem;
+	h3 {
+		display: none;
+	}
+	ul {
+		margin:0;
+		padding:0;
+	}
+
 }
 .design-archives {
 	left:70rem;
@@ -761,13 +756,27 @@ aside.sidebar {
 
 
 
+/* RESPONSIVE */
 
-@media all and (max-width: 1024px) {
-	body {
 
+/* Ensure the infield always displays in full */
+
+@media all and (min-width:850px) and (max-width: 1135px) {
+	html {
+		font-size:7.5px;
 	}
+}
 
+@media all and (min-width:575px) and (max-width: 850px) {
+	html {
+		font-size:5px;
+	}
+}
 
+@media all and (max-width: 575px) {
+	html {
+		font-size:4px;
+	}
 }
 
 
