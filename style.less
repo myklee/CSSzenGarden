@@ -122,6 +122,10 @@ summary:before, .summary a:before,.zen-validate-html, .zen-validate-css, .zen-li
 		display: block;
 	}
 }
+.glow-text {
+	text-shadow:0 0 15px rgba(255,255,255,.66);
+	color: rgba(255,255,255,1);
+}
 
 @globalFontColor: rgba(255,255,255,.8);
 @globalFontColor: #cfe0b3;
@@ -434,7 +438,7 @@ header {
 		color:@globalFontColor;
 		width:100%;
 		margin-top:@htopIndent;
-		margin-left:@hleftIndent - 1;
+		margin-left:@hleftIndent;
 		/* Baselines */
 		.before-after;
 		&:before {
@@ -613,9 +617,10 @@ header {
 .preamble {
 	h3,p {
 		font-family:  'Roboto Slab', serif;
-		margin-left: .4rem;
+		margin-left: 8rem;
 		width:60%;
 		background: rgba(0,0,0,.15);
+		/*background-color: @btnGreen;*/
 		padding:8px 50px;
 
 	}
@@ -700,8 +705,8 @@ header {
 		text-align: left;
 		a {
 			display: inline-block;
-			padding: .3rem 1.6rem;
-			background-color:@btnGreen;
+			padding: 0rem 1rem;
+			background-color:darken(@btnGreen,20%);
 			.animate400eio;
 
 			&:hover, &:active {
@@ -713,24 +718,85 @@ header {
 		}
 	}
 }
+
+/* validators -v */
 footer {
 	position: absolute;
-	top:95rem;
-	left: 30rem;
+	top:65rem;
+	left: 54rem;
+	a {
+		display:inline-block;
+		overflow: hidden;
+		margin:0;
+		padding:1rem;
+		text-indent: -99999px;
+		.square(3rem);
+		.border-top-left-radius(50%);
+		.border-bottom-right-radius(50%);
+
+		.animate400eio;
+
+		&:hover {
+			background-color:rgba(0,0,0,.33);
+			.border-radius(50%);
+			.glow-text;
+			.animate100ei;
+
+		}
+	}
+	a:first-child, a:nth-child(2), a:nth-child(3), a:nth-child(4), a:last-child {
+		font-size: 2.4rem;
+		position: relative;
+		&:before {
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin:-1.2rem 0 0 -1.2rem;
+			display:block;			
+			text-indent:0px;
+		}
+	}
+	/*html5*/
+	a:first-child {
+		&:before {
+			content: "\e001";			
+		}
+	}
+	/*css3*/
+	a:nth-child(2) {
+		&:before {
+			content: "\e002";
+		}
+	}
+	a:nth-child(3) {
+		&:before {
+			content: "\e009";
+			
+		}
+	}
+	a:nth-child(4) {
+		&:before {
+			content: "\e00f";
+		}
+	}
+	a:last-child {
+		&:before {
+			content: "\e00e";
+		}
+	}
+	
 }
 
 /* position side bar aside design list navigation */
 aside.sidebar {
-	/*display:none;	*/
 	position: absolute;
 	top:18rem;
 	height:30rem;
-	/*background-color: @dirtBg;*/
 	text-align: left;
 	color:rgba(255,255,255,.33);
 }
 .design-name {
-	font: 400 1.8rem/3rem 'Roboto', sans-serif;
+	font: 700 1.8rem/3rem 'Roboto', sans-serif;
 	color:rgba(255,255,255,.66);
 	display:block;
 
@@ -745,7 +811,6 @@ aside.sidebar {
 	left:110rem;
 	width:37rem;
 	height:23rem;
-	/*background-color: rgba(20,100,50,.66);*/
 	ul {
 		margin:0;
 		padding:0;
@@ -754,12 +819,19 @@ aside.sidebar {
 			.animate400eio;
 			border-left:0px solid rgba(0,0,0,.33);
 			padding:2rem 4rem;
+			a {
+				.animate400eio;
+			}
 			&:hover, &:active {
-				border-left:30px solid rgba(0,0,0,.33);
-				background-color:rgba(0,0,0,.15);
+				border-left:3rem solid rgba(0,0,0,.1);
+				background-color:rgba(0,0,0,.1);
 				font-weight: 700;
 				/*text-decoration: underline;*/
 				.animate100ei;
+				a {
+					.animate100ei;
+					.glow-text;
+				}
 
 			}
 

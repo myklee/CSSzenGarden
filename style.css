@@ -165,6 +165,10 @@ summary:before,
   position: absolute;
   display: block;
 }
+.glow-text {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.66);
+  color: #ffffff;
+}
 /*@inDepth: 500;*/
 /* global scale */
 html {
@@ -520,7 +524,7 @@ header h2 {
   color: #cfe0b3;
   width: 100%;
   margin-top: 17rem;
-  margin-left: 64rem;
+  margin-left: 65rem;
   /* Baselines */
 
 }
@@ -755,9 +759,11 @@ header h2:after {
 .preamble h3,
 .preamble p {
   font-family: 'Roboto Slab', serif;
-  margin-left: .4rem;
+  margin-left: 8rem;
   width: 60%;
   background: rgba(0, 0, 0, 0.15);
+  /*background-color: @btnGreen;*/
+
   padding: 8px 50px;
 }
 .preamble h3 {
@@ -851,8 +857,8 @@ header h2:after {
 .benefits p a,
 .requirements p a {
   display: inline-block;
-  padding: .3rem 1.6rem;
-  background-color: rgba(30, 160, 65, 0.33);
+  padding: 0rem 1rem;
+  background-color: rgba(14, 74, 30, 0.33);
   -webkit-transition: all 400ms ease-in-out;
   -moz-transition: all 400ms ease-in-out;
   -o-transition: all 400ms ease-in-out;
@@ -872,25 +878,92 @@ header h2:after {
   background-color: #1e3c28;
   color: white;
 }
+/* validators -v */
 footer {
   position: absolute;
-  top: 95rem;
-  left: 30rem;
+  top: 65rem;
+  left: 54rem;
+  /*html5*/
+
+  /*css3*/
+
+}
+footer a {
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  padding: 1rem;
+  text-indent: -99999px;
+  width: 3rem;
+  height: 3rem;
+  -webkit-border-top-left-radius: 50%;
+  -moz-border-radius-topleft: 50%;
+  border-top-left-radius: 50%;
+  -webkit-border-bottom-right-radius: 50%;
+  -moz-border-radius-bottomright: 50%;
+  border-bottom-right-radius: 50%;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+footer a:hover {
+  background-color: rgba(0, 0, 0, 0.33);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.66);
+  color: #ffffff;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+footer a:first-child,
+footer a:nth-child(2),
+footer a:nth-child(3),
+footer a:nth-child(4),
+footer a:last-child {
+  font-size: 2.4rem;
+  position: relative;
+}
+footer a:first-child:before,
+footer a:nth-child(2):before,
+footer a:nth-child(3):before,
+footer a:nth-child(4):before,
+footer a:last-child:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1.2rem 0 0 -1.2rem;
+  display: block;
+  text-indent: 0px;
+}
+footer a:first-child:before {
+  content: "\e001";
+}
+footer a:nth-child(2):before {
+  content: "\e002";
+}
+footer a:nth-child(3):before {
+  content: "\e009";
+}
+footer a:nth-child(4):before {
+  content: "\e00f";
+}
+footer a:last-child:before {
+  content: "\e00e";
 }
 /* position side bar aside design list navigation */
 aside.sidebar {
-  /*display:none;	*/
-
   position: absolute;
   top: 18rem;
   height: 30rem;
-  /*background-color: @dirtBg;*/
-
   text-align: left;
   color: rgba(255, 255, 255, 0.33);
 }
 .design-name {
-  font: 400 1.8rem/3rem 'Roboto', sans-serif;
+  font: 700 1.8rem/3rem 'Roboto', sans-serif;
   color: rgba(255, 255, 255, 0.66);
   display: block;
 }
@@ -904,8 +977,6 @@ aside.sidebar {
   left: 110rem;
   width: 37rem;
   height: 23rem;
-  /*background-color: rgba(20,100,50,.66);*/
-
 }
 .design-selection ul {
   margin: 0;
@@ -920,10 +991,16 @@ aside.sidebar {
   border-left: 0px solid rgba(0, 0, 0, 0.33);
   padding: 2rem 4rem;
 }
+.design-selection ul li a {
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
 .design-selection ul li:hover,
 .design-selection ul li:active {
-  border-left: 30px solid rgba(0, 0, 0, 0.33);
-  background-color: rgba(0, 0, 0, 0.15);
+  border-left: 3rem solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   font-weight: 700;
   /*text-decoration: underline;*/
 
@@ -931,6 +1008,15 @@ aside.sidebar {
   -moz-transition: all 100ms ease-in;
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
+}
+.design-selection ul li:hover a,
+.design-selection ul li:active a {
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.66);
+  color: #ffffff;
 }
 .select {
   /* hide select design label/heading*/
