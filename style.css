@@ -664,7 +664,7 @@ header h2:after {
   /* download HTML and CSS file */
 
   display: block;
-  background-color: rgba(30, 160, 65, 0.33);
+  background-color: rgba(30, 160, 65, 0.5);
   margin: 8rem 0 0 75rem;
   text-transform: uppercase;
   position: relative;
@@ -675,7 +675,7 @@ header h2:after {
   text-indent: -99999px;
   /*hide text easy*/
 
-  color: rgba(30, 160, 65, 0.33);
+  color: rgba(30, 160, 65, 0.5);
 }
 .summary p:last-child:before,
 .summary p:last-child:after {
@@ -803,7 +803,7 @@ header h2:after {
 .explanation p a {
   display: inline-block;
   padding: .3rem 1.6rem;
-  background-color: rgba(30, 160, 65, 0.33);
+  background-color: rgba(30, 160, 65, 0.5);
   -webkit-transition: all 400ms ease-in-out;
   -moz-transition: all 400ms ease-in-out;
   -o-transition: all 400ms ease-in-out;
@@ -858,7 +858,7 @@ header h2:after {
 .requirements p a {
   display: inline-block;
   padding: 0rem 1rem;
-  background-color: rgba(14, 74, 30, 0.33);
+  background-color: rgba(14, 74, 30, 0.5);
   -webkit-transition: all 400ms ease-in-out;
   -moz-transition: all 400ms ease-in-out;
   -o-transition: all 400ms ease-in-out;
@@ -1028,7 +1028,7 @@ aside.sidebar {
   position: absolute;
   top: 44rem;
   height: 3rem;
-  background-color: rgba(30, 160, 65, 0.33);
+  background-color: rgba(30, 160, 65, 0.5);
 }
 .design-archives a,
 .zen-resources a {
